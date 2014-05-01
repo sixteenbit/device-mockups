@@ -20,6 +20,9 @@
  *      - Galaxy S3
  */
 
+// Variables
+$bg-color: #3c3c3c;
+
 /* GENERAL STYLE */
 .device-mockup {
     position: relative;
@@ -44,6 +47,7 @@
                 left: 13.364486%;
                 right: 13.364486%;
                 overflow: hidden;
+                background-color: $bg-color;
             }
             .button {
                 position: absolute;
