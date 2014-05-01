@@ -35,7 +35,7 @@
         height: 100%;
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-image: url("assets/img/macbook.png");
+        background-image: url("../img/macbook.png");
         > {
             .screen {
                 position: absolute;
@@ -61,7 +61,7 @@
     &[data-device="imac"] {
         padding-bottom: 81.230769%;
         > .device {
-            background-image: url("assets/img/imac.png");
+            background-image: url("../img/imac.png");
             > .screen {
                 top: 8.20707071%;
                 bottom: 31.6919192%;
@@ -73,7 +73,7 @@
     &[data-device="macbook"] {
         padding-bottom: 61.775701%;
         > .device {
-            background-image: url("assets/img/macbook.png");
+            background-image: url("../img/macbook.png");
             > .screen {
                 top: 11.0438729%;
                 bottom: 14.6747352%;
@@ -91,18 +91,18 @@
             padding-bottom: 49.9701136%;
         }
         > .device, &[data-color="black"] > .device, &[data-orientation="portrait"][data-color="black"] > .device {
-            background-image: url("assets/img/iphone5_port_black.png");
+            background-image: url("../img/iphone5_port_black.png");
         }
         &[data-orientation="landscape"] {
             > .device, &[data-color="black"] > .device {
-                background-image: url("assets/img/iphone5_land_black.png");
+                background-image: url("../img/iphone5_land_black.png");
             }
         }
         &[data-color="white"] > .device, &[data-orientation="portrait"][data-color="white"] > .device {
-            background-image: url("assets/img/iphone5_port_white.png");
+            background-image: url("../img/iphone5_port_white.png");
         }
         &[data-orientation="landscape"][data-color="white"] > .device {
-            background-image: url("assets/img/iphone5_land_white.png");
+            background-image: url("../img/iphone5_land_white.png");
         }
         > .device > .screen, &[data-orientation="portrait"] > .device > .screen {
             top: 16.28%;
@@ -140,17 +140,17 @@
             padding-bottom: 79.9086758%;
         }
         > .device, &[data-color="black"] > .device, &[data-orientation="portrait"][data-color="black"] > .device {
-            background-image: url("assets/img/ipad_port_black.png");
+            background-image: url("../img/ipad_port_black.png");
         }
         &[data-color="white"] > .device, &[data-orientation="portrait"][data-color="white"] > .device {
-            background-image: url("assets/img/ipad_port_white.png");
+            background-image: url("../img/ipad_port_white.png");
         }
         &[data-orientation="landscape"] {
             > .device, &[data-color="black"] > .device {
-                background-image: url("assets/img/ipad_land_black.png");
+                background-image: url("../img/ipad_land_black.png");
             }
             &[data-color="white"] > .device {
-                background-image: url("assets/img/ipad_land_white.png");
+                background-image: url("../img/ipad_land_white.png");
             }
         }
         > .device > .screen, &[data-orientation="portrait"] > .device > .screen {
@@ -189,18 +189,18 @@
             padding-bottom: 55.9322034%;
         }
         > .device, &[data-color="black"] > .device, &[data-orientation="portrait"][data-color="black"] > .device {
-            background-image: url("assets/img/s3_port_black.png");
+            background-image: url("../img/s3_port_black.png");
         }
         &[data-orientation="landscape"] {
             > .device, &[data-color="black"] > .device {
-                background-image: url("assets/img/s3_land_black.png");
+                background-image: url("../img/s3_land_black.png");
             }
         }
         &[data-color="white"] > .device, &[data-orientation="portrait"][data-color="white"] > .device {
-            background-image: url("assets/img/s3_port_white.png");
+            background-image: url("../img/s3_port_white.png");
         }
         &[data-orientation="landscape"][data-color="white"] > .device {
-            background-image: url("assets/img/s3_land_white.png");
+            background-image: url("../img/s3_land_white.png");
         }
         > .device > .screen, &[data-orientation="portrait"] > .device > .screen {
             top: 12.3728814%;
@@ -224,10 +224,10 @@
             padding-bottom: 56.3330381%;
         }
         > .device, &[data-orientation="portrait"] > .device {
-            background-image: url("assets/img/lumia920_port.png");
+            background-image: url("../img/lumia920_port.png");
         }
         &[data-orientation="landscape"] > .device {
-            background-image: url("assets/img/lumia920_land.png");
+            background-image: url("../img/lumia920_land.png");
         }
         > .device > .screen, &[data-orientation="portrait"] > .device > .screen {
             top: 10.6420405%;
@@ -251,10 +251,10 @@
             padding-bottom: 63.6678201%;
         }
         > .device, &[data-orientation="portrait"] > .device {
-            background-image: url("assets/img/nexus7_port.png");
+            background-image: url("../img/nexus7_port.png");
         }
         &[data-orientation="landscape"] > .device {
-            background-image: url("assets/img/nexus7_land.png");
+            background-image: url("../img/nexus7_land.png");
         }
         > .device > .screen, &[data-orientation="portrait"] > .device > .screen {
             top: 13.1365741%;
@@ -274,7 +274,7 @@
         &[data-orientation="landscape"] {
             padding-bottom: 64.7584973%;
             > .device {
-                background-image: url("assets/img/surface.png");
+                background-image: url("../img/surface.png");
             }
             > .device > .screen {
                 top: 14.5488029%;
@@ -284,7 +284,7 @@
             }
         }
         > .device {
-            background-image: url("assets/img/surface.png");
+            background-image: url("../img/surface.png");
         }
         > .device > .screen {
             top: 14.5488029%;
