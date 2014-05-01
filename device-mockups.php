@@ -11,7 +11,7 @@
  */
 
 function DM_add_stylesheet() {
-	wp_register_style( 'DM-style', plugins_url('assets/css/device-mockups.css', __FILE__) );
+	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.css', __FILE__) );
 	wp_enqueue_style( 'DM-style' );
 }
 
@@ -24,20 +24,23 @@ function device_wrapper( $atts , $content = null ) {
 			'type' => '',
 			'orientation' => 'portrait',
 			'color' => 'black',
+			'stack' => '',
 		), $atts )
 	);
 
 	// Code
 	ob_start();
 
-	echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
-		echo '<div class="device">';
-				echo '<div class="screen">';
-						echo '' . do_shortcode($content) . '';
-				echo '</div>';
-				echo '<div class="btn">';
-						echo '<!-- You can hook the "home button" to some JavaScript events or just remove it -->';
-				echo '</div>';
+	echo '<div class="' . esc_attr($stack) . ' ' . esc_attr($type) . ' ' . esc_attr($orientation) . '">';
+		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
+			echo '<div class="device">';
+					echo '<div class="screen">';
+							echo '' . do_shortcode($content) . '';
+					echo '</div>';
+					echo '<div class="btn">';
+							echo '<!-- You can hook the "home button" to some JavaScript events or just remove it -->';
+					echo '</div>';
+			echo '</div>';
 		echo '</div>';
 	echo '</div>';
 

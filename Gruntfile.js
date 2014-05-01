@@ -17,7 +17,11 @@ module.exports = function(grunt) {
           fontsDir: 'assets/fonts',
           outputStyle: 'nested',
           relativeAssets: true,
-          noLineComments: true
+          noLineComments: true,
+          importPath: [
+            'bower_components/bourbon/dist',
+            'bower_components/neat/app/assets/stylesheets'
+          ]
         }
       }
     },
@@ -26,7 +30,7 @@ module.exports = function(grunt) {
     cssmin: {
       add_banner: {
         files: {
-          'assets/css/device-mockups.css': ['assets/css/device-mockups.css']
+          'assets/css/dm-style.css': ['assets/css/dm-style.css']
         }
       }
     },
@@ -36,8 +40,8 @@ module.exports = function(grunt) {
 				browsers: ['last 2 version', 'ie 9']
 			},
 			dist: {
-				src: 'assets/css/device-mockups.css',
-				dest: 'assets/css/device-mockups.css'
+				src: 'assets/css/dm-style.css',
+				dest: 'assets/css/dm-style.css'
 			}
 		},
 
