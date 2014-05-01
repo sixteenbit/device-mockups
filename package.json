@@ -1,0 +1,15 @@
+{
+  "name": "device-mockups",
+  "version": "1.0.0",
+  "dependencies": {
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-autoprefixer": "~0.7.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
