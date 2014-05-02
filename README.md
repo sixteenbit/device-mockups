@@ -32,7 +32,7 @@ Macbook Content
 [device type="s3"]
 Galaxy S3 Content
 [/device]
-``
+```
 
 ```
 [device type="nexus7"]
