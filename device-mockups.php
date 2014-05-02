@@ -2,7 +2,7 @@
 /*
 	Plugin Name: Device Mockups
 	Plugin URI: https://github.com/mrdink/device-mockups
-	Description: WordPress shortcodes for Pixelsign's HTML5 mockups.
+	Description: WordPress shortcodes for Pixelsign's device mockups.
 	Author: Justin Peacock
 	Version: 1.0
 	Author URI: http://byjust.in
