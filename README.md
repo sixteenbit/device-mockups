@@ -1,6 +1,6 @@
 # Device Mockups
 
-WordPress shortcodes for [Pixelsign's HTML5 mockups](http://aarnis.com/)
+WordPress shortcodes for [Pixelsign's device mockups](http://aarnis.com/)
 
 ### Device Examples
 
