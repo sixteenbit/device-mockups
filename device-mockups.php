@@ -22,16 +22,19 @@ function device_wrapper( $atts , $content = null ) {
 	extract( shortcode_atts(
 		array(
 			'type' => '',
-			'orientation' => 'portrait',
-			'color' => 'black',
-			'stack' => '',
+			'orientation' => '',
+			'color' => '',
+			'stacked' => '',
+			'position' => ''
 		), $atts )
 	);
 
 	// Code
 	ob_start();
-
-	echo '<div class="' . esc_attr($stack) . ' ' . esc_attr($type) . ' ' . esc_attr($orientation) . '">';
+	if (esc_attr($stacked) == 'open') {
+		echo '<div class="stacked">';
+	}
+	echo '<div class="stacked-' . esc_attr($position) . ' ' . esc_attr($type) . ' ' . esc_attr($orientation) . '">';
 		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
 			echo '<div class="device">';
 					echo '<div class="screen">';
@@ -43,6 +46,9 @@ function device_wrapper( $atts , $content = null ) {
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
+	if (esc_attr($stacked) == 'closed') {
+		echo '</div">';
+	}
 
 	return ob_get_clean();
 }
