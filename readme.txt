@@ -1,11 +1,7 @@
 === Device Mockup Shortcodes ===
 Contributors: mrdink
-<<<<<<< HEAD
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CZ54JHH93S2Y
-Tags: shortcode, device, mockup
-=======
 Tags: portfolio, shortcode, device, mockup, iphone
->>>>>>> FETCH_HEAD
 Requires at least: 3.0.1
 Tested up to: 3.9
 Stable tag: 1.0
