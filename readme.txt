@@ -48,6 +48,14 @@ Surface Content
 Lumia 920 Content
 [/device]`
 
+Attributes:
+
+* color: black/white
+* orientation: portrait/landscape
+* stacked: open/closed
+* position: left/right
+* link
+
 Stacking:
 
 For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
