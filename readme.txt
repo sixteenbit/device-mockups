@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,7 @@ Shortcodes for responsive device mockups.
 
 Device Mockups is a collection of shortcodes to display screenshots, videos, or any content within a responsive device.
 
-Usage:
-
+#### Usage:
 `[device type="iphone5"]
 iPhone Content
 [/device]`
@@ -48,44 +47,41 @@ Surface Content
 Lumia 920 Content
 [/device]`
 
-Attributes:
-
+#### Attributes:
 * color: black/white
 * orientation: portrait/landscape
 * stacked: open/closed
 * position: left/right
 * link
 
-Stacking:
-
+#### Stacking:
 For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
 
-Example:
-
+#### Example:
 `[device type="macbook" stacked="open"]CONTENT[/device][device type="iphone5" position="right" stacked="closed"]CONTENT[/device]`
 
-Recommended Image Sizes:
+##### Recommended Image Sizes:
+* iPhone 5 - 640×1136
+* iPad - 2048×1536
+* iMac - 1920x1200
+* Macbook Pro (Retina) - 1440x900
+* Galaxy S3 - 720x1280
+* Nexus 7 - 1920x1200
+* Surface - 1920 x 1080
+* Lumia 920 - 768 x 1280
 
-iPhone 5 - 640×1136
-iPad - 2048×1536
-iMac - 1920x1200
-Macbook Pro (Retina) - 1440x900
-Galaxy S3 - 720x1280
-Nexus 7 - 1920x1200
-Surface - 1920 x 1080
-Lumia 920 - 768 x 1280
-
-* Note that these are only recomendaitons.
+Note that these are only recomendaitons.
 
 Please help by reporting any bugs/feature request at the link below.
 
-Bugs:
-
+### Bugs:
 * Report at: [Github Issue Tracker](https://github.com/mrdink/device-mockups/issues)
 
-Questions/Comments:
-
+### Questions/Comments:
 * http://byjust.in/contact/
+
+### Credit:
+* [Pixelsign](http://aarnis.com/)
 
 == Installation ==
 
