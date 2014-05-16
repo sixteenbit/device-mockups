@@ -14,7 +14,7 @@ Shortcodes for responsive device mockups.
 
 Device Mockups is a collection of shortcodes to display screenshots, videos, or any content within a responsive device.
 
-#### Usage:
+= Usage: =
 `[device type="iphone5"]
 iPhone Content
 [/device]`
@@ -47,20 +47,20 @@ Surface Content
 Lumia 920 Content
 [/device]`
 
-#### Attributes:
+= Attributes: =
 * color: black/white
 * orientation: portrait/landscape
 * stacked: open/closed
 * position: left/right
 * link
 
-#### Stacking:
+= Stacking: =
 For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
 
-#### Example:
+= Example: =
 `[device type="macbook" stacked="open"]CONTENT[/device][device type="iphone5" position="right" stacked="closed"]CONTENT[/device]`
 
-##### Recommended Image Sizes:
+= Recommended Image Sizes: =
 * iPhone 5 - 640×1136
 * iPad - 2048×1536
 * iMac - 1920x1200
@@ -74,13 +74,13 @@ Note that these are only recomendaitons.
 
 Please help by reporting any bugs/feature request at the link below.
 
-### Bugs:
+= Bugs: =
 * Report at: [Github Issue Tracker](https://github.com/mrdink/device-mockups/issues)
 
-### Questions/Comments:
+= Questions/Comments: =
 * http://byjust.in/contact/
 
-### Credit:
+= Credit: =
 * [Pixelsign](http://aarnis.com/)
 
 == Installation ==
@@ -93,6 +93,12 @@ Please help by reporting any bugs/feature request at the link below.
 1. Stacked option
 
 == Changelog ==
+
+= 1.0.2 =
+* formatting fixes for readme.txt :)
+
+= 1.0.1 =
+* readme.txt fixes
 
 = 1.0 =
 * Initial commit
