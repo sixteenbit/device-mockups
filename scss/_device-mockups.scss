@@ -49,7 +49,7 @@ $screen-color: #3c3c3c;
                 overflow: hidden;
                 background-color: $screen-color;
             }
-            .button {
+            .home-button {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -120,14 +120,14 @@ $screen-color: #3c3c3c;
             left: 16.0191273%;
             right: 16.0191273%;
         }
-        > .device > .button, &[data-orientation="portrait"] > .device > .button {
+        > .device > .home-button, &[data-orientation="portrait"] > .device > .home-button {
             display: block;
             top: 86.3%;
             bottom: 5.5%;
             left: 42%;
             right: 42%;
         }
-        &[data-orientation="landscape"] > .device > .button {
+        &[data-orientation="landscape"] > .device > .home-button {
             display: block;
             top: 42%;
             bottom: 42%;
@@ -169,14 +169,14 @@ $screen-color: #3c3c3c;
             left: 11.5459883%;
             right: 11.5459883%;
         }
-        > .device > .button, &[data-orientation="portrait"] > .device > .button {
+        > .device > .home-button, &[data-orientation="portrait"] > .device > .home-button {
             display: block;
             top: 90.2%;
             bottom: 5.5%;
             left: 47.3%;
             right: 47.3%;
         }
-        &[data-orientation="landscape"] > .device > .button {
+        &[data-orientation="landscape"] > .device > .home-button {
             display: block;
             top: 47.3%;
             bottom: 47.3%;

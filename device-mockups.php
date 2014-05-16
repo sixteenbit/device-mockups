@@ -25,7 +25,8 @@ function device_wrapper( $atts , $content = null ) {
 			'orientation' => '',
 			'color' => '',
 			'stacked' => '',
-			'position' => ''
+			'position' => '',
+			'link' => ''
 		), $atts )
 	);
 
@@ -37,10 +38,10 @@ function device_wrapper( $atts , $content = null ) {
 	echo '<div class="stacked-' . esc_attr($position) . ' ' . esc_attr($type) . ' ' . esc_attr($orientation) . '">';
 		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
 			echo '<div class="device">';
-					echo '<div class="screen">';
-						echo '' . do_shortcode($content) . '';
-					echo '</div>';
-				echo '<div class="btn"></div>'; // You can hook the "home button" to some JavaScript events or just remove it
+				echo '<div class="screen">';
+					echo '' . do_shortcode($content) . '';
+				echo '</div>';
+				if ( esc_attr($link ) ) { echo '<a href="' . esc_attr($link) . '" class="home-button"></a>'; }
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
@@ -50,6 +51,6 @@ function device_wrapper( $atts , $content = null ) {
 
 	return ob_get_clean();
 }
-
 add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );
+
 add_shortcode( 'device', 'device_wrapper' );
