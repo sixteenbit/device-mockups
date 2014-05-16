@@ -21,7 +21,7 @@
  */
 
 // Variables
-$bg-color: #3c3c3c;
+$screen-color: #3c3c3c;
 
 /* GENERAL STYLE */
 .device-mockup {
@@ -47,7 +47,7 @@ $bg-color: #3c3c3c;
                 left: 13.364486%;
                 right: 13.364486%;
                 overflow: hidden;
-                background-color: $bg-color;
+                background-color: $screen-color;
             }
             .button {
                 position: absolute;

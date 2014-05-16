@@ -1,5 +1,6 @@
 === Device Mockup Shortcodes ===
 Contributors: mrdink
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CZ54JHH93S2Y
 Tags: shortcode, device, mockup
 Requires at least: 3.0.1
 Tested up to: 3.9
@@ -56,6 +57,10 @@ Example
 
 1. Upload `/device-mockups/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Screenshots ==
+
+1. Stacked option
 
 == Changelog ==
 
