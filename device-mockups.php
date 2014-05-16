@@ -1,8 +1,8 @@
 <?php
 /*
 	Plugin Name: Device Mockups
-	Plugin URI: https://github.com/mrdink/device-mockups
-	Description: WordPress shortcodes for Pixelsign's device mockups.
+	Plugin URI: https://wordpress.org/plugins/device-mockups/
+	Description: Shortcodes for device mockups.
 	Author: Justin Peacock
 	Version: 1.0
 	Author URI: http://byjust.in
@@ -38,11 +38,9 @@ function device_wrapper( $atts , $content = null ) {
 		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
 			echo '<div class="device">';
 					echo '<div class="screen">';
-							echo '' . do_shortcode($content) . '';
+						echo '' . do_shortcode($content) . '';
 					echo '</div>';
-					echo '<div class="btn">';
-							echo '<!-- You can hook the "home button" to some JavaScript events or just remove it -->';
-					echo '</div>';
+				echo '<div class="btn"></div>'; // You can hook the "home button" to some JavaScript events or just remove it
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
