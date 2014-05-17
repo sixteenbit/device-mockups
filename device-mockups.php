@@ -34,8 +34,17 @@ function device_wrapper( $atts , $content = null ) {
 	ob_start();
 	if (esc_attr($stacked) == 'open') {
 		echo '<div class="stacked">';
-	}
-	echo '<div class="stacked-' . esc_attr($position) . ' ' . esc_attr($type) . ' ' . esc_attr($orientation) . '">';
+	} ?>
+
+	<div class="<?php
+		if ( !empty( esc_attr( $position ) ) ) {
+			echo 'stacked-'. esc_attr( $position ) .''; }
+		if ( !empty( esc_attr( $type ) ) ) {
+			echo ' '. esc_attr( $type ) .''; }
+		if ( !empty( esc_attr( $orientation ) ) ) {
+			echo ' '. esc_attr( $orientation ) .''; } ?>">
+
+	<?php
 		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
 			echo '<div class="device">';
 				echo '<div class="screen">';
