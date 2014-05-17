@@ -45,6 +45,15 @@ module.exports = function(grunt) {
 			}
 		},
 
+    // Uglify
+    uglify: {
+      min: {
+        files: {
+          "assets/js/editor.min.js": ["src/js/editor.js"]
+        }
+      }
+    },
+
 		// image optimization
 		imagemin: {
 			img: {
@@ -76,6 +85,10 @@ module.exports = function(grunt) {
       compass: {
         files: ['scss/**/*'],
         tasks: ['stylesheets']
+      },
+      js: {
+        files: ['src/**/*'],
+        tasks: ['scripts']
       }
     }
 
@@ -88,8 +101,14 @@ module.exports = function(grunt) {
     'cssmin'
   ]);
 
+  // register task
+  grunt.registerTask('scripts', [
+    'uglify'
+  ]);
+
   grunt.registerTask('default', [
     'stylesheets',
+    'scripts',
     'watch'
   ]);
 
