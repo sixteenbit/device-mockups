@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,9 @@ Please help by reporting any bugs/feature request at the link below.
 1. Stacked option
 
 == Changelog ==
+
+= 1.1.1 =
+* fixed a conditional statement that was outputing classes that weren't needed
 
 = 1.1 =
 * added TinyMCE button for predefined shortcodes
