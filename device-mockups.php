@@ -15,6 +15,22 @@ function DM_add_stylesheet() {
 	wp_enqueue_style( 'DM-style' );
 }
 
+add_action( 'init', 'DM_buttons' );
+function DM_buttons() {
+    add_filter( "mce_external_plugins", "DM_add_buttons" );
+    add_filter( 'mce_buttons', 'DM_register_buttons' );
+}
+
+function DM_add_buttons( $plugin_array ) {
+    $plugin_array['wptuts'] = plugins_url('assets/js/editor.js', __FILE__) );
+    return $plugin_array;
+}
+
+function DM_register_buttons( $buttons ) {
+    array_push( $buttons, 'dropcap', 'showrecent' ); // dropcap', 'recentposts
+    return $buttons;
+}
+
 // Devices
 function device_wrapper( $atts , $content = null ) {
 
