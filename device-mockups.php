@@ -37,11 +37,11 @@ function device_wrapper( $atts , $content = null ) {
 	} ?>
 
 	<div class="<?php
-		if ( !empty( esc_attr( $position ) ) ) {
+		if ( !empty( $position ) ) {
 			echo 'stacked-'. esc_attr( $position ) .''; }
-		if ( !empty( esc_attr( $type ) ) ) {
+		if ( !empty( $type ) ) {
 			echo ' '. esc_attr( $type ) .''; }
-		if ( !empty( esc_attr( $orientation ) ) ) {
+		if ( !empty( $orientation ) ) {
 			echo ' '. esc_attr( $orientation ) .''; } ?>">
 
 	<?php
