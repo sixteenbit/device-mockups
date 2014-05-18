@@ -19,8 +19,7 @@ module.exports = function(grunt) {
           relativeAssets: true,
           noLineComments: true,
           importPath: [
-            'bower_components/bourbon/dist',
-            'bower_components/neat/app/assets/stylesheets'
+            'bower_components/bourbon/dist'
           ]
         }
       }
@@ -29,8 +28,16 @@ module.exports = function(grunt) {
     // CSS minification + Add banner for WordPress
     cssmin: {
       add_banner: {
+        options: {
+          banner: '/*\n'+
+                      'Plugin Name: Device Mockups\n'+
+                      'Plugin URI: https://wordpress.org/plugins/device-mockups/\n'+
+                      'Author: Justin Peacock\n'+
+                      'Author URI: http://byjust.in\n'+
+                  '*/\n'
+        },
         files: {
-          'assets/css/dm-style.css': ['assets/css/dm-style.css']
+          'assets/css/dm-style.min.css': ['assets/css/dm-style.css']
         }
       }
     },

@@ -4,14 +4,14 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Description: Shortcodes for device mockups.
 Author: Justin Peacock
-Version: 1.1.1
+Version: 1.1.2
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function DM_add_stylesheet() {
-	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.css', __FILE__) );
+	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__) );
 	wp_enqueue_style( 'DM-style' );
 }
 
@@ -44,8 +44,15 @@ function device_wrapper( $atts , $content = null ) {
 		if ( !empty( $orientation ) ) {
 			echo ' '. esc_attr( $orientation ) .''; } ?>">
 
+		<div class="device-mockup" <?php
+			if ( !empty( $type ) ) {
+				echo 'data-device="'. esc_attr( $type ) .'"'; }
+			if ( !empty( $orientation ) ) {
+				echo ' data-orientation="'. esc_attr( $orientation ) .'"'; }
+			if ( !empty( $color ) ) {
+				echo ' data-color="'. esc_attr( $color ) .'"'; } ?>>
+
 	<?php
-		echo '<div class="device-mockup" data-device="' . esc_attr($type) . '" data-orientation="' . esc_attr($orientation) . '" data-color="' . esc_attr($color) . '">';
 			echo '<div class="device">';
 				echo '<div class="screen">';
 					echo '' . do_shortcode($content) . '';
@@ -70,14 +77,14 @@ add_shortcode( 'device', 'device_wrapper' );
 add_action('admin_head', 'DM_tinymce_button');
 
 function DM_tinymce_button() {
-    global $typenow;
-    // check user permissions
-    if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
-   	return;
-    }
-    // verify the post type
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return;
+		global $typenow;
+		// check user permissions
+		if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
+		return;
+		}
+		// verify the post type
+		if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+				return;
 	// check if WYSIWYG is enabled
 	if ( get_user_option('rich_editing') == 'true') {
 		add_filter("mce_external_plugins", "DM_add_tinymce_plugin");
@@ -86,13 +93,13 @@ function DM_tinymce_button() {
 }
 
 function DM_add_tinymce_plugin($plugin_array) {
-   	$plugin_array['DM_tc_button'] = plugins_url( '/assets/js/editor.min.js', __FILE__ );
-   	return $plugin_array;
+		$plugin_array['DM_tc_button'] = plugins_url( '/assets/js/editor.min.js', __FILE__ );
+		return $plugin_array;
 }
 
 function DM_register_my_tc_button($buttons) {
-   array_push($buttons, "DM_tc_button");
-   return $buttons;
+	 array_push($buttons, "DM_tc_button");
+	 return $buttons;
 }
 
 //

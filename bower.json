@@ -21,7 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~3.2.0",
-    "neat": "~1.5.1"
+    "bourbon": "~3.2.0"
   }
 }
