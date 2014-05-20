@@ -23,6 +23,27 @@
       .stacked .stacked-left.ipad.landscape,
       .stacked .stacked-right.ipad.landscape {
         width: 65%; }
+    .stacked .stacked-left.s3,
+    .stacked .stacked-right.s3 {
+      width: 20%; }
+      .stacked .stacked-left.s3.landscape,
+      .stacked .stacked-right.s3.landscape {
+        width: 45%; }
+    .stacked .stacked-left.nexus7,
+    .stacked .stacked-right.nexus7 {
+      width: 30%; }
+      .stacked .stacked-left.nexus7.landscape,
+      .stacked .stacked-right.nexus7.landscape {
+        width: 50%; }
+    .stacked .stacked-left.lumia920,
+    .stacked .stacked-right.lumia920 {
+      width: 20%; }
+      .stacked .stacked-left.lumia920.landscape,
+      .stacked .stacked-right.lumia920.landscape {
+        width: 36%; }
+    .stacked .stacked-left.surface,
+    .stacked .stacked-right.surface {
+      width: 45%; }
   .stacked .stacked-left {
     left: 50px; }
   .stacked .stacked-right {

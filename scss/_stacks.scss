@@ -22,6 +22,27 @@
                 width: 65%;
             }
         }
+        &.s3 {
+            width: 20%;
+            &.landscape {
+                width: 45%;
+            }
+        }
+        &.nexus7 {
+            width: 30%;
+            &.landscape {
+                width: 50%;
+            }
+        }
+        &.lumia920 {
+            width: 20%;
+            &.landscape {
+                width: 36%;
+            }
+        }
+        &.surface {
+            width: 45%;
+        }
     }
     .stacked-left {
         left: 50px;
