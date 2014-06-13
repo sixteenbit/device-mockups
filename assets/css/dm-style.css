@@ -1,10 +1,15 @@
 /*
    Stacks
    ========================================================================== */
+/**
+ *  By:
+ *      Justin Peacock
+ *      http://byjust.in/
+ */
 .stacked {
   position: relative;
-  width: 100%;
-  height: auto; }
+  height: auto;
+  width: 100%; }
   .stacked .stacked-left,
   .stacked .stacked-right {
     position: absolute;
