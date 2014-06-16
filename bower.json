@@ -1,6 +1,6 @@
 {
   "name": "device-mockups",
-  "version": "0.0.0",
+  "version": "1.1.4",
   "homepage": "https://github.com/mrdink/device-mockups",
   "authors": [
     "Justin Peacock <justin@sixteenbit.com>"
@@ -12,7 +12,6 @@
     "wordpress",
     "shortcodes"
   ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,6 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~3.2.0"
+    "bourbon": "~4.0.2"
   }
 }

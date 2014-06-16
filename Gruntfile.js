@@ -6,60 +6,64 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		// Compass
-    compass: {
-      dist: {
-        options: {
-          sassDir: 'scss',
-          cssDir: 'assets/css',
-          imagesDir: 'assets/img',
-          javascriptsDir: 'assets/js',
-          fontsDir: 'assets/fonts',
-          outputStyle: 'nested',
-          relativeAssets: true,
-          noLineComments: true,
-          importPath: [
-            'bower_components/bourbon/dist'
-          ]
-        }
-      }
-    },
+		config: {
+			version: 			'1.1.4',
+			bower: 	 			'bower_components',
+			sass: 	 			'src/scss',
+			assets: 		 	'assets',
+			src: 		 			'src'
+		},
 
-    // CSS minification + Add banner for WordPress
-    cssmin: {
-      add_banner: {
-        options: {
-          banner: '/*\n'+
-                      'Plugin Name: Device Mockups\n'+
-                      'Plugin URI: https://wordpress.org/plugins/device-mockups/\n'+
-                      'Author: Justin Peacock\n'+
-                      'Author URI: http://byjust.in\n'+
-                  '*/\n'
-        },
-        files: {
-          'assets/css/dm-style.min.css': ['assets/css/dm-style.css']
-        }
-      }
-    },
+		sass: {                              // Task
+			dist: {                            // Target
+				options: {                       // Target options
+					style: 'nested',
+					loadPath: [
+						'<%= config.bower %>/bourbon/dist'
+					]
+				},
+				files: {
+					'<%= config.assets %>/css/dm-style.css': '<%= config.sass %>/dm-style.scss'
+				}
+			}
+		},
+
+		// CSS minification + Add banner for WordPress
+		cssmin: {
+			add_banner: {
+				options: {
+					banner: '/*\n'+
+											'Plugin Name: Device Mockups\n'+
+											'Plugin URI: https://wordpress.org/plugins/device-mockups/\n'+
+											'Author: Justin Peacock\n'+
+											'Author URI: http://byjust.in/\n'+
+											'Version: <%= config.version %>\n'+
+									'*/\n'
+				},
+				files: {
+					'<%= config.assets %>/css/dm-style.min.css': ['<%= config.assets %>/css/dm-style.css']
+				}
+			}
+		},
 
 		autoprefixer: {
 			options: {
 				browsers: ['last 2 version', 'ie 9']
 			},
 			dist: {
-				src: 'assets/css/dm-style.css',
-				dest: 'assets/css/dm-style.css'
+				src: '<%= config.assets %>/css/dm-style.css',
+				dest: '<%= config.assets %>/css/dm-style.css'
 			}
 		},
 
-    // Uglify
-    uglify: {
-      min: {
-        files: {
-          "assets/js/editor.min.js": ["src/js/editor.js"]
-        }
-      }
-    },
+		// Uglify
+		uglify: {
+			min: {
+				files: {
+					"<%= config.assets %>/js/editor.min.js": ["<%= config.src %>/js/editor.js"]
+				}
+			}
+		},
 
 		// image optimization
 		imagemin: {
@@ -70,53 +74,53 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: 'assets/img/',
+					cwd: '<%= config.assets %>/img/',
 					src: '**/*.{png,jpg,gif}',
-					dest: 'assets/img/'
+					dest: '<%= config.assets %>/img/'
 				}]
 			}
 		},
 
 		// Watch for file changes
-    watch: {
-      options: {
-        livereload: true
-      },
-      grunt: {
-        files: ['Gruntfile.js'],
-        tasks: ['stylesheets']
-      },
-      markup: {
-        files: ["*.php"],
-      },
-      compass: {
-        files: ['scss/**/*'],
-        tasks: ['stylesheets']
-      },
-      js: {
-        files: ['src/**/*'],
-        tasks: ['scripts']
-      }
-    }
+		watch: {
+			options: {
+				livereload: true
+			},
+			grunt: {
+				files: ['Gruntfile.js'],
+				tasks: ['stylesheets']
+			},
+			markup: {
+				files: ["*.php"],
+			},
+			compass: {
+				files: ['scss/**/*'],
+				tasks: ['stylesheets']
+			},
+			js: {
+				files: ['<%= config.src %>/**/*'],
+				tasks: ['scripts']
+			}
+		}
 
 	});
 
 	// register task
-  grunt.registerTask('stylesheets', [
-    'compass',
-    'autoprefixer',
-    'cssmin'
-  ]);
+	grunt.registerTask('stylesheets', [
+		'sass',
+		'autoprefixer',
+		'cssmin'
+	]);
 
-  // register task
-  grunt.registerTask('scripts', [
-    'uglify'
-  ]);
+	// register task
+	grunt.registerTask('scripts', [
+		'uglify'
+	]);
 
-  grunt.registerTask('default', [
-    'stylesheets',
-    'scripts',
-    'watch'
-  ]);
+	grunt.registerTask('default', [
+		'stylesheets',
+		'scripts',
+		'watch'
+	]);
 
 };

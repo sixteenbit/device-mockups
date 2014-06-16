@@ -14,6 +14,31 @@ Shortcodes for responsive device mockups.
 
 Device Mockups is a collection of shortcodes to display screenshots, videos, or any content within a responsive device.
 
+= Attributes: =
+* color: black/white
+* orientation: portrait/landscape
+* stacked: open/closed
+* position: left/right
+* link
+
+= Recommended Image Sizes: =
+* iPhone 5 - 640×1136
+* iPad - 2048×1536
+* iMac - 1920x1200
+* Macbook Pro (Retina) - 1440x900
+* Galaxy S3 - 720x1280
+* Nexus 7 - 1920x1200
+* Surface - 1920 x 1080
+* Lumia 920 - 768 x 1280
+
+Note that these are only recomendaitons.
+
+= Stacking: =
+For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
+
+= Example: =
+`[device type="macbook" stacked="open"]CONTENT[/device][device type="iphone5" position="right" stacked="closed"]CONTENT[/device]`
+
 = Usage: =
 `[device type="iphone5"]
 iPhone Content
@@ -46,31 +71,6 @@ Surface Content
 `[device type="lumia920"]
 Lumia 920 Content
 [/device]`
-
-= Attributes: =
-* color: black/white
-* orientation: portrait/landscape
-* stacked: open/closed
-* position: left/right
-* link
-
-= Stacking: =
-For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
-
-= Example: =
-`[device type="macbook" stacked="open"]CONTENT[/device][device type="iphone5" position="right" stacked="closed"]CONTENT[/device]`
-
-= Recommended Image Sizes: =
-* iPhone 5 - 640×1136
-* iPad - 2048×1536
-* iMac - 1920x1200
-* Macbook Pro (Retina) - 1440x900
-* Galaxy S3 - 720x1280
-* Nexus 7 - 1920x1200
-* Surface - 1920 x 1080
-* Lumia 920 - 768 x 1280
-
-Note that these are only recomendaitons.
 
 Please help by reporting any bugs/feature request at the link below.
 
