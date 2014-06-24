@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,7 +95,7 @@ Please help by reporting any bugs/feature request at the link below.
 
 == Changelog ==
 
-= 1.1.5 =
+= 1.1.6 =
 * added the ability to wrap a link around a device screen
 
 = 1.1.4 =
