@@ -1,65 +1,4 @@
 /*
-   Stacks
-   ========================================================================== */
-/**
- *  By:
- *      Justin Peacock
- *      http://byjust.in/
- */
-.stacked {
-  position: relative;
-  height: auto;
-  width: 100%; }
-  .stacked .stacked-left,
-  .stacked .stacked-right {
-    position: absolute;
-    bottom: 0;
-    z-index: 10; }
-    .stacked .stacked-left.iphone5,
-    .stacked .stacked-right.iphone5 {
-      width: 16%; }
-      .stacked .stacked-left.iphone5.landscape,
-      .stacked .stacked-right.iphone5.landscape {
-        width: 35%; }
-    .stacked .stacked-left.ipad,
-    .stacked .stacked-right.ipad {
-      bottom: -12px;
-      width: 45%; }
-      .stacked .stacked-left.ipad.landscape,
-      .stacked .stacked-right.ipad.landscape {
-        width: 65%; }
-    .stacked .stacked-left.s3,
-    .stacked .stacked-right.s3 {
-      width: 20%; }
-      .stacked .stacked-left.s3.landscape,
-      .stacked .stacked-right.s3.landscape {
-        width: 45%; }
-    .stacked .stacked-left.nexus7,
-    .stacked .stacked-right.nexus7 {
-      width: 30%; }
-      .stacked .stacked-left.nexus7.landscape,
-      .stacked .stacked-right.nexus7.landscape {
-        width: 50%; }
-    .stacked .stacked-left.lumia920,
-    .stacked .stacked-right.lumia920 {
-      width: 20%; }
-      .stacked .stacked-left.lumia920.landscape,
-      .stacked .stacked-right.lumia920.landscape {
-        width: 36%; }
-    .stacked .stacked-left.surface,
-    .stacked .stacked-right.surface {
-      width: 45%; }
-  .stacked .stacked-left {
-    left: 50px; }
-  .stacked .stacked-right {
-    right: 50px; }
-  @media screen and (max-width: 768px) {
-    .stacked .stacked-left {
-      left: 10px; }
-    .stacked .stacked-right {
-      right: 10px; } }
-
-/*
  *  HTML5 Device Mockups
  *
  *  By:
@@ -286,3 +225,64 @@
       bottom: 14.9171271%;
       left: 9.36195587%;
       right: 9.36195587%; }
+
+/*
+   Stacks
+   ========================================================================== */
+/**
+ *  By:
+ *      Justin Peacock
+ *      http://byjust.in/
+ */
+.stacked {
+  position: relative;
+  height: auto;
+  width: 100%; }
+  .stacked .stacked-left,
+  .stacked .stacked-right {
+    position: absolute;
+    bottom: 0;
+    z-index: 10; }
+    .stacked .stacked-left.iphone5,
+    .stacked .stacked-right.iphone5 {
+      width: 16%; }
+      .stacked .stacked-left.iphone5.landscape,
+      .stacked .stacked-right.iphone5.landscape {
+        width: 35%; }
+    .stacked .stacked-left.ipad,
+    .stacked .stacked-right.ipad {
+      bottom: -12px;
+      width: 45%; }
+      .stacked .stacked-left.ipad.landscape,
+      .stacked .stacked-right.ipad.landscape {
+        width: 65%; }
+    .stacked .stacked-left.s3,
+    .stacked .stacked-right.s3 {
+      width: 20%; }
+      .stacked .stacked-left.s3.landscape,
+      .stacked .stacked-right.s3.landscape {
+        width: 45%; }
+    .stacked .stacked-left.nexus7,
+    .stacked .stacked-right.nexus7 {
+      width: 30%; }
+      .stacked .stacked-left.nexus7.landscape,
+      .stacked .stacked-right.nexus7.landscape {
+        width: 50%; }
+    .stacked .stacked-left.lumia920,
+    .stacked .stacked-right.lumia920 {
+      width: 20%; }
+      .stacked .stacked-left.lumia920.landscape,
+      .stacked .stacked-right.lumia920.landscape {
+        width: 36%; }
+    .stacked .stacked-left.surface,
+    .stacked .stacked-right.surface {
+      width: 45%; }
+  .stacked .stacked-left {
+    left: 50px; }
+  .stacked .stacked-right {
+    right: 50px; }
+  @media screen and (max-width: 768px) {
+    .stacked .stacked-left {
+      left: 10px; }
+    .stacked .stacked-right {
+      right: 10px; } }
