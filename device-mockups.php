@@ -4,7 +4,7 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Description: Shortcodes for device mockups.
 Author: Justin Peacock
-Version: 1.1.6
+Version: 1.1.7
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,9 +32,8 @@ function device_wrapper( $atts , $content = null ) {
 
 	// Code
 	ob_start();
-	if (esc_attr($stacked) == 'open') {
-		echo '<div class="stacked">';
-	} ?>
+
+	if (esc_attr($stacked) == 'open') { echo '<div class="stacked">';	} ?>
 
 	<div class="<?php
 		if ( !empty( $position ) ) {
@@ -55,17 +54,16 @@ function device_wrapper( $atts , $content = null ) {
 	<?php
 			echo '<div class="device">';
 				echo '<div class="screen">';
-					if (!empty( esc_attr($link ) ) ) { echo '<a href="' . esc_attr($link) . '">'; }
+					if ( !empty($link) ) { echo '<a href="' . esc_attr($link) . '">'; }
 						echo '' . do_shortcode($content) . '';
-					if (!empty( esc_attr($link ) ) ) { echo '</a>'; }
+					if ( !empty($link) ) { echo '</a>'; }
 				echo '</div>';
 				echo '<div class="home-button"></div>';
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
-	if (esc_attr($stacked) == 'closed') {
-		echo '</div">';
-	}
+
+	if (esc_attr($stacked) == 'closed') { echo '</div">';	}
 
 	return ob_get_clean();
 }
