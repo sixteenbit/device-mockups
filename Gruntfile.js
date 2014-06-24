@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		config: {
-			version: 			'1.1.4',
+			version: 			'1.1.5',
 			bower: 	 			'bower_components',
 			sass: 	 			'src/scss',
 			assets: 		 	'assets',
