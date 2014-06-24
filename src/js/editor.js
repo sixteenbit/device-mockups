@@ -7,56 +7,56 @@
             menu: [
                 {
                     text: 'iPhone 5',
-                    value: '[device type="iphone5" color="" orientation=""][/device]',
+                    value: '[device type="iphone5" color="" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'iPad',
-                    value: '[device type="ipad" color="" orientation=""][/device]',
+                    value: '[device type="ipad" color="" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'iMac',
-                    value: '[device type="imac"][/device]',
+                    value: '[device type="imac" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'Macbook Pro',
-                    value: '[device type="macbook"][/device]',
+                    value: '[device type="macbook" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'Galaxy S3',
-                    value: '[device type="s3" color="" orientation=""][/device]',
+                    value: '[device type="s3" color="" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'Nexus 7',
-                    value: '[device type="nexus7" orientation=""][/device]',
+                    value: '[device type="nexus7" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'Surface',
-                    value: '[device type="surface" orientation=""][/device]',
+                    value: '[device type="surface" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },
                 },
                 {
                     text: 'Lumia 920',
-                    value: '[device type="lumia920" orientation=""][/device]',
+                    value: '[device type="lumia920" orientation="" link=""][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },

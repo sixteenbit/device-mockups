@@ -55,9 +55,11 @@ function device_wrapper( $atts , $content = null ) {
 	<?php
 			echo '<div class="device">';
 				echo '<div class="screen">';
-					echo '' . do_shortcode($content) . '';
+					if (!empty( esc_attr($link ) ) ) { echo '<a href="' . esc_attr($link) . '">'; }
+						echo '' . do_shortcode($content) . '';
+					if (!empty( esc_attr($link ) ) ) { echo '</a>'; }
 				echo '</div>';
-				if ( esc_attr($link ) ) { echo '<a href="' . esc_attr($link) . '" class="home-button"></a>'; }
+				echo '<div class="home-button"></div>';
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
