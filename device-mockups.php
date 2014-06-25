@@ -26,44 +26,49 @@ function device_wrapper( $atts , $content = null ) {
 			'color' => '',
 			'stacked' => '',
 			'position' => '',
-			'link' => ''
+			'link' => '',
+			'width' => ''
 		), $atts )
 	);
 
 	// Code
 	ob_start();
 
-	if (esc_attr($stacked) == 'open') { echo '<div class="stacked">';	} ?>
+	if (esc_attr($stacked) == 'open') { echo '<div class="stacked">';	}
 
-	<div class="<?php
-		if ( !empty( $position ) ) {
-			echo 'stacked-'. esc_attr( $position ) .''; }
-		if ( !empty( $type ) ) {
-			echo ' '. esc_attr( $type ) .''; }
-		if ( !empty( $orientation ) ) {
-			echo ' '. esc_attr( $orientation ) .''; } ?>">
+		if ( !empty( $width ) ) { echo '<div style="max-width:'. $width .'">';	} ?>
 
-		<div class="device-mockup" <?php
+		<div class="<?php
+			if ( !empty( $position ) ) {
+				echo 'stacked-'. esc_attr( $position ) .''; }
 			if ( !empty( $type ) ) {
-				echo 'data-device="'. esc_attr( $type ) .'"'; }
+				echo ' '. esc_attr( $type ) .''; }
 			if ( !empty( $orientation ) ) {
-				echo ' data-orientation="'. esc_attr( $orientation ) .'"'; }
-			if ( !empty( $color ) ) {
-				echo ' data-color="'. esc_attr( $color ) .'"'; } ?>>
+				echo ' '. esc_attr( $orientation ) .''; } ?>">
 
-	<?php
-			echo '<div class="device">';
-				echo '<div class="screen">';
-					if ( !empty($link) ) { echo '<a href="' . esc_attr($link) . '">'; }
-						echo '' . do_shortcode($content) . '';
-					if ( !empty($link) ) { echo '</a>'; }
+			<div class="device-mockup" <?php
+				if ( !empty( $type ) ) {
+					echo 'data-device="'. esc_attr( $type ) .'"'; }
+				if ( !empty( $orientation ) ) {
+					echo ' data-orientation="'. esc_attr( $orientation ) .'"'; }
+				if ( !empty( $color ) ) {
+					echo ' data-color="'. esc_attr( $color ) .'"'; } ?>>
+
+		<?php
+				echo '<div class="device">';
+					echo '<div class="screen">';
+						if ( !empty($link) ) { echo '<a href="' . esc_attr($link) . '">'; }
+							echo '' . do_shortcode($content) . '';
+						if ( !empty($link) ) { echo '</a>'; }
+					echo '</div>';
+					echo '<div class="home-button"></div>';
 				echo '</div>';
-				echo '<div class="home-button"></div>';
 			echo '</div>';
 		echo '</div>';
-	echo '</div>';
 
-	if (esc_attr($stacked) == 'closed') { echo '</div">';	}
+		if ( !empty( $width ) ) { echo '</div>';	}
+
+	if (esc_attr($width) == 'closed') { echo '</div">';	}
 
 	return ob_get_clean();
 }
