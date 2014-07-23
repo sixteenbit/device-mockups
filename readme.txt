@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ Device Mockups is a collection of shortcodes to display screenshots, videos, or 
 * stacked: open/closed
 * position: left/right
 * link
+* width
 
 = Recommended Image Sizes: =
 * iPhone 5 - 640×1136
@@ -31,7 +32,7 @@ Device Mockups is a collection of shortcodes to display screenshots, videos, or 
 * Surface - 1920 x 1080
 * Lumia 920 - 768 x 1280
 
-Note that these are only recomendaitons.
+Note that these are only recommendations.
 
 = Stacking: =
 For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
@@ -95,6 +96,10 @@ Please help by reporting any bugs/feature request at the link below.
 
 == Changelog ==
 
+= 1.1.8 =
+* added width attribute. (Example width="80%" or width="400px")
+* note that `width` isn't for overall width of `stacked` devices. I suggest wrapping the `stacked` items in a div and applying a max-width
+
 = 1.1.7 =
 * added the ability to wrap a link around a device screen
 
@@ -108,7 +113,7 @@ Please help by reporting any bugs/feature request at the link below.
 * added version string to CSS
 
 = 1.1.1 =
-* fixed a conditional statement that was outputing classes that weren't needed
+* fixed a conditional statement that was outputting classes that weren't needed
 
 = 1.1 =
 * added TinyMCE button for predefined shortcodes

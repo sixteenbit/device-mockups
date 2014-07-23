@@ -10,7 +10,7 @@ Requires at least: 3.0.1
 
 Tested up to: 3.9
 
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 
 License: GPLv2 or later
 
@@ -28,6 +28,7 @@ Device Mockups is a collection of shortcodes to display screenshots, videos, or 
 * stacked: open/closed
 * position: left/right
 * link
+* width
 
 ### Recommended Image Sizes:
 * iPhone 5 - 640×1136
@@ -39,7 +40,7 @@ Device Mockups is a collection of shortcodes to display screenshots, videos, or 
 * Surface - 1920 x 1080
 * Lumia 920 - 768 x 1280
 
-Note that these are only recomendaitons.
+Note that these are only recommendations.
 
 ### Stacking:
 For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
