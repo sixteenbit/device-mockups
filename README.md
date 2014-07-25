@@ -20,7 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
-Device Mockups is a collection of shortcodes to display screenshots, videos, or any content within a responsive device.
+Show your work in high resolution mockup shortcodes. Wrap your images or YouTube or Vimeo videos in different device wrappers. There's also a simple dropdown in the editor to help select what device you would like to use. The devices will respond to the container it's in and will look great on mobile.
 
 ### Attributes:
 * color: black/white

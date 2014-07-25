@@ -2,7 +2,7 @@
 /*
 Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
-Description: Shortcodes for device mockups.
+Description: Shortcodes for responsive device mockups.
 Author: Justin Peacock
 Version: 1.1.9
 Author URI: http://byjust.in
