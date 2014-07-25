@@ -54,13 +54,7 @@ echo "Ignoring github specific & deployment script"
 svn propset svn:ignore "deploy.sh
 LICENSE
 README.md
-bower.json
-package.json
-Gruntfile.js
-scss
-src
-node_modules
-bower_components
+build
 .git
 .gitignore" "$SVNPATH/trunk/"
 

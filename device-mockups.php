@@ -2,9 +2,9 @@
 /*
 Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
-Description: Shortcodes for device mockups.
+Description: Shortcodes for responsive device mockups.
 Author: Justin Peacock
-Version: 1.1.8
+Version: 1.1.9
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,11 +64,12 @@ function device_wrapper( $atts , $content = null ) {
 					echo '<div class="home-button"></div>';
 				echo '</div>';
 			echo '</div>';
+
 		echo '</div>';
 
 		if ( !empty( $width ) ) { echo '</div>';	}
 
-	if (esc_attr($width) == 'closed') { echo '</div">';	}
+	if (esc_attr($stacked) == 'closed') { echo '</div>';	}
 
 	return ob_get_clean();
 }

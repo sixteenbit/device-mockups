@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Shortcodes for responsive device mockups.
 
 == Description ==
 
-Device Mockups is a collection of shortcodes to display screenshots, videos, or any content within a responsive device.
+Show your work in high resolution mockup shortcodes. Wrap your images or YouTube or Vimeo videos in different device wrappers. There's also a simple dropdown in the editor to help select what device you would like to use. The devices will respond to the container it's in and will look great on mobile.
 
 = Attributes: =
 * color: black/white
@@ -95,6 +95,9 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
+
+= 1.1.9 =
+* fixed a bug reported by Barn2Media
 
 = 1.1.8 =
 * added width attribute. (Example width="80%" or width="400px")
