@@ -3,12 +3,12 @@ Contributors: mrdink
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CZ54JHH93S2Y
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
-Tested up to: 3.9
-Stable tag: 1.1.9
+Tested up to: 4.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Shortcodes for responsive device mockups.
+Simplify your mockups, Device Mockups is a plugin to generate shortcodes that display screenshots of your websites, apps, or videos in a responsive  device mockup of your choice.
 
 == Description ==
 
