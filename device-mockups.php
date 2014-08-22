@@ -2,9 +2,9 @@
 /*
 Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
-Description: Simplify your mockups, Device Mockups is a plugin to generate shortcodes that display screenshots of your websites, apps, or videos in a responsive  device mockup of your choice.
+Description: Simplify your mockups. Device Mockups generates shortcodes that display screenshots of your content in a responsive device.
 Author: Justin Peacock
-Version: 1.2.0
+Version: 1.2.1
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

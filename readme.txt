@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Simplify your mockups, Device Mockups is a plugin to generate shortcodes that display screenshots of your websites, apps, or videos in a responsive  device mockup of your choice.
+Simplify your mockups. Device Mockups generates shortcodes that display screenshots of your content in a responsive device.
 
 == Description ==
 
@@ -95,6 +95,10 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
+
+= 1.2.1 =
+* added icons to suppot WP 4.0 installer (Created by @timm3h)
+* added more browser prefixes
 
 = 1.1.9 =
 * fixed a bug reported by Barn2Media

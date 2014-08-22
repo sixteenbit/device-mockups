@@ -10,13 +10,13 @@ Requires at least: 3.0.1
 
 Tested up to: 4.0
 
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 
 License: GPLv2 or later
 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-> Simplify your mockups, Device Mockups is a plugin to generate shortcodes that display screenshots of your websites, apps, or videos in a responsive  device mockup of your choice.
+> Simplify your mockups. Device Mockups generates shortcodes that display screenshots of your content in a responsive device.
 
 ## Description
 
