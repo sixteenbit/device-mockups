@@ -3,7 +3,7 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Author: Justin Peacock
 Author URI: http://byjust.in/
-Version: 1.1.9
+Version: 1.2.0
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* HTML5 Device Mockups  By: Tomi Hiltunen tomi@mitakuuluu.fi http://fi.linkedin.com/in/tomihiltunen/  Angelos Arnis http://fi.linkedin.com/in/angelosarnis/  Inluded in this package: - iPhone5 (black/white, portrait/landscape) - iPad2 (black/white, portrait/landscape) - iMac - MacBook Pro (retina model) - Nexus 7 - Lumia 920 - Microsoft Surface - Galaxy S3 */
 /* GENERAL STYLE */
 .device-mockup { position: relative; width: 100%; padding-bottom: 61.775701%; }
-.device-mockup > .device { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; background-size: 100% 100%; background-repeat: no-repeat; background-image: url("../img/macbook.png"); }
+.device-mockup > .device { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; background-image: url("../img/macbook.png"); }
 .device-mockup > .device > .screen { position: absolute; top: 11.0438729%; bottom: 14.6747352%; left: 13.364486%; right: 13.364486%; overflow: hidden; background-color: #3c3c3c; }
 .device-mockup > .device > .home-button { position: absolute; top: 0; left: 0; display: none; overflow: hidden; border-radius: 100%; -webkit-border-radius: 100%; -moz-border-radius: 100%; cursor: pointer; }
 .device-mockup[data-device="imac"] { padding-bottom: 81.230769%; }
