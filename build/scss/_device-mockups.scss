@@ -20,15 +20,16 @@
  *      - Galaxy S3
  */
 
-// Variables
-$screen-color: #3c3c3c;
-
 /* GENERAL STYLE */
 .device-mockup {
     position: relative;
     width: 100%;
     padding-bottom: 61.775701%;
-    > .device {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    & > .device {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -39,7 +40,7 @@ $screen-color: #3c3c3c;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-image: url("../img/macbook.png");
-        > {
+        & > {
             .screen {
                 position: absolute;
                 top: 11.0438729%;

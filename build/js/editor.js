@@ -61,7 +61,28 @@
                         editor.insertContent(this.value());
                     },
                 },
-           ]
+                {
+                    text: 'Chrome',
+                    value: '[browser type="chrome" width="" link=""][/browser]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+                {
+                    text: 'Firefox',
+                    value: '[browser type="firefox" width="" link=""][/browser]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+                {
+                    text: 'Safari',
+                    value: '[browser type="safari" width="" link=""][/browser]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+             ]
         });
     });
 })();
