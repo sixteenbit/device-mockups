@@ -3,7 +3,7 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Author: Justin Peacock
 Author URI: http://byjust.in/
-Version: 1.2.0
+Version: 1.2.2
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -74,20 +74,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Stacks ========================================================================== */
 /** By: Justin Peacock http://byjust.in/ */
-.stacked { position: relative; height: auto; width: 100%; }
-.stacked .stacked-left, .stacked .stacked-right { position: absolute; bottom: 0; z-index: 10; }
-.stacked .stacked-left.iphone5, .stacked .stacked-right.iphone5 { width: 16%; }
-.stacked .stacked-left.iphone5.landscape, .stacked .stacked-right.iphone5.landscape { width: 35%; }
-.stacked .stacked-left.ipad, .stacked .stacked-right.ipad { bottom: -12px; width: 45%; }
-.stacked .stacked-left.ipad.landscape, .stacked .stacked-right.ipad.landscape { width: 65%; }
-.stacked .stacked-left.s3, .stacked .stacked-right.s3 { width: 20%; }
-.stacked .stacked-left.s3.landscape, .stacked .stacked-right.s3.landscape { width: 45%; }
-.stacked .stacked-left.nexus7, .stacked .stacked-right.nexus7 { width: 30%; }
-.stacked .stacked-left.nexus7.landscape, .stacked .stacked-right.nexus7.landscape { width: 50%; }
-.stacked .stacked-left.lumia920, .stacked .stacked-right.lumia920 { width: 20%; }
-.stacked .stacked-left.lumia920.landscape, .stacked .stacked-right.lumia920.landscape { width: 36%; }
-.stacked .stacked-left.surface, .stacked .stacked-right.surface { width: 45%; }
-.stacked .stacked-left { left: 50px; }
-.stacked .stacked-right { right: 50px; }
-@media screen and (max-width: 768px) { .stacked .stacked-left { left: 10px; }
-  .stacked .stacked-right { right: 10px; } }
+.dm-stacked { position: relative; width: 100%; height: auto; }
+.dm-stacked .dm-stacked-left, .dm-stacked .dm-stacked-right { position: absolute; bottom: 0; z-index: 10; }
+.dm-stacked .dm-stacked-left.iphone5, .dm-stacked .dm-stacked-right.iphone5 { width: 16%; }
+.dm-stacked .dm-stacked-left.iphone5.landscape, .dm-stacked .dm-stacked-right.iphone5.landscape { width: 35%; }
+.dm-stacked .dm-stacked-left.ipad, .dm-stacked .dm-stacked-right.ipad { bottom: -12px; width: 45%; }
+.dm-stacked .dm-stacked-left.ipad.landscape, .dm-stacked .dm-stacked-right.ipad.landscape { width: 65%; }
+.dm-stacked .dm-stacked-left.s3, .dm-stacked .dm-stacked-right.s3 { width: 20%; }
+.dm-stacked .dm-stacked-left.s3.landscape, .dm-stacked .dm-stacked-right.s3.landscape { width: 45%; }
+.dm-stacked .dm-stacked-left.nexus7, .dm-stacked .dm-stacked-right.nexus7 { width: 30%; }
+.dm-stacked .dm-stacked-left.nexus7.landscape, .dm-stacked .dm-stacked-right.nexus7.landscape { width: 50%; }
+.dm-stacked .dm-stacked-left.lumia920, .dm-stacked .dm-stacked-right.lumia920 { width: 20%; }
+.dm-stacked .dm-stacked-left.lumia920.landscape, .dm-stacked .dm-stacked-right.lumia920.landscape { width: 36%; }
+.dm-stacked .dm-stacked-left.surface, .dm-stacked .dm-stacked-right.surface { width: 45%; }
+.dm-stacked .dm-stacked-left { left: 50px; }
+.dm-stacked .dm-stacked-right { right: 50px; }
+@media screen and (max-width: 768px) { .dm-stacked .dm-stacked-left { left: 10px; }
+  .dm-stacked .dm-stacked-right { right: 10px; } }
+
+/* Hide ========================================================================== */
+/** By: Justin Peacock http://byjust.in/ */
+.dm-hide-left { overflow: hidden; margin-left: -70px; }
+.dm-hide-left .device-mockup { position: relative; right: 33.33333%; }
+
+.dm-hide-right { overflow: hidden; margin-right: -70px; }
+.dm-hide-right .device-mockup { position: relative; left: 33.33333%; }

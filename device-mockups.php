@@ -4,20 +4,22 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Description: Simplify your mockups. Device Mockups generates shortcodes that display screenshots of your content in a responsive device.
 Author: Justin Peacock
-Version: 1.2.1
+Version: 1.2.2
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function DM_add_stylesheet() {
-	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.2.0' );
+	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.2.2' );
 	wp_enqueue_style( 'DM-style' );
 }
+add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );
 
+//
 // Devices
+//
 function device_wrapper( $atts , $content = null ) {
-
 	// Attributes
 	extract( shortcode_atts(
 		array(
@@ -27,54 +29,59 @@ function device_wrapper( $atts , $content = null ) {
 			'stacked' => '',
 			'position' => '',
 			'link' => '',
-			'width' => ''
+			'width' => '',
+			'hide' => ''
 		), $atts )
 	);
-
-	// Code
 	ob_start();
 
-	if (esc_attr($stacked) == 'open') { echo '<div class="stacked">';	}
+	// Open $stacked
+	if (esc_attr($stacked) == 'open') { echo '<div class="dm-stacked">';	}
 
-		if ( !empty( $width ) ) { echo '<div style="max-width:'. $width .'">';	} ?>
+		// Open $hide
+		if ( !empty( $hide ) ) { echo '<div class="dm-hide-'. esc_attr( $hide ) .'">'; }
 
-		<div class="<?php
-			if ( !empty( $position ) ) {
-				echo 'stacked-'. esc_attr( $position ) .''; }
-			if ( !empty( $type ) ) {
-				echo ' '. esc_attr( $type ) .''; }
-			if ( !empty( $orientation ) ) {
-				echo ' '. esc_attr( $orientation ) .''; } ?>">
+			// Open $width
+			if ( !empty( $width ) ) { echo '<div style="max-width:'. $width .'">';	} ?>
 
-			<div class="device-mockup" <?php
-				if ( !empty( $type ) ) {
-					echo 'data-device="'. esc_attr( $type ) .'"'; }
-				if ( !empty( $orientation ) ) {
-					echo ' data-orientation="'. esc_attr( $orientation ) .'"'; }
-				if ( !empty( $color ) ) {
-					echo ' data-color="'. esc_attr( $color ) .'"'; } ?>>
+				<div class="<?php
+					if ( !empty( $position ) ) {
+						echo 'dm-stacked-'. esc_attr( $position ) .''; }
+					if ( !empty( $type ) ) {
+						echo ' '. esc_attr( $type ) .''; }
+					if ( !empty( $orientation ) ) {
+						echo ' '. esc_attr( $orientation ) .''; } ?>">
 
-		<?php
-				echo '<div class="device">';
-					echo '<div class="screen">';
-						if ( !empty($link) ) { echo '<a href="' . esc_attr($link) . '">'; }
-							echo '' . do_shortcode($content) . '';
-						if ( !empty($link) ) { echo '</a>'; }
+					<div class="device-mockup" <?php
+						if ( !empty( $type ) ) {
+							echo 'data-device="'. esc_attr( $type ) .'"'; }
+						if ( !empty( $orientation ) ) {
+							echo ' data-orientation="'. esc_attr( $orientation ) .'"'; }
+						if ( !empty( $color ) ) {
+							echo ' data-color="'. esc_attr( $color ) .'"'; } ?>>
+				<?php
+						echo '<div class="device">';
+							echo '<div class="screen">';
+								if ( !empty($link) ) { echo '<a href="' . esc_attr($link) . '">'; }
+									echo '' . do_shortcode($content) . '';
+								if ( !empty($link) ) { echo '</a>'; }
+							echo '</div>';
+							echo '<div class="home-button"></div>';
+						echo '</div>';
 					echo '</div>';
-					echo '<div class="home-button"></div>';
 				echo '</div>';
-			echo '</div>';
 
-		echo '</div>';
+			// Close $width
+			if ( !empty( $width ) ) { echo '</div>'; }
 
-		if ( !empty( $width ) ) { echo '</div>';	}
+		// Close $hide
+		if ( !empty( $hide ) ) { echo '</div>';	}
 
+	// Close $stacked
 	if (esc_attr($stacked) == 'closed') { echo '</div>';	}
 
 	return ob_get_clean();
 }
-add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );
-
 add_shortcode( 'device', 'device_wrapper' );
 
 //
