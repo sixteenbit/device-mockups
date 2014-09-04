@@ -10,7 +10,7 @@ Requires at least: 3.0.1
 
 Tested up to: 4.0
 
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 
 License: GPLv2 or later
 
@@ -29,6 +29,7 @@ Show your work in high resolution mockup shortcodes. Wrap your images or YouTube
 * position: left/right
 * link
 * width
+* hide
 
 ### Recommended Image Sizes:
 * iPhone 5 - 640×1136

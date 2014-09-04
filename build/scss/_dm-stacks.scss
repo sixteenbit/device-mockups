@@ -7,11 +7,11 @@
  *      http://byjust.in/
  */
 
-.stacked {
+.dm-stacked {
     position: relative;
     @include size(100% auto);
-    .stacked-left,
-    .stacked-right {
+    .dm-stacked-left,
+    .dm-stacked-right {
         position: absolute;
         bottom: 0;
         z-index: 10;
@@ -50,17 +50,17 @@
             width: 45%;
         }
     }
-    .stacked-left {
+    .dm-stacked-left {
         left: 50px;
     }
-    .stacked-right {
+    .dm-stacked-right {
         right: 50px;
     }
     @media screen and (max-width: 768px) {
-        .stacked-left {
+        .dm-stacked-left {
             left: 10px;
         }
-        .stacked-right {
+        .dm-stacked-right {
             right: 10px;
         }
     }

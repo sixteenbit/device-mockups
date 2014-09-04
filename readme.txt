@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,11 +14,18 @@ Simplify your mockups. Device Mockups generates shortcodes that display screensh
 
 Show your work in high resolution mockup shortcodes. Wrap your images or YouTube or Vimeo videos in different device wrappers. There's also a simple dropdown in the editor to help select what device you would like to use. The devices will respond to the container it's in and will look great on mobile.
 
-= Attributes: =
+= Device Attributes: =
+* type
 * color: black/white
 * orientation: portrait/landscape
 * stacked: open/closed
 * position: left/right
+* link
+* width
+* hide
+
+= Browser Attributes: =
+* type
 * link
 * width
 
@@ -95,6 +102,10 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
+
+= 1.3.0 =
+* added an attribute to hide the left or right of the device (currently doesn't work with stacking) - idea credit to @raphaelkross
+* added browsers (chrome, firefox, and safari) - images credit to [Pixeden](http://www.pixeden.com/psd-web-elements/flat-psd-browsers-set)
 
 = 1.2.1 =
 * added icons to suppot WP 4.0 installer (Created by @timm3h)

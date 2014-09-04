@@ -1,6 +1,6 @@
 {
   "name": "device-mockups",
-  "version": "1.1.9",
+  "version": "1.2.2",
   "homepage": "https://wordpress.org/plugins/device-mockups/",
   "authors": [
     "Justin Peacock <justin@sixteenbit.com>"
@@ -20,6 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~4.0.2"
+    "bourbon": "~3.2.0"
   }
 }
