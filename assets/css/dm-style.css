@@ -73,6 +73,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .device-mockup[data-device="surface"] > .device { background-image: url("../img/surface.png"); }
 .device-mockup[data-device="surface"] > .device > .screen { top: 14.5488029%; bottom: 14.9171271%; left: 9.36195587%; right: 9.36195587%; }
 
+.dm-width { max-width: 100%; display: inline-block; }
+
 /* Browsers ========================================================================== */
 /** By: Justin Peacock http://byjust.in/ */
 .dm-browsers { position: relative; width: 100%; padding-bottom: 61.775701%; }

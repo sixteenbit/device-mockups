@@ -1,6 +1,12 @@
 @import "bourbon";
 @import "variables";
 @import "device-mockups";
+
+.dm-width {
+    max-width: 100%;
+    display: inline-block;
+}
+
 @import "dm-browsers";
 @import "dm-stacks";
 @import "dm-hide";

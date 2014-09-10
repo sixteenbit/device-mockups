@@ -42,7 +42,7 @@ function device_wrapper( $atts , $content = null ) {
     if ( !empty( $hide ) ) { echo '<div class="dm-hide-'. esc_attr( $hide ) .'">'; }
 
       // Open $width
-      if ( !empty( $width ) ) { echo '<div style="max-width:'. $width .'">';  } ?>
+      if ( !empty( $width ) ) { echo '<div class="dm-width" style="width:'. $width .';">';  } ?>
 
         <div class="<?php
           if ( !empty( $position ) ) {
