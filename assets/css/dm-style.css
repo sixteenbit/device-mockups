@@ -8,15 +8,17 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-.dm-device { position: relative; width: 100%; padding-bottom: 61.775701%; }
+.dm-device { position: relative; width: 100%; padding-bottom: 61.775701%; margin-bottom: 20px; }
 .dm-device img { max-width: 100%; height: auto; }
 .dm-device > .device { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; }
 .dm-device > .device > .screen { position: absolute; top: 11.0438729%; bottom: 14.6747352%; left: 13.364486%; right: 13.364486%; overflow: hidden; background-color: #3c3c3c; }
+.dm-device > .device > .screen iframe { width: 100% !important; height: 100% !important; }
 
-.dm-browser { position: relative; width: 100%; padding-bottom: 61.775701%; }
+.dm-browser { position: relative; width: 100%; padding-bottom: 61.775701%; margin-bottom: 20px; }
 .dm-browser img { max-width: 100%; height: auto; border-right: none !important; }
 .dm-browser > .device { position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; -webkit-background-size: 100% 100%; background-size: 100% 100%; background-repeat: no-repeat; }
 .dm-browser > .device > .screen { position: absolute; top: 15.043873%; left: 0; right: 0; bottom: 0; overflow: hidden; background-color: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+.dm-browser > .device > .screen iframe { width: 100% !important; height: 100% !important; }
 
 .dm-width { max-width: 100%; display: inline-block; }
 
@@ -58,8 +60,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .dm-device[data-device="iphone5s"][data-orientation="landscape"][data-color="white"] > .device { background-image: url("../img/iphone5s_land_white.png"); }
 .dm-device[data-device="iphone5s"][data-color="gold"] > .device, .dm-device[data-device="iphone5s"][data-orientation="portrait"][data-color="gold"] > .device { background-image: url("../img/iphone5s_port_gold.png"); }
 .dm-device[data-device="iphone5s"][data-orientation="landscape"][data-color="gold"] > .device { background-image: url("../img/iphone5s_land_gold.png"); }
-.dm-device[data-device="iphone5s"] > .device > .screen, .dm-device[data-device="iphone5s"][data-orientation="portrait"] > .device > .screen { top: 15.9%; bottom: 15.4%; left: 11.2%; right: 10.4%; }
-.dm-device[data-device="iphone5s"][data-orientation="landscape"] > .device > .screen { top: 10.4%; bottom: 11.2%; left: 15.9%; right: 15.4%; }
+.dm-device[data-device="iphone5s"] > .device > .screen, .dm-device[data-device="iphone5s"][data-orientation="portrait"] > .device > .screen { top: 14.7%; bottom: 14.2%; left: 8.6%; right: 7.5%; }
+.dm-device[data-device="iphone5s"][data-orientation="landscape"] > .device > .screen { top: 7.4%; bottom: 8.5%; left: 14.8%; right: 14.2%; }
 
 /* iPhone 6 ========================================================================== */
 .dm-device[data-device="iphone6"] { padding-bottom: 200.477897%; }
@@ -67,12 +69,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .dm-device[data-device="iphone6"][data-orientation="landscape"] { padding-bottom: 49.9701136%; }
 .dm-device[data-device="iphone6"] > .device, .dm-device[data-device="iphone6"][data-color="black"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="black"] > .device { background-image: url("../img/iphone6_port_black.png"); }
 .dm-device[data-device="iphone6"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="black"] > .device { background-image: url("../img/iphone6_land_black.png"); }
-.dm-device[data-device="iphone6"][data-color="white"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="white"] > .device { background-image: url("../img/iphone6_port_white.png"); }
-.dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="white"] > .device { background-image: url("../img/iphone6_land_white.png"); }
+.dm-device[data-device="iphone6"][data-color="silver"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="silver"] > .device { background-image: url("../img/iphone6_port_silver.png"); }
+.dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="silver"] > .device { background-image: url("../img/iphone6_land_silver.png"); }
 .dm-device[data-device="iphone6"][data-color="gold"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="gold"] > .device { background-image: url("../img/iphone6_port_gold.png"); }
 .dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="gold"] > .device { background-image: url("../img/iphone6_land_gold.png"); }
-.dm-device[data-device="iphone6"] > .device > .screen, .dm-device[data-device="iphone6"][data-orientation="portrait"] > .device > .screen { top: 13.6%; bottom: 13.5%; left: 10.7%; right: 10.7%; }
-.dm-device[data-device="iphone6"][data-orientation="landscape"] > .device > .screen { top: 10.7%; bottom: 10.7%; left: 13.6%; right: 13.5%; }
+.dm-device[data-device="iphone6"] > .device > .screen, .dm-device[data-device="iphone6"][data-orientation="portrait"] > .device > .screen { top: 12.2%; bottom: 12.1%%; left: 6.6%; right: 6.6%; }
+.dm-device[data-device="iphone6"][data-orientation="landscape"] > .device > .screen { top: 6%; bottom: 6.1%; left: 11.6%; right: 11.6%; }
 
 /* iPhone 6 Plus ========================================================================== */
 .dm-device[data-device="iphone6-plus"] { padding-bottom: 200.477897%; }
@@ -80,12 +82,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .dm-device[data-device="iphone6-plus"][data-orientation="landscape"] { padding-bottom: 49.9701136%; }
 .dm-device[data-device="iphone6-plus"] > .device, .dm-device[data-device="iphone6-plus"][data-color="black"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="black"] > .device { background-image: url("../img/iphone6_plus_port_black.png"); }
 .dm-device[data-device="iphone6-plus"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="black"] > .device { background-image: url("../img/iphone6_plus_land_black.png"); }
-.dm-device[data-device="iphone6-plus"][data-color="white"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="white"] > .device { background-image: url("../img/iphone6_plus_port_white.png"); }
-.dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="white"] > .device { background-image: url("../img/iphone6_plus_land_white.png"); }
+.dm-device[data-device="iphone6-plus"][data-color="silver"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="silver"] > .device { background-image: url("../img/iphone6_plus_port_silver.png"); }
+.dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="silver"] > .device { background-image: url("../img/iphone6_plus_land_silver.png"); }
 .dm-device[data-device="iphone6-plus"][data-color="gold"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="gold"] > .device { background-image: url("../img/iphone6_plus_port_gold.png"); }
 .dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="gold"] > .device { background-image: url("../img/iphone6_plus_land_gold.png"); }
-.dm-device[data-device="iphone6-plus"] > .device > .screen, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"] > .device > .screen { top: 12.6%; bottom: 12.6%; left: 9.7%; right: 9.7%; }
-.dm-device[data-device="iphone6-plus"][data-orientation="landscape"] > .device > .screen { top: 9.7%; bottom: 9.7%; left: 12.6%; right: 12.6%; }
+.dm-device[data-device="iphone6-plus"] > .device > .screen, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"] > .device > .screen { top: 11.4%; bottom: 11.6%; left: 6.6%; right: 6.2%; }
+.dm-device[data-device="iphone6-plus"][data-orientation="landscape"] > .device > .screen { top: 6.3%; bottom: 6.5%; left: 11.4%; right: 11.6%; }
 
 /* Lumia 920 ========================================================================== */
 .dm-device[data-device="lumia920"] { padding-bottom: 172.796353%; }
@@ -131,7 +133,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /** Options */
 /* Stacking ========================================================================== */
-.dm-stacked { position: relative; width: 100%; height: auto; }
+.dm-stacked { position: relative; margin-bottom: 20px; width: 100%; height: auto; }
 .dm-stacked .dm-stacked-left, .dm-stacked .dm-stacked-right { position: absolute; bottom: 0; z-index: 10; }
 .dm-stacked .dm-stacked-left.iphone5, .dm-stacked .dm-stacked-right.iphone5 { width: 16%; }
 .dm-stacked .dm-stacked-left.iphone5.landscape, .dm-stacked .dm-stacked-right.iphone5.landscape { width: 35%; }
@@ -146,6 +148,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .dm-stacked .dm-stacked-left.surface, .dm-stacked .dm-stacked-right.surface { width: 45%; }
 .dm-stacked .dm-stacked-left { left: 50px; }
 .dm-stacked .dm-stacked-right { right: 50px; }
+.dm-stacked .dm-device { margin-bottom: 0; }
 @media screen and (max-width: 768px) { .dm-stacked .dm-stacked-left { left: 10px; }
   .dm-stacked .dm-stacked-right { right: 10px; } }
 

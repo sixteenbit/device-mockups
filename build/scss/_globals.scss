@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 61.775701%;
+    margin-bottom: 20px;
     img {
         max-width: 100%;
         height: auto;
@@ -25,6 +26,10 @@
                 right: 13.364486%;
                 overflow: hidden;
                 background-color: $screen-color;
+                iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
             }
         }
     }
@@ -34,6 +39,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 61.775701%;
+    margin-bottom: 20px;
     img {
         max-width: 100%;
         height: auto;
@@ -60,6 +66,10 @@
                 background-color: #fff;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
+                iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function DM_add_stylesheet() {
-  wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.58758' );
+  wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.3.0' );
   wp_enqueue_style( 'DM-style' );
 }
 add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );

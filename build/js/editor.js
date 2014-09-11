@@ -6,6 +6,27 @@
             icon: 'icon dashicons-smartphone',
             menu: [
                 {
+                    text: 'iPhone 6',
+                    value: '[device type="iphone6" color="" orientation="" width="" link=""][/device]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+                {
+                    text: 'iPhone 6 Plus',
+                    value: '[device type="iphone6-plus" color="" orientation="" width="" link=""][/device]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+                {
+                    text: 'iPhone 5s',
+                    value: '[device type="iphone5s" color="" orientation="" width="" link=""][/device]',
+                    onclick: function() {
+                        editor.insertContent(this.value());
+                    },
+                },
+                {
                     text: 'iPhone 5',
                     value: '[device type="iphone5" color="" orientation="" width="" link=""][/device]',
                     onclick: function() {
@@ -62,22 +83,8 @@
                     },
                 },
                 {
-                    text: 'Chrome',
-                    value: '[browser type="chrome" width="" link=""][/browser]',
-                    onclick: function() {
-                        editor.insertContent(this.value());
-                    },
-                },
-                {
-                    text: 'Firefox',
-                    value: '[browser type="firefox" width="" link=""][/browser]',
-                    onclick: function() {
-                        editor.insertContent(this.value());
-                    },
-                },
-                {
-                    text: 'Safari',
-                    value: '[browser type="safari" width="" link=""][/browser]',
+                    text: 'Stacking',
+                    value: '[device type="macbook" orientation="" width="" link="" stacked="open"][/device][device type="iphone" orientation="" width="" link="" stacked="closed" position="closed"][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },

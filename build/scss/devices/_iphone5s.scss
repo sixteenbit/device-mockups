@@ -36,16 +36,16 @@
         }
         & > .device > .screen,
         &[data-orientation="portrait"] > .device > .screen {
-            top: 15.9%;
-            bottom: 15.4%;
-            left: 11.2%;
-            right: 10.4%;
+            top: 14.7%;
+            bottom: 14.2%;
+            left: 8.6%;
+            right: 7.5%;
         }
         &[data-orientation="landscape"] > .device > .screen {
-            top: 10.4%;
-            bottom: 11.2%;
-            left: 15.9%;
-            right: 15.4%;
+            top: 7.4%;
+            bottom: 8.5%;
+            left: 14.8%;
+            right: 14.2%;
         }
     }
 }

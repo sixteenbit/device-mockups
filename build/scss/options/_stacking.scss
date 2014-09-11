@@ -3,6 +3,7 @@
    ========================================================================== */
 .dm-stacked {
     position: relative;
+    margin-bottom: 20px;
     @include size(100% auto);
     .dm-stacked-left,
     .dm-stacked-right {
@@ -49,6 +50,9 @@
     }
     .dm-stacked-right {
         right: 50px;
+    }
+    .dm-device {
+        margin-bottom: 0;
     }
     @media screen and (max-width: 768px) {
         .dm-stacked-left {
