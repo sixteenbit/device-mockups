@@ -1,0 +1,51 @@
+/*
+   iPhone 6
+   ========================================================================== */
+.dm-device {
+    @extend %dm-device;
+    &[data-device="iphone6"] {
+        padding-bottom: 200.477897%;
+        &[data-orientation="portrait"] {
+            padding-bottom: 200.477897%;
+        }
+        &[data-orientation="landscape"] {
+            padding-bottom: 49.9701136%;
+        }
+        & > .device, &[data-color="black"] > .device,
+        &[data-orientation="portrait"][data-color="black"] > .device {
+            background-image: url("../img/iphone6_port_black.png");
+        }
+        &[data-orientation="landscape"] {
+            & > .device, &[data-color="black"] > .device {
+                background-image: url("../img/iphone6_land_black.png");
+            }
+        }
+        &[data-color="silver"] > .device,
+        &[data-orientation="portrait"][data-color="silver"] > .device {
+            background-image: url("../img/iphone6_port_silver.png");
+        }
+        &[data-orientation="landscape"][data-color="silver"] > .device {
+            background-image: url("../img/iphone6_land_silver.png");
+        }
+        &[data-color="gold"] > .device,
+        &[data-orientation="portrait"][data-color="gold"] > .device {
+            background-image: url("../img/iphone6_port_gold.png");
+        }
+        &[data-orientation="landscape"][data-color="gold"] > .device {
+            background-image: url("../img/iphone6_land_gold.png");
+        }
+        & > .device > .screen,
+        &[data-orientation="portrait"] > .device > .screen {
+            top: 13.6%;
+            bottom: 13.5%;
+            left: 10.7%;
+            right: 10.7%;
+        }
+        &[data-orientation="landscape"] > .device > .screen {
+            top: 10.7%;
+            bottom: 10.7%;
+            left: 13.6%;
+            right: 13.5%;
+        }
+    }
+}

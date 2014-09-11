@@ -1,0 +1,51 @@
+/*
+   iPhone 5s
+   ========================================================================== */
+.dm-device {
+    @extend %dm-device;
+    &[data-device="iphone5s"] {
+        padding-bottom: 200.477897%;
+        &[data-orientation="portrait"] {
+            padding-bottom: 200.477897%;
+        }
+        &[data-orientation="landscape"] {
+            padding-bottom: 49.9701136%;
+        }
+        & > .device, &[data-color="black"] > .device,
+        &[data-orientation="portrait"][data-color="black"] > .device {
+            background-image: url("../img/iphone5s_port_black.png");
+        }
+        &[data-orientation="landscape"] {
+            & > .device, &[data-color="black"] > .device {
+                background-image: url("../img/iphone5s_land_black.png");
+            }
+        }
+        &[data-color="white"] > .device,
+        &[data-orientation="portrait"][data-color="white"] > .device {
+            background-image: url("../img/iphone5s_port_white.png");
+        }
+        &[data-orientation="landscape"][data-color="white"] > .device {
+            background-image: url("../img/iphone5s_land_white.png");
+        }
+        &[data-color="gold"] > .device,
+        &[data-orientation="portrait"][data-color="gold"] > .device {
+            background-image: url("../img/iphone5s_port_gold.png");
+        }
+        &[data-orientation="landscape"][data-color="gold"] > .device {
+            background-image: url("../img/iphone5s_land_gold.png");
+        }
+        & > .device > .screen,
+        &[data-orientation="portrait"] > .device > .screen {
+            top: 15.9%;
+            bottom: 15.4%;
+            left: 11.2%;
+            right: 10.4%;
+        }
+        &[data-orientation="landscape"] > .device > .screen {
+            top: 10.4%;
+            bottom: 11.2%;
+            left: 15.9%;
+            right: 15.4%;
+        }
+    }
+}

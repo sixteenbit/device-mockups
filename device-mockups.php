@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function DM_add_stylesheet() {
-  wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.3.0' );
+  wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.58758' );
   wp_enqueue_style( 'DM-style' );
 }
 add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );
@@ -52,7 +52,7 @@ function device_wrapper( $atts , $content = null ) {
           if ( !empty( $orientation ) ) {
             echo ' '. esc_attr( $orientation ) .''; } ?>">
 
-          <div class="device-mockup" <?php
+          <div class="dm-device" <?php
             if ( !empty( $type ) ) {
               echo 'data-device="'. esc_attr( $type ) .'"'; }
             if ( !empty( $orientation ) ) {
@@ -66,7 +66,6 @@ function device_wrapper( $atts , $content = null ) {
                   echo '' . do_shortcode($content) . '';
                 if ( !empty($link) ) { echo '</a>'; }
               echo '</div>';
-              echo '<div class="home-button"></div>';
             echo '</div>';
           echo '</div>';
         echo '</div>';
@@ -103,7 +102,7 @@ function browser_wrapper( $atts , $content = null ) {
     // Open $width
     if ( !empty( $width ) ) { echo '<div style="max-width:'. $width .'">';  } ?>
 
-        <div class="dm-browsers" <?php
+        <div class="dm-browser" <?php
             if ( !empty( $type ) ) {
               echo 'data-device="'. esc_attr( $type ) .'"'; }
             if ( !empty( $orientation ) ) {
