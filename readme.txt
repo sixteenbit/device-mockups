@@ -8,13 +8,16 @@ Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Simplify your mockups. Device Mockups generates shortcodes that display screenshots of your content in a responsive device.
+Show your work in high resolution, responsive device mockups using only shortcodes.
 
 == Description ==
 
-Show your work in high resolution mockup shortcodes. Wrap your images or YouTube or Vimeo videos in different device wrappers. There's also a simple dropdown in the editor to help select what device you would like to use. The devices will respond to the container it's in and will look great on mobile.
+Show your work in high resolution, responsive device mockups using only shortcodes. Wrap images, videos, or any other content within a few simple shortcodes to display them within any of the pre-packaged devices mockups, which are easily selectable from within the editor.
 
-= Device Attributes: =
+= Documentation =
+For more information, including code examples and more, check out (https://dm.byjust.in).
+
+= Device Attributes =
 * type
 * color: black/white
 * orientation: portrait/landscape
@@ -22,90 +25,53 @@ Show your work in high resolution mockup shortcodes. Wrap your images or YouTube
 * position: left/right
 * link
 * width
-* hide
+* hide: left/right
 
-= Browser Attributes: =
+= Browser Attributes =
 * type
 * link
 * width
 
-= Recommended Image Sizes: =
-* iPhone 5 - 640×1136
-* iPad - 2048×1536
-* iMac - 1920x1200
-* Macbook Pro (Retina) - 1440x900
-* Galaxy S3 - 720x1280
-* Nexus 7 - 1920x1200
-* Surface - 1920 x 1080
-* Lumia 920 - 768 x 1280
-
-Note that these are only recommendations.
-
-= Stacking: =
-For stacking the devices on top of each other, add `stacked="open"` to the first device and `stacked="closed"` to the last device. You'll also need to apply the position of the inner device with `position="left"` or `position="right"`.
-
-= Example: =
-`[device type="macbook" stacked="open"]CONTENT[/device][device type="iphone5" position="right" stacked="closed"]CONTENT[/device]`
-
-= Usage: =
-`[device type="iphone5"]
-iPhone Content
-[/device]`
-
-`[device type="ipad"]
-iPad Content
-[/device]`
-
-`[device type="imac"]
-iMac Content
-[/device]`
-
-`[device type="macbook"]
-Macbook Content
-[/device]`
-
-`[device type="s3"]
-Galaxy S3 Content
-[/device]`
-
-`[device type="nexus7"]
-Nexus 7 Content
-[/device]`
-
-`[device type="surface"]
-Surface Content
-[/device]`
-
-`[device type="lumia920"]
-Lumia 920 Content
-[/device]`
+= Recommended Image Sizes =
+* iPhone 6 – 1334×750
+* iPhone 6 Plus – 1920×1080
+* iPhone 5s – 1136×640
+* iPhone 5 – 640×1136
+* iPad – 2048×1536
+* iMac – 1920×1200
+* Macbook Pro – 1440×900
+* Galaxy S3 – 720×1280
+* Nexus 7 – 1920×1200
+* Surface – 1920×1080
+* Lumia 920 – 768×1280
+* Chrome – 1440×900
+* Firefox – 1440×900
+* Safari – 1440×900
 
 Please help by reporting any bugs/feature request at the link below.
 
 = Bugs: =
 * Report at: [Github Issue Tracker](https://github.com/mrdink/device-mockups/issues)
 
-= Questions/Comments: =
+= Questions/Comments =
 * http://byjust.in/contact/
 
-= Credit: =
-* [Pixelsign](http://aarnis.com/)
-
 == Installation ==
-
 1. Upload `/device-mockups/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
-
 1. Stacked option
 2. TinyMCE shortcode generator
 
 == Changelog ==
-
 = 1.3.0 =
+* added iPhone 6, iPhone 6 Plus, and iPhone 5s
 * added an attribute to hide the left or right of the device (currently doesn't work with stacking) - idea credit to @raphaelkross
-* added browsers (chrome, firefox, and safari) - images credit to [Pixeden](http://www.pixeden.com/psd-web-elements/flat-psd-browsers-set)
+* added browsers (chrome, firefox, and safari)
+* added hiding but currently in beta
+* added documentation link to plugin
+* and much more
 
 = 1.2.1 =
 * added icons to suppot WP 4.0 installer (Created by @timm3h)

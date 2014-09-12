@@ -1,0 +1,15 @@
+/*
+   Firefox
+   ========================================================================== */
+.dm-browser {
+    @extend %dm-browser;
+    &[data-device="firefox"] {
+        & > .device {
+            background-image: url("../img/firefox.png");
+            & > .screen {
+                top: 13.3%;
+                border: 1px solid #f6f6f6;
+            }
+        }
+    }
+}

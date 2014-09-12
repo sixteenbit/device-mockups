@@ -1,20 +1,33 @@
 /*
-   Stacks
+   Stacking
    ========================================================================== */
-/**
- *  By:
- *      Justin Peacock
- *      http://byjust.in/
- */
-
 .dm-stacked {
     position: relative;
+    margin-bottom: 20px;
     @include size(100% auto);
     .dm-stacked-left,
     .dm-stacked-right {
         position: absolute;
         bottom: 0;
         z-index: 10;
+        &.iphone6 {
+            width: 17%;
+            &.landscape {
+                width: 39%;
+            }
+        }
+        &.iphone6-plus {
+            width: 21%;
+            &.landscape {
+                width: 46%;
+            }
+        }
+        &.iphone5s {
+            width: 17%;
+            &.landscape {
+                width: 37%;
+            }
+        }
         &.iphone5 {
             width: 16%;
             &.landscape {
@@ -55,6 +68,9 @@
     }
     .dm-stacked-right {
         right: 50px;
+    }
+    .dm-device {
+        margin-bottom: 0;
     }
     @media screen and (max-width: 768px) {
         .dm-stacked-left {
