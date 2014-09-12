@@ -1,4 +1,8 @@
 @import "bourbon";
+@import "variables";
+@import "globals";
 
-@import "device-mockups";
-@import "stacks";
+@import "devices";
+@import "options";
+
+@import "browsers";
