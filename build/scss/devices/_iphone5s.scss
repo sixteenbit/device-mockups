@@ -4,12 +4,12 @@
 .dm-device {
     @extend %dm-device;
     &[data-device="iphone5s"] {
-        padding-bottom: 200.477897%;
+        padding-bottom: 210.477897%;
         &[data-orientation="portrait"] {
-            padding-bottom: 200.477897%;
+            padding-bottom: 210.477897%;
         }
         &[data-orientation="landscape"] {
-            padding-bottom: 49.9701136%;
+            padding-bottom: 46.970114%;
         }
         & > .device, &[data-color="black"] > .device,
         &[data-orientation="portrait"][data-color="black"] > .device {

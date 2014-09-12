@@ -10,6 +10,24 @@
         position: absolute;
         bottom: 0;
         z-index: 10;
+        &.iphone6 {
+            width: 17%;
+            &.landscape {
+                width: 39%;
+            }
+        }
+        &.iphone6-plus {
+            width: 21%;
+            &.landscape {
+                width: 46%;
+            }
+        }
+        &.iphone5s {
+            width: 17%;
+            &.landscape {
+                width: 37%;
+            }
+        }
         &.iphone5 {
             width: 16%;
             &.landscape {
