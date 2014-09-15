@@ -1,21 +1,20 @@
 === Device Mockups ===
-Contributors: mrdink
+Contributors: mrdink, phikai
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CZ54JHH93S2Y
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Show your work in high resolution, responsive device mockups using only shortcodes.
 
 == Description ==
-
 Show your work in high resolution, responsive device mockups using only shortcodes. Wrap images, videos, or any other content within a few simple shortcodes to display them within any of the pre-packaged devices mockups, which are easily selectable from within the editor.
 
 = Documentation =
-For more information, including code examples and more, check out (https://dm.byjust.in).
+For more information, including code examples and more, check out (http://dm.byjust.in).
 
 = Device Attributes =
 * type
@@ -65,6 +64,10 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
+= 1.3.0 =
+* URL fix in the readme.txt
+* image optimization
+
 = 1.3.0 =
 * added iPhone 6, iPhone 6 Plus, and iPhone 5s
 * added an attribute to hide the left or right of the device (currently doesn't work with stacking) - idea credit to @raphaelkross

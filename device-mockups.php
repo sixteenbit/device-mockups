@@ -4,14 +4,14 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Description: Show your work in high resolution, responsive device mockups using only shortcodes.
 Author: Justin Peacock
-Version: 1.3.0
+Version: 1.3.1
 Author URI: http://byjust.in
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 function DM_add_stylesheet() {
-	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.3.0' );
+	wp_register_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.3.1' );
 	wp_enqueue_style( 'DM-style' );
 }
 add_action( 'wp_enqueue_scripts', 'DM_add_stylesheet' );
