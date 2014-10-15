@@ -931,14 +931,14 @@ html[xmlns] .slides {
     width: 0;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
-    border-right: 12px solid rgba(255, 255, 255, 0.3);
+    border-right: 12px solid rgba(0, 0, 0, 0.4);
     left: -50px; }
   .flex-direction-nav .flex-next {
     height: 0;
     width: 0;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
-    border-left: 12px solid rgba(255, 255, 255, 0.3);
+    border-left: 12px solid rgba(0, 0, 0, 0.4);
     right: -50px;
     text-align: right; }
 
