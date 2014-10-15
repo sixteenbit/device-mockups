@@ -1,3 +1,6 @@
+$flex-arrow-color: rgba(white, 0.3);
+$flex-arrow-size: 24px;
+
 /*
  * jQuery FlexSlider v2.2.0
  * http://www.woothemes.com/flexslider/
@@ -109,7 +112,7 @@ html[xmlns] .slides {
         display: block;
         width: 40px;
         height: 40px;
-        margin: -32px 0 0;
+        margin: (-$flex-arrow-size) 0 0;
         position: absolute;
         top: 50%;
         z-index: 10;
@@ -121,11 +124,11 @@ html[xmlns] .slides {
         transition: all .3s ease;
     }
     .flex-prev {
-        @include triangle(32px, gray, left);
+        @include triangle($flex-arrow-size, $flex-arrow-color, left);
         left: -50px;
     }
     .flex-next {
-        @include triangle(32px, gray, right);
+        @include triangle($flex-arrow-size, $flex-arrow-color, right);
         right: -50px;
         text-align: right;
     }

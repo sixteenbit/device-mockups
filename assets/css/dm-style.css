@@ -3,7 +3,7 @@ Plugin Name: Device Mockups
 Plugin URI: https://wordpress.org/plugins/device-mockups/
 Author: Justin Peacock
 Author URI: http://byjust.in/
-Version: 1.3.1
+Version: 1.4.0
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -916,7 +916,7 @@ html[xmlns] .slides {
     display: block;
     width: 40px;
     height: 40px;
-    margin: -32px 0 0;
+    margin: -24px 0 0;
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -929,16 +929,16 @@ html[xmlns] .slides {
   .flex-direction-nav .flex-prev {
     height: 0;
     width: 0;
-    border-top: 16px solid transparent;
-    border-bottom: 16px solid transparent;
-    border-right: 16px solid grey;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid rgba(255, 255, 255, 0.3);
     left: -50px; }
   .flex-direction-nav .flex-next {
     height: 0;
     width: 0;
-    border-top: 16px solid transparent;
-    border-bottom: 16px solid transparent;
-    border-left: 16px solid grey;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid rgba(255, 255, 255, 0.3);
     right: -50px;
     text-align: right; }
 
