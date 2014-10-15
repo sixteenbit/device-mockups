@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~3.2.0"
+    "bourbon": "~3.2.0",
+    "flexslider": "*"
   }
 }
