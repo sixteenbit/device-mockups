@@ -2,7 +2,7 @@
    Safari
    ========================================================================== */
 .dm-browser {
-    @extend %dm-browser;
+    @include dm-browser;
     &[data-device="safari"] {
         & > .device {
             background-image: url("../img/safari.png");

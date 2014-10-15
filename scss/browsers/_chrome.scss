@@ -2,7 +2,7 @@
    Chrome
    ========================================================================== */
 .dm-browser {
-    @extend %dm-browser;
+    @include dm-browser;
     &[data-device="chrome"] {
         & > .device {
             background-image: url("../img/chrome.png");

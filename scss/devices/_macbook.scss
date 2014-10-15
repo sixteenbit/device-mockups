@@ -2,7 +2,7 @@
    Macbook Pro
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="macbook"] {
         padding-bottom: 61.775701%;
         & > .device {

@@ -2,7 +2,7 @@
    Lumia 920
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="lumia920"] {
         padding-bottom: 172.796353%;
         &[data-orientation="portrait"] {

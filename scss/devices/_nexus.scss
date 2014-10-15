@@ -2,7 +2,7 @@
    Nexus 7
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="nexus7"] {
         padding-bottom: 156.521739%;
         &[data-orientation="portrait"] {

@@ -1,3 +1,13 @@
+/*
+ * Device Mockups v1.3.1 (https://wordpress.org/plugins/device-mockups/)
+ * Copyright 2014 Justin Peacock
+*/
+
+/*
+ * Device Mockups v1.3.1 (https://wordpress.org/plugins/device-mockups/)
+ * Copyright 2014 Justin Peacock
+*/
+
 (function() {
     tinymce.PluginManager.add('DM_tc_button', function( editor, url ) {
         editor.addButton( 'DM_tc_button', {
@@ -84,7 +94,7 @@
                 },
                 {
                     text: 'Stacking',
-                    value: '[device type="macbook" orientation="" width="" link="" stacked="open"][/device][device type="iphone" orientation="" width="" link="" stacked="closed" position="closed"][/device]',
+                    value: '[device type="macbook" link="" stacked="open"][/device][device type="iphone5" orientation="" link="" stacked="closed" position="right"][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },

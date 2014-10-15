@@ -55,6 +55,15 @@ svn propset svn:ignore "deploy.sh
 LICENSE
 README.md
 build
+Gruntfile.js
+scss
+html
+ai
+bower.json
+package.json
+bower_components
+node_modules
+.editorconfig
 .git
 .gitignore" "$SVNPATH/trunk/"
 

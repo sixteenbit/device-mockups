@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		config: {
 			bower: 	 			'bower_components',
 			sass: 	 			'scss',
-			assets: 		 	'../assets',
+			assets: 		 	'assets',
 
 			cssbanner: '/*\n'+
 								'Plugin Name: <%= pkg.plugin.name %>\n'+
@@ -28,49 +28,69 @@ module.exports = function(grunt) {
 								 ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
 								 '*/\n'
 		},
-
-		sass: {                              // Task
-			dist: {                            // Target
-				options: {                       // Target options
-					style: 'compact',
-					loadPath: [
-						'<%= config.bower %>/bourbon/dist'
-					]
-				},
+    jshint: {
+      options: {
+        "bitwise": true,
+        "browser": true,
+        "curly": true,
+        "eqeqeq": true,
+        "eqnull": true,
+        "esnext": true,
+        "immed": true,
+        "jquery": true,
+        "latedef": true,
+        "newcap": true,
+        "noarg": true,
+        "node": true,
+        "strict": false,
+        "trailing": true,
+        "undef": true,
+        "globals": {
+          "jQuery": true,
+          "alert": true,
+          "tinymce": false
+        }
+      },
+      all: [
+        'Gruntfile.js',
+        '<%= config.assets %>/js/*.js',
+        '!<%= config.assets %>/**/*.min.*'
+      ]
+    },
+		sass: {
+      options: {
+        style: 'compact',
+        includePaths: ['<%= config.bower %>/bourbon/dist']
+      },
+			dev: {
 				files: {
 					'<%= config.assets %>/css/dm-style.css': 'scss/dm-style.scss'
 				}
 			}
 		},
-
 		autoprefixer: {
 			options: {
 				browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
 			},
-			dist: {
+			dev: {
 				src: '<%= config.assets %>/css/dm-style.css',
 				dest: '<%= config.assets %>/css/dm-style.css'
 			}
 		},
-
-		// CSS minification + Add banner for WordPress
 		cssmin: {
-			css: {
+			dist: {
 				files: {
 					'<%= config.assets %>/css/dm-style.min.css': ['<%= config.assets %>/css/dm-style.css']
 				}
 			}
 		},
-
-		// Uglify
 		uglify: {
 			min: {
 				files: {
-					"<%= config.assets %>/js/editor.min.js": ["js/editor.js"]
+					"<%= config.assets %>/js/editor.min.js": ["<%= config.assets %>/js/editor.js"]
 				}
 			}
 		},
-
 		usebanner: {
 			css: {
 				options: {
@@ -96,8 +116,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
-		// image optimization
 		imagemin: {
 			img: {
 				options: {
@@ -112,8 +130,6 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-
-		// Watch for file changes
 		watch: {
 			options: {
 				livereload: false
@@ -134,11 +150,11 @@ module.exports = function(grunt) {
 				tasks: ['stylesheets','scripts','usebanner']
 			}
 		}
-
 	});
 
 	// register task
 	grunt.registerTask('stylesheets', [
+    'jshint',
 		'sass',
 		'autoprefixer',
 		'cssmin'
@@ -146,6 +162,7 @@ module.exports = function(grunt) {
 
 	// register task
 	grunt.registerTask('scripts', [
+    'jshint',
 		'uglify'
 	]);
 
