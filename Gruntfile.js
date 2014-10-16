@@ -87,7 +87,8 @@ module.exports = function(grunt) {
 		uglify: {
 			min: {
 				files: {
-					"<%= config.assets %>/js/editor.min.js": ["<%= config.assets %>/js/editor.js"]
+					"<%= config.assets %>/js/editor.min.js": ["<%= config.assets %>/js/editor.js"],
+          "<%= config.assets %>/js/jquery.flexslider.min.js": ["<%= config.bower %>/flexslider/jquery.flexslider.js"]
 				}
 			}
 		},
@@ -111,7 +112,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					src: [
-						'<%= config.assets %>/js/*.js'
+						'<%= config.assets %>/js/*.js',
+            '!<%= config.assets %>/js/editor.js',
 					]
 				}
 			}
@@ -139,7 +141,7 @@ module.exports = function(grunt) {
 				tasks: ['stylesheets','scripts','usebanner']
 			},
 			markup: {
-				files: ["../*.php"],
+				files: ["*.php"],
 			},
 			compass: {
 				files: ['scss/**/*'],

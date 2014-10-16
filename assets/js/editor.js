@@ -1,13 +1,3 @@
-/*
- * Device Mockups v1.3.1 (https://wordpress.org/plugins/device-mockups/)
- * Copyright 2014 Justin Peacock
-*/
-
-/*
- * Device Mockups v1.3.1 (https://wordpress.org/plugins/device-mockups/)
- * Copyright 2014 Justin Peacock
-*/
-
 (function() {
     tinymce.PluginManager.add('DM_tc_button', function( editor, url ) {
         editor.addButton( 'DM_tc_button', {
