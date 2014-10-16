@@ -40,11 +40,11 @@ function device_wrapper( $atts , $content = null ) {
 
 		<div class="<?php
 		  if ( !empty( $position ) ) {
-			echo 'dm-stacked-'. esc_attr( $position ) .''; }
+				echo 'dm-stacked-'. esc_attr( $position ) .''; }
 		  if ( !empty( $type ) ) {
-			echo ' '. esc_attr( $type ) .''; }
+				echo ' '. esc_attr( $type ) .''; }
 		  if ( !empty( $orientation ) ) {
-			echo ' '. esc_attr( $orientation ) .''; } ?>">
+				echo ' '. esc_attr( $orientation ) .''; } ?>">
 
 		  <div class="dm-device" <?php
 			if ( !empty( $type ) ) {
@@ -195,7 +195,7 @@ if (!class_exists("DM_Gallery")) {
 		var $dm_instance = 0;
 
 		function dm_gallery()	{
-			add_action('init', array(&$this, 'addScripts'));
+			add_action('init', array(&$this, 'dm_scripts'));
 			add_shortcode('dm-gallery', array(&$this, 'dm_gallery_func'));
 		}
 
@@ -218,7 +218,7 @@ if (!class_exists("DM_Gallery")) {
 				/* Default FlexSlider */
 				$js  = "\n".'<script type="text/javascript">'."\n";
 				$js .= 'jQuery(window).load(function() { '."\n";
-				$js .= '  jQuery("#dm_' . $this->dm_instance . '").flexslider({';
+				$js .= '  jQuery("#dm_' . $this->dm_instance . '").flexslider({controlNav:false,';
 				if ( isset( $attr['options'] ) ) {
 					$js .= $attr['options'];
 				}
@@ -237,8 +237,9 @@ if (!class_exists("DM_Gallery")) {
 			*/
 			if ( isset( $attr['orderby'] ) ) {
 				$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-				if ( !$attr['orderby'] )
+				if ( !$attr['orderby'] ) {
 					unset( $attr['orderby'] );
+				}
 			}
 
 			/*
@@ -259,8 +260,9 @@ if (!class_exists("DM_Gallery")) {
 			  ), $attr));
 
 			$id = intval($id);
-			if ( 'RAND' == $order )
+			if ( 'RAND' == $order ) {
 				$orderby = 'none';
+			}
 
 			if ( !empty($mediatag) ) {
 				$mediaList = get_attachments_by_media_tags("media_tags=$mediatag&orderby=$orderby&order=$order");
@@ -283,8 +285,9 @@ if (!class_exists("DM_Gallery")) {
 				$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
 			}
 
-			if ( empty($attachments) )
+			if ( empty($attachments) ) {
 				return '';
+			}
 
 			if ( is_feed() ) {
 				$output = "\n";
@@ -343,7 +346,7 @@ if (!class_exists("DM_Gallery")) {
 			return $output;
 		}
 
-		function addScripts()	{
+		function dm_scripts()	{
 			$plugin_url = get_option('siteurl') . "/" . PLUGINDIR . "/" . plugin_basename(dirname(__FILE__));
 			if (!is_admin()) {
 				wp_enqueue_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.4.0' );
