@@ -16,6 +16,11 @@ Show your work in high resolution, responsive device mockups using only shortcod
 = Documentation =
 For more information, including code examples and more, check out (http://dm.byjust.in).
 
+= Available shortcodes =
+* [device][/device]
+* [browser][/browser]
+* [dm-gallery]
+
 = Device Attributes =
 * type
 * color: black/white
@@ -30,6 +35,16 @@ For more information, including code examples and more, check out (http://dm.byj
 * type
 * link
 * width
+
+= Slider Attributes =
+* order
+* orderby
+* id (post)
+* size (thumbnail, medium, large, or full)
+* include (id)
+* exclude (id)
+* css (inline styles to apply to the container)
+* options (custom js options)
 
 = Recommended Image Sizes =
 * iPhone 6 – 1334×750
@@ -64,7 +79,14 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
-= 1.3.0 =
+= 1.4.0 =
+* added FlexSlider
+* fixed a CSS  issues with iPhone 6
+* fixed stacking button in editor
+* reverted to node-sass
+* updated file structure
+
+= 1.3.1 =
 * URL fix in the readme.txt
 * image optimization
 
