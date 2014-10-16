@@ -2,7 +2,7 @@
    Firefox
    ========================================================================== */
 .dm-browser {
-    @extend %dm-browser;
+    @include dm-browser;
     &[data-device="firefox"] {
         & > .device {
             background-image: url("../img/firefox.png");

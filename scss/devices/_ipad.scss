@@ -2,7 +2,7 @@
    iPad
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="ipad"] {
         padding-bottom: 128.406276%;
         &[data-orientation="portrait"] {

@@ -2,7 +2,7 @@
    iPhone 6
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="iphone6"] {
         padding-bottom: 200.477897%;
         &[data-orientation="portrait"] {
@@ -37,7 +37,7 @@
         & > .device > .screen,
         &[data-orientation="portrait"] > .device > .screen {
             top: 12.2%;
-            bottom: 12.1%%;
+            bottom: 12.1%;
             left: 6.6%;
             right: 6.6%;
         }

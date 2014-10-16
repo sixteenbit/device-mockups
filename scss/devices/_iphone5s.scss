@@ -2,7 +2,7 @@
    iPhone 5s
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="iphone5s"] {
         padding-bottom: 210.477897%;
         &[data-orientation="portrait"] {

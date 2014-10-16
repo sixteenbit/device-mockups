@@ -2,7 +2,7 @@
    iMac
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="imac"] {
         padding-bottom: 81.230769%;
         & > .device {

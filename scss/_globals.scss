@@ -1,4 +1,4 @@
-%dm-device {
+@mixin dm-device {
     position: relative;
     width: 100%;
     padding-bottom: 61.775701%;
@@ -36,7 +36,7 @@
     }
 }
 
-%dm-browser {
+@mixin dm-browser {
     position: relative;
     width: 100%;
     padding-bottom: 61.775701%;

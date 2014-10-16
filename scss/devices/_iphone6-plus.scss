@@ -2,7 +2,7 @@
    iPhone 6 Plus
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="iphone6-plus"] {
         padding-bottom: 200.477897%;
         &[data-orientation="portrait"] {

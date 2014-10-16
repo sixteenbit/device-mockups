@@ -84,7 +84,7 @@
                 },
                 {
                     text: 'Stacking',
-                    value: '[device type="macbook" orientation="" width="" link="" stacked="open"][/device][device type="iphone" orientation="" width="" link="" stacked="closed" position="closed"][/device]',
+                    value: '[device type="macbook" link="" stacked="open"][/device][device type="iphone5" orientation="" link="" stacked="closed" position="right"][/device]',
                     onclick: function() {
                         editor.insertContent(this.value());
                     },

@@ -2,7 +2,7 @@
    Surface
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
+    @include dm-device;
     &[data-device="surface"] {
         padding-bottom: 64.7584973%;
         &[data-orientation="landscape"] {

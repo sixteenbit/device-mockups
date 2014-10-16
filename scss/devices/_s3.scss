@@ -1,44 +1,44 @@
 /*
-   iPhone 5
+   Galaxy S3
    ========================================================================== */
 .dm-device {
-    @extend %dm-device;
-    &[data-device="iphone5"] {
-        padding-bottom: 200.477897%;
+    @include dm-device;
+    &[data-device="s3"] {
+        padding-bottom: 178.787879%;
         &[data-orientation="portrait"] {
-            padding-bottom: 200.477897%;
+            padding-bottom: 178.787879%;
         }
         &[data-orientation="landscape"] {
-            padding-bottom: 49.9701136%;
+            padding-bottom: 55.9322034%;
         }
         & > .device, &[data-color="black"] > .device,
         &[data-orientation="portrait"][data-color="black"] > .device {
-            background-image: url("../img/iphone5_port_black.png");
+            background-image: url("../img/s3_port_black.png");
         }
         &[data-orientation="landscape"] {
             & > .device, &[data-color="black"] > .device {
-                background-image: url("../img/iphone5_land_black.png");
+                background-image: url("../img/s3_land_black.png");
             }
         }
         &[data-color="white"] > .device,
         &[data-orientation="portrait"][data-color="white"] > .device {
-            background-image: url("../img/iphone5_port_white.png");
+            background-image: url("../img/s3_port_white.png");
         }
         &[data-orientation="landscape"][data-color="white"] > .device {
-            background-image: url("../img/iphone5_land_white.png");
+            background-image: url("../img/s3_land_white.png");
         }
         & > .device > .screen,
         &[data-orientation="portrait"] > .device > .screen {
-            top: 16.28%;
-            bottom: 16.28%;
-            left: 11.77%;
-            right: 11.77%;
+            top: 12.3728814%;
+            bottom: 15.5367232%;
+            left: 13.8383838%;
+            right: 13.8383838%;
         }
         &[data-orientation="landscape"] > .device > .screen {
-            top: 11.722488%;
-            bottom: 11.722488%;
-            left: 16.0191273%;
-            right: 16.0191273%;
+            top: 13.8383838%;
+            bottom: 13.8383838%;
+            left: 12.3728814%;
+            right: 15.5367232%;
         }
     }
 }
