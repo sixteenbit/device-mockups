@@ -142,7 +142,7 @@ function DM_tinymce_button() {
 }
 
 function DM_add_tinymce_plugin($plugin_array) {
-	$plugin_array['DM_tc_button'] = plugins_url( '/assets/js/editor.min.js', __FILE__ );
+	$plugin_array['DM_tc_button'] = plugins_url( 'assets/js/editor.min.js', __FILE__ );
 	return $plugin_array;
 }
 
@@ -296,8 +296,6 @@ if (!class_exists("DM_Gallery")) {
 				return $output;
 			}
 
-			$plugin_url = get_option('siteurl') . "/" . PLUGINDIR . "/" . plugin_basename(dirname(__FILE__));
-
 			/**
 			* Start output
 			*/
@@ -346,11 +344,10 @@ if (!class_exists("DM_Gallery")) {
 			return $output;
 		}
 
-		function dm_scripts()	{
-			$plugin_url = get_option('siteurl') . "/" . PLUGINDIR . "/" . plugin_basename(dirname(__FILE__));
+		function dm_scripts() {
 			if (!is_admin()) {
 				wp_enqueue_style( 'DM-style', plugins_url('assets/css/dm-style.min.css', __FILE__), false, '1.4.0.1' );
-				wp_enqueue_script('dm_flexslider', $plugin_url.'/assets/js/jquery.flexslider.min.js', array('jquery'));
+				wp_enqueue_script('dm_flexslider', plugins_url( 'assets/js/jquery.flexslider.min.js', __FILE__ ), array('jquery'));
 			}
 		}
 	}
