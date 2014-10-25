@@ -79,6 +79,10 @@ Please help by reporting any bugs/feature request at the link below.
 2. TinyMCE shortcode generator
 
 == Changelog ==
+= 1.4.2 =
+* pull request from @irazasyed to fix the custom url to the plugin dir
+* removed README.md
+
 = 1.4.0 =
 * added FlexSlider
 * fixed a CSS  issues with iPhone 6
