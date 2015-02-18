@@ -1,19 +1,14 @@
 <?php
 
-/*
-  Plugin Name: Device Mockups
-  Plugin URI: https://wordpress.org/plugins/device-mockups/
-  Description: Show your work in high resolution, responsive device mockups using only shortcodes.
-  Author: Justin Peacock
-  Version: 1.4.2.1
-  Author URI: http://byjust.in
-  License: GNU General Public License v2.0
-  License URI: http://www.gnu.org/licenses/gpl-2.0.html
- */
+namespace com\mrdink\device_mockups\app\controllers;
 
-class DeviceMockups {
+use com\mrdink\device_mockups\app\controllers\AppController;
+
+class DeviceMockups extends AppController {
 
     public $viewVariables = array();
+    
+    public $deviceMockupGallery;
 
     public function init() {
         add_shortcode('device', array($this, 'deviceWrapper'));
@@ -21,6 +16,8 @@ class DeviceMockups {
         add_action('admin_head', array($this, 'tinymceButton'));
         add_action('admin_head', array($this, 'tinymceIcon'));
         add_filter('plugin_action_links_' . $this->getPluginName(), array($this, 'docsLink'));
+
+        $this->deviceMockupGallery = new DeviceMockupsGallery();
     }
 
     /**
@@ -73,7 +70,7 @@ class DeviceMockups {
     }
 
     public function addTinymcePlugin($plugin_array) {
-        $plugin_array['DM_tc_button'] = plugins_url('assets/js/editor.min.js', __FILE__);
+        $plugin_array['DM_tc_button'] = plugins_url('../assets/js/editor.min.js', __FILE__);
         return $plugin_array;
     }
 
@@ -93,48 +90,6 @@ class DeviceMockups {
      */
     public function tinymceIcon() {
         $this->loadView('tinymce_icon');
-    }
-
-    
-    ////////////////////////////////////////////////////////////////////////////
-    // HELPER FUNCTIONS
-    ////////////////////////////////////////////////////////////////////////////
-    private function getPluginName() {
-        return plugin_basename(__FILE__);
-    }
-
-    private function pluginPath() {
-        return untrailingslashit(plugin_dir_path(__FILE__));
-    }
-
-    private function loadViewContents($view) {
-        ob_start();
-        $this->loadView('browser_wrapper');
-        return ob_get_clean();
-    }
-
-    private function loadView($view) {
-        $viewToLoad = $this->pluginPath() . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $view . '.php';
-        if (file_exists($viewToLoad)) {
-            extract($this->viewVariables);
-            include $viewToLoad;
-        }
-    }
-
-    private function setFromAttributes($viewVars, $atts) {
-        extract(shortcode_atts($viewVars, $atts));
-        foreach ($viewVars as $name => $value) {
-            $this->set($name, ${$name});
-        }
-    }
-
-    /**
-     * Add a key value pair to be availabe in the view.
-     * @param string $key name of variable in the view
-     * @param mixed $value for the variable.
-     */
-    public function set($key, $value) {
-        $this->viewVariables[$key] = $value;
     }
 
 }
