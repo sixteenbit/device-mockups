@@ -1,0 +1,83 @@
+/*
+   Stacking
+   ========================================================================== */
+.dm-stacked {
+    position: relative;
+    margin-bottom: 20px;
+    @include size(100% auto);
+    .dm-stacked-left,
+    .dm-stacked-right {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        &.iphone6 {
+            width: 17%;
+            &.landscape {
+                width: 39%;
+            }
+        }
+        &.iphone6-plus {
+            width: 21%;
+            &.landscape {
+                width: 46%;
+            }
+        }
+        &.iphone5s {
+            width: 17%;
+            &.landscape {
+                width: 37%;
+            }
+        }
+        &.iphone5 {
+            width: 16%;
+            &.landscape {
+                width: 35%;
+            }
+        }
+        &.ipad {
+            bottom: -12px;
+            width: 45%;
+            &.landscape {
+                width: 65%;
+            }
+        }
+        &.s3 {
+            width: 20%;
+            &.landscape {
+                width: 45%;
+            }
+        }
+        &.nexus7 {
+            width: 30%;
+            &.landscape {
+                width: 50%;
+            }
+        }
+        &.lumia920 {
+            width: 20%;
+            &.landscape {
+                width: 36%;
+            }
+        }
+        &.surface {
+            width: 45%;
+        }
+    }
+    .dm-stacked-left {
+        left: 50px;
+    }
+    .dm-stacked-right {
+        right: 50px;
+    }
+    .dm-device {
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: 768px) {
+        .dm-stacked-left {
+            left: 10px;
+        }
+        .dm-stacked-right {
+            right: 10px;
+        }
+    }
+}

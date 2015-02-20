@@ -1,0 +1,81 @@
+//
+// Mixins
+//
+@mixin dm-device {
+    position: relative;
+    width: 100%;
+    padding-bottom: 61.775701%;
+    margin-bottom: 20px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    & > .device {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        & > {
+            .screen {
+                position: absolute;
+                top: 11.0438729%;
+                bottom: 14.6747352%;
+                left: 13.364486%;
+                right: 13.364486%;
+                overflow: hidden;
+                background-color: $screen-color;
+                .embed-youtube,
+                iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@mixin dm-browser {
+    position: relative;
+    width: 100%;
+    padding-bottom: 61.775701%;
+    margin-bottom: 20px;
+    img {
+        max-width: 100%;
+        height: auto;
+        border-right: none !important;
+    }
+    & > .device {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        & > {
+            .screen {
+                position: absolute;
+                top: 15.043873%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                background-color: #fff;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                .embed-youtube,
+                iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+}

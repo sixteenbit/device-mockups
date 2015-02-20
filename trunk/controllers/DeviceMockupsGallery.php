@@ -1,6 +1,6 @@
 <?php
 
-namespace com\mrdink\device_mockups\app\controllers;
+namespace com\mrdink\device_mockups\controllers;
 
 class DeviceMockupsGallery {
 

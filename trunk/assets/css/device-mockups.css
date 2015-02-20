@@ -1,0 +1,820 @@
+/**
+ * Devices
+ */
+.dm-width {
+  max-width: 100%;
+  display: inline-block; }
+
+/*
+   iMac
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="imac"] {
+    padding-bottom: 81.230769%; }
+    .dm-device[data-device="imac"] > .device {
+      background-image: url("../img/imac.png"); }
+      .dm-device[data-device="imac"] > .device > .screen {
+        top: 8.20707071%;
+        bottom: 31.6919192%;
+        left: 6.61538462%;
+        right: 6.61538462%; }
+
+/*
+   iPad
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="ipad"] {
+    padding-bottom: 128.406276%; }
+    .dm-device[data-device="ipad"][data-orientation="portrait"] {
+      padding-bottom: 128.406276%; }
+    .dm-device[data-device="ipad"][data-orientation="landscape"] {
+      padding-bottom: 79.9086758%; }
+    .dm-device[data-device="ipad"] > .device, .dm-device[data-device="ipad"][data-color="black"] > .device, .dm-device[data-device="ipad"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/ipad_port_black.png"); }
+    .dm-device[data-device="ipad"][data-color="white"] > .device, .dm-device[data-device="ipad"][data-orientation="portrait"][data-color="white"] > .device {
+      background-image: url("../img/ipad_port_white.png"); }
+    .dm-device[data-device="ipad"][data-orientation="landscape"] > .device, .dm-device[data-device="ipad"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/ipad_land_black.png"); }
+    .dm-device[data-device="ipad"][data-orientation="landscape"][data-color="white"] > .device {
+      background-image: url("../img/ipad_land_white.png"); }
+    .dm-device[data-device="ipad"] > .device > .screen, .dm-device[data-device="ipad"][data-orientation="portrait"] > .device > .screen {
+      top: 12.025723%;
+      bottom: 12.154341%;
+      left: 13.45995%;
+      right: 13.45995%; }
+    .dm-device[data-device="ipad"][data-orientation="landscape"] > .device > .screen {
+      top: 13.87755102%;
+      bottom: 13.87755102%;
+      left: 11.5459883%;
+      right: 11.5459883%; }
+
+/*
+   iPhone 5
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="iphone5"] {
+    padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone5"][data-orientation="portrait"] {
+      padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone5"][data-orientation="landscape"] {
+      padding-bottom: 49.9701136%; }
+    .dm-device[data-device="iphone5"] > .device, .dm-device[data-device="iphone5"][data-color="black"] > .device, .dm-device[data-device="iphone5"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/iphone5_port_black.png"); }
+    .dm-device[data-device="iphone5"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone5"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/iphone5_land_black.png"); }
+    .dm-device[data-device="iphone5"][data-color="white"] > .device, .dm-device[data-device="iphone5"][data-orientation="portrait"][data-color="white"] > .device {
+      background-image: url("../img/iphone5_port_white.png"); }
+    .dm-device[data-device="iphone5"][data-orientation="landscape"][data-color="white"] > .device {
+      background-image: url("../img/iphone5_land_white.png"); }
+    .dm-device[data-device="iphone5"] > .device > .screen, .dm-device[data-device="iphone5"][data-orientation="portrait"] > .device > .screen {
+      top: 16.28%;
+      bottom: 16.28%;
+      left: 11.77%;
+      right: 11.77%; }
+    .dm-device[data-device="iphone5"][data-orientation="landscape"] > .device > .screen {
+      top: 11.722488%;
+      bottom: 11.722488%;
+      left: 16.0191273%;
+      right: 16.0191273%; }
+
+/*
+   iPhone 5s
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="iphone5s"] {
+    padding-bottom: 210.477897%; }
+    .dm-device[data-device="iphone5s"][data-orientation="portrait"] {
+      padding-bottom: 210.477897%; }
+    .dm-device[data-device="iphone5s"][data-orientation="landscape"] {
+      padding-bottom: 46.970114%; }
+    .dm-device[data-device="iphone5s"] > .device, .dm-device[data-device="iphone5s"][data-color="black"] > .device, .dm-device[data-device="iphone5s"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/iphone5s_port_black.png"); }
+    .dm-device[data-device="iphone5s"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone5s"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/iphone5s_land_black.png"); }
+    .dm-device[data-device="iphone5s"][data-color="white"] > .device, .dm-device[data-device="iphone5s"][data-orientation="portrait"][data-color="white"] > .device {
+      background-image: url("../img/iphone5s_port_white.png"); }
+    .dm-device[data-device="iphone5s"][data-orientation="landscape"][data-color="white"] > .device {
+      background-image: url("../img/iphone5s_land_white.png"); }
+    .dm-device[data-device="iphone5s"][data-color="gold"] > .device, .dm-device[data-device="iphone5s"][data-orientation="portrait"][data-color="gold"] > .device {
+      background-image: url("../img/iphone5s_port_gold.png"); }
+    .dm-device[data-device="iphone5s"][data-orientation="landscape"][data-color="gold"] > .device {
+      background-image: url("../img/iphone5s_land_gold.png"); }
+    .dm-device[data-device="iphone5s"] > .device > .screen, .dm-device[data-device="iphone5s"][data-orientation="portrait"] > .device > .screen {
+      top: 14.7%;
+      bottom: 14.2%;
+      left: 8.6%;
+      right: 7.5%; }
+    .dm-device[data-device="iphone5s"][data-orientation="landscape"] > .device > .screen {
+      top: 7.4%;
+      bottom: 8.5%;
+      left: 14.8%;
+      right: 14.2%; }
+
+/*
+   iPhone 6
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="iphone6"] {
+    padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone6"][data-orientation="portrait"] {
+      padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone6"][data-orientation="landscape"] {
+      padding-bottom: 49.9701136%; }
+    .dm-device[data-device="iphone6"] > .device, .dm-device[data-device="iphone6"][data-color="black"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/iphone6_port_black.png"); }
+    .dm-device[data-device="iphone6"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/iphone6_land_black.png"); }
+    .dm-device[data-device="iphone6"][data-color="silver"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="silver"] > .device {
+      background-image: url("../img/iphone6_port_silver.png"); }
+    .dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="silver"] > .device {
+      background-image: url("../img/iphone6_land_silver.png"); }
+    .dm-device[data-device="iphone6"][data-color="gold"] > .device, .dm-device[data-device="iphone6"][data-orientation="portrait"][data-color="gold"] > .device {
+      background-image: url("../img/iphone6_port_gold.png"); }
+    .dm-device[data-device="iphone6"][data-orientation="landscape"][data-color="gold"] > .device {
+      background-image: url("../img/iphone6_land_gold.png"); }
+    .dm-device[data-device="iphone6"] > .device > .screen, .dm-device[data-device="iphone6"][data-orientation="portrait"] > .device > .screen {
+      top: 12.2%;
+      bottom: 12.1%;
+      left: 6.6%;
+      right: 6.6%; }
+    .dm-device[data-device="iphone6"][data-orientation="landscape"] > .device > .screen {
+      top: 6%;
+      bottom: 6.1%;
+      left: 11.6%;
+      right: 11.6%; }
+
+/*
+   iPhone 6 Plus
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="iphone6-plus"] {
+    padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone6-plus"][data-orientation="portrait"] {
+      padding-bottom: 200.477897%; }
+    .dm-device[data-device="iphone6-plus"][data-orientation="landscape"] {
+      padding-bottom: 49.9701136%; }
+    .dm-device[data-device="iphone6-plus"] > .device, .dm-device[data-device="iphone6-plus"][data-color="black"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/iphone6_plus_port_black.png"); }
+    .dm-device[data-device="iphone6-plus"][data-orientation="landscape"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/iphone6_plus_land_black.png"); }
+    .dm-device[data-device="iphone6-plus"][data-color="silver"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="silver"] > .device {
+      background-image: url("../img/iphone6_plus_port_silver.png"); }
+    .dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="silver"] > .device {
+      background-image: url("../img/iphone6_plus_land_silver.png"); }
+    .dm-device[data-device="iphone6-plus"][data-color="gold"] > .device, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"][data-color="gold"] > .device {
+      background-image: url("../img/iphone6_plus_port_gold.png"); }
+    .dm-device[data-device="iphone6-plus"][data-orientation="landscape"][data-color="gold"] > .device {
+      background-image: url("../img/iphone6_plus_land_gold.png"); }
+    .dm-device[data-device="iphone6-plus"] > .device > .screen, .dm-device[data-device="iphone6-plus"][data-orientation="portrait"] > .device > .screen {
+      top: 11.4%;
+      bottom: 11.6%;
+      left: 6.6%;
+      right: 6.2%; }
+    .dm-device[data-device="iphone6-plus"][data-orientation="landscape"] > .device > .screen {
+      top: 6.3%;
+      bottom: 6.5%;
+      left: 11.4%;
+      right: 11.6%; }
+
+/*
+   Lumia 920
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="lumia920"] {
+    padding-bottom: 172.796353%; }
+    .dm-device[data-device="lumia920"][data-orientation="portrait"] {
+      padding-bottom: 172.796353%; }
+    .dm-device[data-device="lumia920"][data-orientation="landscape"] {
+      padding-bottom: 56.3330381%; }
+    .dm-device[data-device="lumia920"] > .device, .dm-device[data-device="lumia920"][data-orientation="portrait"] > .device {
+      background-image: url("../img/lumia920_port.png"); }
+    .dm-device[data-device="lumia920"][data-orientation="landscape"] > .device {
+      background-image: url("../img/lumia920_land.png"); }
+    .dm-device[data-device="lumia920"] > .device > .screen, .dm-device[data-device="lumia920"][data-orientation="portrait"] > .device > .screen {
+      top: 10.6420405%;
+      bottom: 18.9973615%;
+      left: 13.5258359%;
+      right: 13.5258359%; }
+    .dm-device[data-device="lumia920"][data-orientation="landscape"] > .device > .screen {
+      top: 12.2641509%;
+      bottom: 12.2641509%;
+      left: 10.5403012%;
+      right: 18.6005314%; }
+
+/*
+   Macbook Pro
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="macbook"] {
+    padding-bottom: 61.775701%; }
+    .dm-device[data-device="macbook"] > .device {
+      background-image: url("../img/macbook.png"); }
+      .dm-device[data-device="macbook"] > .device > .screen {
+        top: 11.0438729%;
+        bottom: 14.6747352%;
+        left: 13.364486%;
+        right: 13.364486%; }
+
+/*
+   Nexus 7
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="nexus7"] {
+    padding-bottom: 156.521739%; }
+    .dm-device[data-device="nexus7"][data-orientation="portrait"] {
+      padding-bottom: 156.521739%; }
+    .dm-device[data-device="nexus7"][data-orientation="landscape"] {
+      padding-bottom: 63.6678201%; }
+    .dm-device[data-device="nexus7"] > .device, .dm-device[data-device="nexus7"][data-orientation="portrait"] > .device {
+      background-image: url("../img/nexus7_port.png"); }
+    .dm-device[data-device="nexus7"][data-orientation="landscape"] > .device {
+      background-image: url("../img/nexus7_land.png"); }
+    .dm-device[data-device="nexus7"] > .device > .screen, .dm-device[data-device="nexus7"][data-orientation="portrait"] > .device > .screen {
+      top: 13.1365741%;
+      bottom: 12.7893519%;
+      left: 13.7681159%;
+      right: 13.7681159%; }
+    .dm-device[data-device="nexus7"][data-orientation="landscape"] > .device > .screen {
+      top: 13.7681159%;
+      bottom: 13.7681159%;
+      left: 13.0911188%;
+      right: 13.0911188%; }
+
+/*
+   Galaxy S3
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="s3"] {
+    padding-bottom: 178.787879%; }
+    .dm-device[data-device="s3"][data-orientation="portrait"] {
+      padding-bottom: 178.787879%; }
+    .dm-device[data-device="s3"][data-orientation="landscape"] {
+      padding-bottom: 55.9322034%; }
+    .dm-device[data-device="s3"] > .device, .dm-device[data-device="s3"][data-color="black"] > .device, .dm-device[data-device="s3"][data-orientation="portrait"][data-color="black"] > .device {
+      background-image: url("../img/s3_port_black.png"); }
+    .dm-device[data-device="s3"][data-orientation="landscape"] > .device, .dm-device[data-device="s3"][data-orientation="landscape"][data-color="black"] > .device {
+      background-image: url("../img/s3_land_black.png"); }
+    .dm-device[data-device="s3"][data-color="white"] > .device, .dm-device[data-device="s3"][data-orientation="portrait"][data-color="white"] > .device {
+      background-image: url("../img/s3_port_white.png"); }
+    .dm-device[data-device="s3"][data-orientation="landscape"][data-color="white"] > .device {
+      background-image: url("../img/s3_land_white.png"); }
+    .dm-device[data-device="s3"] > .device > .screen, .dm-device[data-device="s3"][data-orientation="portrait"] > .device > .screen {
+      top: 12.3728814%;
+      bottom: 15.5367232%;
+      left: 13.8383838%;
+      right: 13.8383838%; }
+    .dm-device[data-device="s3"][data-orientation="landscape"] > .device > .screen {
+      top: 13.8383838%;
+      bottom: 13.8383838%;
+      left: 12.3728814%;
+      right: 15.5367232%; }
+
+/*
+   Surface
+   ========================================================================== */
+.dm-device {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-device img {
+    max-width: 100%;
+    height: auto; }
+  .dm-device > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-device > .device > .screen {
+      position: absolute;
+      top: 11.0438729%;
+      bottom: 14.6747352%;
+      left: 13.364486%;
+      right: 13.364486%;
+      overflow: hidden;
+      background-color: #3c3c3c; }
+      .dm-device > .device > .screen .embed-youtube, .dm-device > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-device[data-device="surface"] {
+    padding-bottom: 64.7584973%; }
+    .dm-device[data-device="surface"][data-orientation="landscape"] {
+      padding-bottom: 64.7584973%; }
+      .dm-device[data-device="surface"][data-orientation="landscape"] > .device {
+        background-image: url("../img/surface.png"); }
+      .dm-device[data-device="surface"][data-orientation="landscape"] > .device > .screen {
+        top: 14.5488029%;
+        bottom: 14.9171271%;
+        left: 9.36195587%;
+        right: 9.36195587%; }
+    .dm-device[data-device="surface"] > .device {
+      background-image: url("../img/surface.png"); }
+    .dm-device[data-device="surface"] > .device > .screen {
+      top: 14.5488029%;
+      bottom: 14.9171271%;
+      left: 9.36195587%;
+      right: 9.36195587%; }
+
+/**
+ * Options
+ */
+/*
+   Stacking
+   ========================================================================== */
+.dm-stacked {
+  position: relative;
+  margin-bottom: 20px;
+  height: auto;
+  width: 100%; }
+  .dm-stacked .dm-stacked-left, .dm-stacked .dm-stacked-right {
+    position: absolute;
+    bottom: 0;
+    z-index: 10; }
+    .dm-stacked .dm-stacked-left.iphone6, .dm-stacked .dm-stacked-right.iphone6 {
+      width: 17%; }
+      .dm-stacked .dm-stacked-left.iphone6.landscape, .dm-stacked .dm-stacked-right.iphone6.landscape {
+        width: 39%; }
+    .dm-stacked .dm-stacked-left.iphone6-plus, .dm-stacked .dm-stacked-right.iphone6-plus {
+      width: 21%; }
+      .dm-stacked .dm-stacked-left.iphone6-plus.landscape, .dm-stacked .dm-stacked-right.iphone6-plus.landscape {
+        width: 46%; }
+    .dm-stacked .dm-stacked-left.iphone5s, .dm-stacked .dm-stacked-right.iphone5s {
+      width: 17%; }
+      .dm-stacked .dm-stacked-left.iphone5s.landscape, .dm-stacked .dm-stacked-right.iphone5s.landscape {
+        width: 37%; }
+    .dm-stacked .dm-stacked-left.iphone5, .dm-stacked .dm-stacked-right.iphone5 {
+      width: 16%; }
+      .dm-stacked .dm-stacked-left.iphone5.landscape, .dm-stacked .dm-stacked-right.iphone5.landscape {
+        width: 35%; }
+    .dm-stacked .dm-stacked-left.ipad, .dm-stacked .dm-stacked-right.ipad {
+      bottom: -12px;
+      width: 45%; }
+      .dm-stacked .dm-stacked-left.ipad.landscape, .dm-stacked .dm-stacked-right.ipad.landscape {
+        width: 65%; }
+    .dm-stacked .dm-stacked-left.s3, .dm-stacked .dm-stacked-right.s3 {
+      width: 20%; }
+      .dm-stacked .dm-stacked-left.s3.landscape, .dm-stacked .dm-stacked-right.s3.landscape {
+        width: 45%; }
+    .dm-stacked .dm-stacked-left.nexus7, .dm-stacked .dm-stacked-right.nexus7 {
+      width: 30%; }
+      .dm-stacked .dm-stacked-left.nexus7.landscape, .dm-stacked .dm-stacked-right.nexus7.landscape {
+        width: 50%; }
+    .dm-stacked .dm-stacked-left.lumia920, .dm-stacked .dm-stacked-right.lumia920 {
+      width: 20%; }
+      .dm-stacked .dm-stacked-left.lumia920.landscape, .dm-stacked .dm-stacked-right.lumia920.landscape {
+        width: 36%; }
+    .dm-stacked .dm-stacked-left.surface, .dm-stacked .dm-stacked-right.surface {
+      width: 45%; }
+  .dm-stacked .dm-stacked-left {
+    left: 50px; }
+  .dm-stacked .dm-stacked-right {
+    right: 50px; }
+  .dm-stacked .dm-device {
+    margin-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .dm-stacked .dm-stacked-left {
+      left: 10px; }
+    .dm-stacked .dm-stacked-right {
+      right: 10px; } }
+
+/*
+   Hiding
+   ========================================================================== */
+.dm-hide-left {
+  overflow: hidden;
+  margin-left: -70px; }
+  .dm-hide-left .dm-device {
+    position: relative;
+    right: 33.3333333333%; }
+
+.dm-hide-right {
+  overflow: hidden;
+  margin-right: -70px; }
+  .dm-hide-right .dm-device {
+    position: relative;
+    left: 33.3333333333%; }
+
+/**
+ * Browsers
+ */
+/*
+   Chrome
+   ========================================================================== */
+.dm-browser {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-browser img {
+    max-width: 100%;
+    height: auto;
+    border-right: none !important; }
+  .dm-browser > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-browser > .device > .screen {
+      position: absolute;
+      top: 15.043873%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      .dm-browser > .device > .screen .embed-youtube, .dm-browser > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-browser[data-device="chrome"] > .device {
+    background-image: url("../img/chrome.png"); }
+    .dm-browser[data-device="chrome"] > .device > .screen {
+      top: 12.4%;
+      border: 1px solid #f3f2f3; }
+
+/*
+   Firefox
+   ========================================================================== */
+.dm-browser {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-browser img {
+    max-width: 100%;
+    height: auto;
+    border-right: none !important; }
+  .dm-browser > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-browser > .device > .screen {
+      position: absolute;
+      top: 15.043873%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      .dm-browser > .device > .screen .embed-youtube, .dm-browser > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-browser[data-device="firefox"] > .device {
+    background-image: url("../img/firefox.png"); }
+    .dm-browser[data-device="firefox"] > .device > .screen {
+      top: 13.3%;
+      border: 1px solid #f6f6f6; }
+
+/*
+   Safari
+   ========================================================================== */
+.dm-browser {
+  position: relative;
+  width: 100%;
+  padding-bottom: 61.775701%;
+  margin-bottom: 20px; }
+  .dm-browser img {
+    max-width: 100%;
+    height: auto;
+    border-right: none !important; }
+  .dm-browser > .device {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .dm-browser > .device > .screen {
+      position: absolute;
+      top: 15.043873%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      .dm-browser > .device > .screen .embed-youtube, .dm-browser > .device > .screen iframe {
+        width: 100% !important;
+        height: 100% !important; }
+  .dm-browser[data-device="safari"] > .device {
+    background-image: url("../img/safari.png"); }
+    .dm-browser[data-device="safari"] > .device > .screen {
+      top: 5.9%;
+      border: 1px solid #eee; }

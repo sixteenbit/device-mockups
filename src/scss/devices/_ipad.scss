@@ -1,0 +1,45 @@
+/*
+   iPad
+   ========================================================================== */
+.dm-device {
+    @include dm-device;
+    &[data-device="ipad"] {
+        padding-bottom: 128.406276%;
+        &[data-orientation="portrait"] {
+            padding-bottom: 128.406276%;
+        }
+        &[data-orientation="landscape"] {
+            padding-bottom: 79.9086758%;
+        }
+        & > .device, &[data-color="black"] >
+        .device, &[data-orientation="portrait"][data-color="black"] > .device {
+            background-image: url("../img/ipad_port_black.png");
+        }
+        &[data-color="white"] > .device,
+        &[data-orientation="portrait"][data-color="white"] > .device {
+            background-image: url("../img/ipad_port_white.png");
+        }
+        &[data-orientation="landscape"] {
+            & > .device,
+            &[data-color="black"] > .device {
+                background-image: url("../img/ipad_land_black.png");
+            }
+            &[data-color="white"] > .device {
+                background-image: url("../img/ipad_land_white.png");
+            }
+        }
+        & > .device > .screen,
+        &[data-orientation="portrait"] > .device > .screen {
+            top: 12.025723%;
+            bottom: 12.154341%;
+            left: 13.45995%;
+            right: 13.45995%;
+        }
+        &[data-orientation="landscape"] > .device > .screen {
+            top: 13.87755102%;
+            bottom: 13.87755102%;
+            left: 11.5459883%;
+            right: 11.5459883%;
+        }
+    }
+}

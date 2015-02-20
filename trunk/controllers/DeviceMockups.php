@@ -1,9 +1,9 @@
 <?php
 
-namespace com\mrdink\device_mockups\app\controllers;
+namespace com\mrdink\device_mockups\controllers;
 
-use com\mrdink\device_mockups\app\controllers\AppController;
-use com\mrdink\device_mockups\app\helpers\DeviceHelper;
+use com\mrdink\device_mockups\controllers\AppController;
+use com\mrdink\device_mockups\helpers\DeviceHelper;
 
 class DeviceMockups extends AppController {
 
@@ -93,8 +93,8 @@ class DeviceMockups extends AppController {
 
     function scripts() {
     	if ( !is_admin() ) {
-	  		wp_enqueue_style( 'dm-style', plugins_url('../assets/css/dm-style.min.css', __FILE__), false, '2.0.0-wip' );
-	  		wp_enqueue_script('dm-flexslider', plugins_url( '../assets/js/jquery.flexslider.min.js', __FILE__ ), array('jquery'));
+	  		wp_enqueue_style( 'device-mockups-style', plugins_url('../assets/css/device-mockups.css', __FILE__), false, '2.0.0-wip' );
+	  		wp_enqueue_script('device-mockups-flexslider', plugins_url( '../assets/js/flexslider.js', __FILE__ ), array('jquery'));
 	  	}
     }
 

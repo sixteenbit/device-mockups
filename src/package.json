@@ -1,0 +1,43 @@
+{
+  "name": "device-mockups",
+  "version": "2.0.0-wip",
+  "author": {
+    "name": "Justin Peacock",
+    "uri": "http://www.dm.byjust.in"
+  },
+  "plugin": {
+    "name": "Device Mockups",
+    "desc": "Shortcodes for responsive device mockups",
+    "uri": "https://wordpress.org/plugins/device-mockups"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mrdink/device-mockups.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrdink/device-mockups/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-imagemin": "^0.9.3",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-csscomb": "^3.0.0",
+    "grunt-cssjanus": "^0.2.4",
+    "grunt-notify": "^0.4.1",
+    "grunt-sass": "^0.18.0",
+    "grunt-version-check": "^0.2.1",
+    "grunt-wp-i18n": "^0.5.0",
+    "load-grunt-config": "^0.16.0",
+    "load-grunt-tasks": "^3.0.0",
+    "node-sass": "^2.0.1",
+    "time-grunt": "^1.0.0",
+    "versioncheck": "^2.1.1"
+  }
+}

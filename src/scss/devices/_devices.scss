@@ -1,0 +1,19 @@
+/**
+ * Devices
+ */
+.dm-width {
+    max-width: 100%;
+    display: inline-block;
+}
+
+@import "imac";
+@import "ipad";
+@import "iphone5";
+@import "iphone5s";
+@import "iphone6";
+@import "iphone6-plus";
+@import "lumia-920";
+@import "macbook";
+@import "nexus";
+@import "s3";
+@import "surface";
