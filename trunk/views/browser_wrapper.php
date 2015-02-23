@@ -1,31 +1,19 @@
-<?php
-
-function getDataAttribute() {
-	$output='' ; if (!empty($type)) {
-		$output .='data-device="' . esc_attr($type) . '"';
-	}
-	if (!empty($orientation)) {
-		$output .=' data-orientation="' . esc_attr($orientation) . '"';
-	}
-	if (!empty($color)) {
-		$output .=' data-color="' . esc_attr($color) . '"';
-	} return $output; }
-?>
-
-<div class="wrap">
-  <?php if (!empty($width)): ?>
-  <div style="max-width:<?=$width ?>">
-    <?php endif ?>
-
-    <div class="dm-browser" <?=getDataAttribute() ?>>
+<div class="dm-wrapper">
+<?php if (!empty($width)): ?>
+  <div style="width:<?= $width ?>;">
+<?php endif ?>
+    <div class="dm-browser" <?=$browserHelper->getAttr() ?>>
       <div class="device">
         <div class="screen">
-          <?php if (!empty($link)) { echo '<a href="' . esc_attr($link) . '">'; } echo do_shortcode($content); if (!empty($link)) { echo '</a>'; } ?>
-        </div>
-      </div>
-    </div>
-
-    <?php if (!empty($width)): ?>
-  </div>
-  <?php endif ?>
-</div>
+          <?php
+          	if (!empty($link)) { echo '<a href="' . esc_attr($link) . '">'; }
+	          	echo do_shortcode($content);
+	          if (!empty($link)) { echo '</a>'; }
+	        ?>
+        </div><!-- .screen -->
+      </div><!-- .device -->
+    </div><!-- .dm-browser -->
+<?php if (!empty($width)): ?>
+  </div><!-- .dm-width -->
+<?php endif ?>
+</div><!-- .dm-wrapper -->

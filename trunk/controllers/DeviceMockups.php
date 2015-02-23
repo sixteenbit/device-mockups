@@ -4,6 +4,7 @@ namespace com\mrdink\device_mockups\controllers;
 
 use com\mrdink\device_mockups\controllers\AppController;
 use com\mrdink\device_mockups\helpers\DeviceHelper;
+use com\mrdink\device_mockups\helpers\BrowserHelper;
 
 class DeviceMockups extends AppController {
 
@@ -47,12 +48,15 @@ class DeviceMockups extends AppController {
      * Browsers
      */
     public function browserWrapper($atts, $content = null) {
+    		$browserHelper = new BrowserHelper();
         $viewVars = array(
             'type' => 'chrome',
             'link' => '',
             'width' => '',
             'content' => $content);
         $this->setFromAttributes($viewVars, $atts);
+        $browserHelper->attr = $this->viewVariables;
+        $this->viewVariables['browserHelper'] = $browserHelper;
         return $this->loadViewContents('browser_wrapper');
     }
 
