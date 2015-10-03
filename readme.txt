@@ -1,10 +1,10 @@
 === Device Mockups ===
 Contributors: mrdink, phikai
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CZ54JHH93S2Y
+Donate link: http://drop.byjust.in/3YqO
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
-Tested up to: 4.0
-Stable tag: 1.5
+Tested up to: 4.3
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ For more information, including code examples and more, check out (http://dm.byj
 
 = Device Attributes =
 * type
-* color: black/white
+* color: black/white/gold/silver
 * orientation: portrait/landscape
 * stacked: open/closed
 * position: left/right
