@@ -1,9 +1,9 @@
 {
   "name": "device-mockups",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "homepage": "https://wordpress.org/plugins/device-mockups/",
   "authors": [
-    "Justin Peacock <justin@sixteenbit.com>"
+    "Justin Peacock <wp@sixteenbit.com>"
   ],
   "description": "WordPress shortcodes for device mockups",
   "keywords": [
@@ -20,7 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~3.2.0",
-    "flexslider": "*"
+    "bourbon": "~4.2.5",
+    "slick-carousel": "slick.js#~1.5.8"
   }
 }

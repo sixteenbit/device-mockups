@@ -1,0 +1,15 @@
+/**
+ * Safari
+ */
+.dm-browser {
+  @include dm-browser;
+  &[data-device="safari"] {
+    & > .device {
+      background-image: url("img/safari.png");
+      & > .screen {
+        top: 5.9%;
+        border: 1px solid #eee;
+      }
+    }
+  }
+}

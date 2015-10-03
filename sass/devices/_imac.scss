@@ -1,0 +1,18 @@
+/**
+ * iMac
+ */
+.dm-device {
+  @include dm-device;
+  &[data-device="imac"] {
+    padding-bottom: 81.230769%;
+    & > .device {
+      background-image: url("img/imac.png");
+      & > .screen {
+        top: 8.20707071%;
+        bottom: 31.6919192%;
+        left: 6.61538462%;
+        right: 6.61538462%;
+      }
+    }
+  }
+}

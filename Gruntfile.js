@@ -1,178 +1,160 @@
-'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-	// load all grunt tasks matching the `grunt-*` pattern
-	require('load-grunt-tasks')(grunt);
+    /**
+     * time-grunt
+     *
+     * Display the elapsed execution time of grunt tasks
+     *
+     * @link https://www.npmjs.com/package/time-grunt
+     */
+    require('time-grunt')(grunt);
 
-	grunt.initConfig({
-
-		pkg: grunt.file.readJSON('package.json'),
-
-		config: {
-			bower: 	 			'bower_components',
-			sass: 	 			'scss',
-			assets: 		 	'assets',
-
-			cssbanner: '/*\n'+
-								'Plugin Name: <%= pkg.plugin.name %>\n'+
-								'Plugin URI: <%= pkg.plugin.uri %>\n'+
-								'Author: <%= pkg.author.name %>\n'+
-								'Author URI: <%= pkg.author.uri %>\n'+
-								'Version: <%= pkg.version %>\n'+
-								'License: GNU General Public License v2.0\n'+
-								'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n'+
-						'*/\n',
-
-			jsbanner:  '/*\n' +
-								 ' * <%= pkg.plugin.name %> v<%= pkg.version %> (<%= pkg.plugin.uri %>)\n' +
-								 ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-								 '*/\n'
-		},
-    jshint: {
-      options: {
-        "bitwise": true,
-        "browser": true,
-        "curly": true,
-        "eqeqeq": true,
-        "eqnull": true,
-        "esnext": true,
-        "immed": true,
-        "jquery": true,
-        "latedef": true,
-        "newcap": true,
-        "noarg": true,
-        "node": true,
-        "strict": false,
-        "trailing": true,
-        "undef": true,
-        "globals": {
-          "jQuery": true,
-          "alert": true,
-          "tinymce": false
+    // Project configuration
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        /**
+         * grunt-contrib-concat
+         *
+         * Concatenate files.
+         *
+         * Concatenates an array of js files set in /grunt/vars.js
+         *
+         * @link https://www.npmjs.com/package/grunt-contrib-concat
+         */
+        concat: {
+            options: {
+                separator: ';',
+                stripBanners: true,
+                banner: '/*! <%= pkg.title %> - v<%= pkg.version %>\n' +
+                ' * <%= pkg.homepage %>\n' +
+                ' * Copyright (c) <%= grunt.template.today("yyyy") %>;' +
+                ' * Licensed GPLv2+' +
+                ' */\n'
+            },
+            main: {
+                src: [
+                    'bower_components/slick-carousel/slick/slick.js'
+                ],
+                dest: 'js/device-mockups.js'
+            },
+            admin: {
+                src: [
+                    'js/src/editor.js'
+                ],
+                dest: 'inc/admin/device-mockups-admin.js'
+            }
+        },
+        /**
+         * grunt-contrib-jshint
+         *
+         * Validate files with JSHint.
+         *
+         * @link https://www.npmjs.com/package/grunt-contrib-jshint
+         */
+        jshint: {
+            all: [
+                'Gruntfile.js',
+                'js/src/**/*.js'
+            ]
+        },
+        /**
+         * grunt-contrib-sass
+         *
+         * Compile Sass to CSS
+         *
+         * @link https://www.npmjs.com/package/grunt-contrib-sass
+         */
+        sass: {
+            dist: {
+                options: {
+                    loadPath: [
+                        'bower_components/bourbon/app/assets/stylesheets'
+                    ],
+                    style: 'expanded',
+                    sourcemap: 'none'
+                },
+                files: {
+                    'inc/admin/device-mockups-admin.css': 'sass/device-mockups-admin.scss',
+                    'device-mockups.css': 'sass/device-mockups.scss'
+                }
+            }
+        },
+        /**
+         * grunt-contrib-watch
+         *
+         * Run predefined tasks whenever watched file patterns are
+         * added, changed or deleted.
+         *
+         * @link https://www.npmjs.com/package/grunt-contrib-watch
+         */
+        watch: {
+            styles: {
+                files: ['sass/*.scss'],
+                tasks: ['css']
+            }
+        },
+        /**
+         * grunt-version-check
+         *
+         * Checks if your NPM or Bower dependencies are out of date.
+         *
+         * Run grunt versioncheck
+         *
+         * @link https://www.npmjs.com/package/grunt-version-check
+         */
+        versioncheck: {
+            options: {
+                skip: ['semver', 'npm', 'lodash'],
+                hideUpToDate: false
+            }
+        },
+        /**
+         * grunt-notify
+         *
+         * Automatic desktop notifications for Grunt errors and warnings using
+         * Growl for OS X or Windows, Mountain Lion and Mavericks Notification
+         * Center, and Notify-Send.
+         *
+         * @link https://www.npmjs.com/package/grunt-notify
+         */
+        notify: {
+            css: {
+                options: {
+                    title: 'Grunt, grunt!',
+                    message: 'CSS is compiled.'
+                }
+            },
+            js: {
+                options: {
+                    title: 'Grunt, grunt!',
+                    message: 'JS is all good.'
+                }
+            },
+            default: {
+                options: {
+                    title: 'Grunt, grunt!',
+                    message: 'All tasks have completed with no errors.'
+                }
+            }
         }
-      },
-      all: [
-        'Gruntfile.js',
-        '<%= config.assets %>/js/*.js',
-        '!<%= config.assets %>/**/*.min.*'
-      ]
-    },
-		sass: {
-      options: {
-        style: 'compact',
-        includePaths: ['<%= config.bower %>/bourbon/dist']
-      },
-			dev: {
-				files: {
-					'<%= config.assets %>/css/dm-style.css': 'scss/dm-style.scss'
-				}
-			}
-		},
-		autoprefixer: {
-			options: {
-				browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
-			},
-			dev: {
-				src: '<%= config.assets %>/css/dm-style.css',
-				dest: '<%= config.assets %>/css/dm-style.css'
-			}
-		},
-		cssmin: {
-			dist: {
-				files: {
-					'<%= config.assets %>/css/dm-style.min.css': ['<%= config.assets %>/css/dm-style.css']
-				}
-			}
-		},
-		uglify: {
-			min: {
-				files: {
-					"<%= config.assets %>/js/editor.min.js": ["<%= config.assets %>/js/editor.js"],
-          "<%= config.assets %>/js/jquery.flexslider.min.js": ["<%= config.bower %>/flexslider/jquery.flexslider.js"]
-				}
-			}
-		},
-		usebanner: {
-			css: {
-				options: {
-					position: 'top',
-					banner: '<%= config.cssbanner %>'
-				},
-				files: {
-					src: [
-						'<%= config.assets %>/css/dm-style.css',
-						'<%= config.assets %>/css/dm-style.min.css'
-					]
-				}
-			},
-			js: {
-				options: {
-					position: 'top',
-					banner: '<%= config.jsbanner %>'
-				},
-				files: {
-					src: [
-						'<%= config.assets %>/js/*.js',
-            '!<%= config.assets %>/js/editor.js',
-					]
-				}
-			}
-		},
-		imagemin: {
-			img: {
-				options: {
-					optimizationLevel: 7,
-					progressive: true
-				},
-				files: [{
-					expand: true,
-					cwd: '<%= config.assets %>/img/',
-					src: '**/*.{png,jpg,gif}',
-					dest: '<%= config.assets %>/img/'
-				}]
-			}
-		},
-		watch: {
-			options: {
-				livereload: false
-			},
-			grunt: {
-				files: ['Gruntfile.js'],
-				tasks: ['stylesheets','scripts','usebanner']
-			},
-			markup: {
-				files: ["*.php"],
-			},
-			compass: {
-				files: ['scss/**/*'],
-				tasks: ['stylesheets','scripts','usebanner']
-			},
-			js: {
-				files: ['js/**/*'],
-				tasks: ['stylesheets','scripts','usebanner']
-			}
-		}
-	});
+    });
+    /**
+     * load-grunt-tasks
+     *
+     * Load multiple grunt tasks using globbing patterns
+     *
+     * This module will read the dependencies/devDependencies/peerDependencies
+     * in your package.json and load grunt tasks that match the provided patterns.
+     *
+     * @link https://www.npmjs.com/package/load-grunt-tasks
+     */
+    require('load-grunt-tasks')(grunt);
 
-	// register task
-	grunt.registerTask('stylesheets', [
-    'jshint',
-		'sass',
-		'autoprefixer',
-		'cssmin'
-	]);
+    grunt.registerTask('css', ['sass', 'notify:css']);
 
-	// register task
-	grunt.registerTask('scripts', [
-    'jshint',
-		'uglify'
-	]);
+    grunt.registerTask('js', ['jshint', 'concat', 'notify:js']);
 
-	grunt.registerTask('default', [
-		'stylesheets',
-		'scripts',
-		'usebanner',
-		'watch'
-	]);
+    grunt.registerTask('default', ['css', 'js', 'notify:default']);
 
+    grunt.util.linefeed = '\n';
 };
