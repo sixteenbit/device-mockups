@@ -1,0 +1,36 @@
+# Copyright (C) 2015 Justin Peacock
+# This file is distributed under the GPLv2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Device Mockups 1.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/device-mockups\n"
+"POT-Creation-Date: 2015-10-04 20:37:59+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+
+#. Plugin Name of the plugin/theme
+msgid "Device Mockups"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/device-mockups/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Show your work in high resolution, responsive device mockups using only "
+"shortcodes."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Justin Peacock"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://byjust.in/"
+msgstr ""

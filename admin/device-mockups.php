@@ -16,7 +16,7 @@ function device_mockups_tinymce_button() {
 }
 
 function device_mockups_add_tinymce_plugin( $plugin_array ) {
-	$plugin_array['device_mockups_tc_button'] = plugins_url( 'device-mockups-admin.js', __FILE__ );
+	$plugin_array['device_mockups_tc_button'] = plugins_url( 'device-mockups.js', __FILE__ );
 
 	return $plugin_array;
 }
@@ -28,7 +28,7 @@ function device_mockups_register_my_tc_button( $buttons ) {
 }
 
 function add_device_mockups_admin() {
-	wp_register_style( 'device-mockups-admin', DEVICE_MOCKUPS_URL . '/inc/admin/device-mockups-admin.css', false, DEVICE_MOCKUPS_VERSION );
+	wp_register_style( 'device-mockups-admin', DEVICE_MOCKUPS_URL . '/admin/device-mockups.css', false, DEVICE_MOCKUPS_VERSION );
 	wp_enqueue_style( 'device-mockups-admin' );
 }
 

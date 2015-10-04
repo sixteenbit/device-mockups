@@ -8,6 +8,7 @@
  * Author URI: https://byjust.in/
  * License:     GPLv2+
  * Text Domain: device_mockups
+ * Domain Path: /languages
  */
 
 /**
@@ -32,7 +33,19 @@
 define( 'DEVICE_MOCKUPS_VERSION', '1.5.0' );
 define( 'DEVICE_MOCKUPS_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEVICE_MOCKUPS_PATH', dirname( __FILE__ ) . '/' );
+define( 'DEVICE_MOCKUPS_ADMIN', DEVICE_MOCKUPS_PATH . 'admin/' );
 define( 'DEVICE_MOCKUPS_INC', DEVICE_MOCKUPS_PATH . 'includes/' );
+
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+function device_mockups_load_textdomain() {
+	load_plugin_textdomain( 'device_mockups', false, plugin_basename( DEVICE_MOCKUPS_PATH ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'device_mockups_load_textdomain' );
 
 /**
  * Enqueue stylesheet when device or browser shortcode is used.
@@ -74,7 +87,7 @@ add_filter( "plugin_action_links_$plugin", 'device_mockups_docs_link' );
 /**
  * Include functions
  */
-require_once DEVICE_MOCKUPS_INC . 'admin/device-mockups-admin.php';
+require_once DEVICE_MOCKUPS_ADMIN . 'device-mockups.php';
 require_once DEVICE_MOCKUPS_INC . 'device.php';
 require_once DEVICE_MOCKUPS_INC . 'browser.php';
 

@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                 src: [
                     'js/src/editor.js'
                 ],
-                dest: 'inc/admin/device-mockups-admin.js'
+                dest: 'admin/device-mockups.js'
             }
         },
         /**
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'inc/admin/device-mockups-admin.css': 'sass/device-mockups-admin.scss',
+                    'admin/device-mockups.css': 'sass/device-mockups-admin.scss',
                     'css/device-mockups.css': 'sass/device-mockups.scss'
                 }
             }
@@ -97,6 +97,22 @@ module.exports = function (grunt) {
                     'bower_components/slick-carousel/slick/fonts/*'
                 ],
                 dest: 'fonts/'
+            },
+            build: {
+                expand: true,
+                src: [
+                    '**',
+                    '!**/.*',
+                    '!node_modules/**',
+                    '!bower_components/**',
+                    '!release/**',
+                    '!sass/**',
+                    '!js/src/**',
+                    '!bower.json',
+                    '!Gruntfile.js',
+                    '!package.json'
+                ],
+                dest: 'release/device-mockups/'
             }
         },
         /**
@@ -110,7 +126,7 @@ module.exports = function (grunt) {
             prod: {
                 options: {
                     domainPath: '/languages/',
-                    potFilename: '<%%= pkg.name %>.pot',
+                    potFilename: 'device-mockups.pot',
                     type: 'wp-plugin'
                 }
             }
@@ -191,6 +207,8 @@ module.exports = function (grunt) {
     grunt.registerTask('js', ['jshint', 'concat', 'notify:js']);
 
     grunt.registerTask('default', ['copy', 'css', 'js', 'makepot', 'notify:default']);
+
+    grunt.registerTask('build', ['default', 'copy:build']);
 
     grunt.util.linefeed = '\n';
 };
