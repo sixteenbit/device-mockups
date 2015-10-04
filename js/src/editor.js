@@ -12,11 +12,7 @@
                     onclick: function () {
                         editor.windowManager.open({
                             title: 'Add a device',
-                            body: [{
-                                type: 'textbox',
-                                name: 'content',
-                                label: 'Content'
-                            },
+                            body: [
                                 {
                                     type: 'textbox',
                                     name: 'link',
@@ -67,6 +63,11 @@
                                     type: 'textbox',
                                     name: 'width',
                                     label: 'Width'
+                                },
+                                {
+                                    type: 'textbox',
+                                    name: 'content',
+                                    label: 'Content'
                                 }],
                             onsubmit: function (e) {
                                 editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" width="' + e.data.width + '"]' + e.data.content + '[/device]');
@@ -81,11 +82,7 @@
                     onclick: function () {
                         editor.windowManager.open({
                             title: 'Add a browser',
-                            body: [{
-                                type: 'textbox',
-                                name: 'content',
-                                label: 'Content'
-                            },
+                            body: [
                                 {
                                     type: 'textbox',
                                     name: 'link',
@@ -106,6 +103,11 @@
                                     type: 'textbox',
                                     name: 'width',
                                     label: 'Width'
+                                },
+                                {
+                                    type: 'textbox',
+                                    name: 'content',
+                                    label: 'Content'
                                 }],
                             onsubmit: function (e) {
                                 editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" width="' + e.data.width + '"]' + e.data.content + '[/browser]');
