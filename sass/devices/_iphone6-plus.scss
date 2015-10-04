@@ -13,26 +13,26 @@
     }
     & > .device, &[data-color="black"] > .device,
     &[data-orientation="portrait"][data-color="black"] > .device {
-      background-image: url("img/iphone6_plus_port_black.png");
+      background-image: url("#{$base-url}iphone6_plus_port_black.png");
     }
     &[data-orientation="landscape"] {
       & > .device, &[data-color="black"] > .device {
-        background-image: url("img/iphone6_plus_land_black.png");
+        background-image: url("#{$base-url}iphone6_plus_land_black.png");
       }
     }
     &[data-color="silver"] > .device,
     &[data-orientation="portrait"][data-color="silver"] > .device {
-      background-image: url("img/iphone6_plus_port_silver.png");
+      background-image: url("#{$base-url}iphone6_plus_port_silver.png");
     }
     &[data-orientation="landscape"][data-color="silver"] > .device {
-      background-image: url("img/iphone6_plus_land_silver.png");
+      background-image: url("#{$base-url}iphone6_plus_land_silver.png");
     }
     &[data-color="gold"] > .device,
     &[data-orientation="portrait"][data-color="gold"] > .device {
-      background-image: url("img/iphone6_plus_port_gold.png");
+      background-image: url("#{$base-url}iphone6_plus_port_gold.png");
     }
     &[data-orientation="landscape"][data-color="gold"] > .device {
-      background-image: url("img/iphone6_plus_land_gold.png");
+      background-image: url("#{$base-url}iphone6_plus_land_gold.png");
     }
     & > .device > .screen,
     &[data-orientation="portrait"] > .device > .screen {

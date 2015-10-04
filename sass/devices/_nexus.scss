@@ -12,10 +12,10 @@
       padding-bottom: 63.6678201%;
     }
     & > .device, &[data-orientation="portrait"] > .device {
-      background-image: url("img/nexus7_port.png");
+      background-image: url("#{$base-url}nexus7_port.png");
     }
     &[data-orientation="landscape"] > .device {
-      background-image: url("img/nexus7_land.png");
+      background-image: url("#{$base-url}nexus7_land.png");
     }
     & > .device > .screen,
     &[data-orientation="portrait"] > .device > .screen {

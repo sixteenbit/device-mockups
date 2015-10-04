@@ -5,7 +5,7 @@
   @include dm-browser;
   &[data-device="chrome"] {
     & > .device {
-      background-image: url("img/chrome.png");
+      background-image: url("#{$base-url}chrome.png");
       & > .screen {
         top: 12.4%;
         border: 1px solid #f3f2f3;

@@ -1,3 +1,31 @@
+@charset "UTF-8";
+/**
+ * Table of Contents
+ *
+ * Options
+ *      Gallery
+ *      Stacking
+ *      Hiding
+ *      Width
+ * Devices
+ * 		iMac
+ *		iPad
+ *		iPhone 5
+ *		iPhone 5s
+ * 		iPhone 6
+ *      iPhone 6 Plus
+ *      Lumia 920
+ *      Macbook Pro
+ *      Nexus 7
+ *      Galaxy S3
+ *      Surface
+ * Browsers
+ * 		Chrome
+ *		Firefox
+ *		Safari
+ * Slick
+ */
+
 // Vendors
 @import
   'bourbon';
@@ -9,9 +37,10 @@
 
 // Options
 @import
-  'options/width',
+  'options/gallery',
   'options/stacking',
-  'options/hiding';
+  'options/hiding',
+  'options/width';
 
 // Devices
 @import
@@ -33,4 +62,7 @@
   'browsers/firefox',
   'browsers/safari';
 
-//@import "flexslider";
+// Vendors
+@import
+  'slick',
+  'slick-theme';

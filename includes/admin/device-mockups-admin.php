@@ -3,15 +3,11 @@
 add_action( 'admin_head', 'device_mockups_tinymce_button' );
 
 function device_mockups_tinymce_button() {
-	global $typenow;
 	// check user permissions
 	if ( ! current_user_can( 'edit_posts' ) && ! current_user_can( 'edit_pages' ) ) {
 		return;
 	}
-	// verify the post type
-	if ( ! in_array( $typenow, array( 'post', 'page' ) ) ) {
-		return;
-	}
+
 	// check if WYSIWYG is enabled
 	if ( get_user_option( 'rich_editing' ) == 'true' ) {
 		add_filter( "mce_external_plugins", "device_mockups_add_tinymce_plugin" );

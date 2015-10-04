@@ -33,7 +33,8 @@ module.exports = function (grunt) {
             },
             main: {
                 src: [
-                    'bower_components/slick-carousel/slick/slick.js'
+                    'bower_components/slick-carousel/slick/slick.js',
+                    'js/src/init.js'
                 ],
                 dest: 'js/device-mockups.js'
             },
@@ -68,14 +69,49 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     loadPath: [
-                        'bower_components/bourbon/app/assets/stylesheets'
+                        'bower_components/bourbon/app/assets/stylesheets',
+                        'bower_components/slick-carousel/slick'
                     ],
                     style: 'expanded',
                     sourcemap: 'none'
                 },
                 files: {
                     'inc/admin/device-mockups-admin.css': 'sass/device-mockups-admin.scss',
-                    'device-mockups.css': 'sass/device-mockups.scss'
+                    'css/device-mockups.css': 'sass/device-mockups.scss'
+                }
+            }
+        },
+        /**
+         * grunt-contrib-copy
+         *
+         * Copy files and folders
+         *
+         * @link https://www.npmjs.com/package/grunt-contrib-copy
+         */
+        copy: {
+            fonts: {
+                expand: true,
+                filter: 'isFile',
+                flatten: true,
+                src: [
+                    'bower_components/slick-carousel/slick/fonts/*'
+                ],
+                dest: 'fonts/'
+            }
+        },
+        /**
+         * grunt-wp-i18n
+         *
+         * Internationalize WordPress themes and plugins.
+         *
+         * @link https://www.npmjs.com/package/grunt-wp-i18n
+         */
+        makepot: {
+            prod: {
+                options: {
+                    domainPath: '/languages/',
+                    potFilename: '<%%= pkg.name %>.pot',
+                    type: 'wp-plugin'
                 }
             }
         },
@@ -154,7 +190,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('js', ['jshint', 'concat', 'notify:js']);
 
-    grunt.registerTask('default', ['css', 'js', 'notify:default']);
+    grunt.registerTask('default', ['copy', 'css', 'js', 'makepot', 'notify:default']);
 
     grunt.util.linefeed = '\n';
 };

@@ -32,17 +32,35 @@
 define( 'DEVICE_MOCKUPS_VERSION', '1.5.0' );
 define( 'DEVICE_MOCKUPS_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEVICE_MOCKUPS_PATH', dirname( __FILE__ ) . '/' );
-define( 'DEVICE_MOCKUPS_INC', DEVICE_MOCKUPS_PATH . 'inc/' );
+define( 'DEVICE_MOCKUPS_INC', DEVICE_MOCKUPS_PATH . 'includes/' );
 
-require_once DEVICE_MOCKUPS_INC . 'admin/device-mockups-admin.php';
-
-function device_mockups_scripts() {
-	wp_enqueue_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . '/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
-//	wp_enqueue_script( 'script-name', DEVICE_MOCKUPS_URL . '/js/example.js', array(), '1.0.0', true );
+/**
+ * Enqueue stylesheet when device or browser shortcode is used.
+ */
+function device_mockups_stylesheet() {
+	global $post;
+	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'device' ) || has_shortcode( $post->post_content, 'browser' ) ) {
+		wp_enqueue_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . '/css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
+	}
 }
 
-add_action( 'wp_enqueue_scripts', 'device_mockups_scripts' );
+add_action( 'wp_enqueue_scripts', 'device_mockups_stylesheet' );
 
+/**
+ * Enqueue script when gallery shortcode is used.
+ */
+function device_mockups_script() {
+	global $post;
+	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'gallery' ) ) {
+		wp_enqueue_script( 'device-mockups-scripts', DEVICE_MOCKUPS_URL . '/js/device-mockups.js', array(), DEVICE_MOCKUPS_VERSION, true );
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'device_mockups_script' );
+
+/**
+ * Add documentation link
+ */
 function device_mockups_docs_link( $links ) {
 	$settings_link = '<a href="http://dm.byjust.in" target="_blank">Documentation</a>';
 	array_unshift( $links, $settings_link );
@@ -53,60 +71,16 @@ function device_mockups_docs_link( $links ) {
 $plugin = plugin_basename( __FILE__ );
 add_filter( "plugin_action_links_$plugin", 'device_mockups_docs_link' );
 
-// adds device wrapper shortcode
-function device_mockups_device_wrapper( $atts, $content = null ) {
-	$specs = shortcode_atts( array(
-		'type'        => 'imac',
-		'orientation' => '',
-		'color'       => '',
-		'stacked'     => '',
-		'position'    => '',
-		'link'        => '',
-		'width'       => '',
-		'hide'        => ''
-	), $atts );
+/**
+ * Include functions
+ */
+require_once DEVICE_MOCKUPS_INC . 'admin/device-mockups-admin.php';
+require_once DEVICE_MOCKUPS_INC . 'device.php';
+require_once DEVICE_MOCKUPS_INC . 'browser.php';
 
-	$stacked_s = $specs['stacked'] == 'open' ? '<div class="dm-stacked">' : '';
-	$stacked_e = $specs['stacked'] == 'closed' ? '</div>' : '';
-
-	$hide_s = ! empty( $specs['hide'] ) ? '<div class="dm-hide-' . esc_attr( $specs['hide'] ) . '">' : '';
-	$hide_e = ! empty( $specs['hide'] ) ? '</div>' : '';
-
-	$width_s = ! empty( $specs['width'] ) ? '<div class="dm-width" style="width:' . esc_attr( $specs['width'] ) . ';">' : '';
-	$width_e = ! empty( $specs['width'] ) ? '</div>' : '';
-
-	$wrapper_s = ! empty( $specs['position'] ) ? '<div class="dm-stacked-' . esc_attr( $specs['position'] ) . ' ' . esc_attr( $specs['type'] ) . ' ">' : '';
-	$wrapper_e = ! empty( $specs['position'] ) ? '</div>' : '';
-
-	$anchor_s = ! empty( $specs['link'] ) ? '<a href="' . esc_url( $specs['link'] ) . '">' : '';
-	$anchor_e = ! empty( $specs['link'] ) ? '</a>' : '';
-
-	return $stacked_s . $hide_s . $width_s . $wrapper_s . '<div class="dm-device" data-device="' . esc_attr( $specs['type'] ) . '" data-orientation="' . esc_attr( $specs['orientation'] ) . '" data-color="' . esc_attr( $specs['color'] ) . '"><div class="device"><div class="screen">' . $anchor_s . do_shortcode( $content ) . $anchor_e . '</div></div></div>' . $wrapper_e . $width_e . $hide_e . $stacked_e;
-}
-
-add_shortcode( 'device', 'device_mockups_device_wrapper' );
-
-// adds browser wrapper shortcode
-function device_mockups_browser_wrapper( $atts, $content = null ) {
-	$specs = shortcode_atts( array(
-		'type'  => 'chrome',
-		'link'  => '',
-		'width' => '',
-	), $atts );
-
-	$width_s = ! empty( $specs['width'] ) ? '<div class="dm-width" style="width:' . esc_attr( $specs['width'] ) . ';">' : '';
-	$width_e = ! empty( $specs['width'] ) ? '</div>' : '';
-
-	$anchor_s = ! empty( $specs['link'] ) ? '<a href="' . esc_url( $specs['link'] ) . '">' : '';
-	$anchor_e = ! empty( $specs['link'] ) ? '</a>' : '';
-
-	return $width_s . '<div class="dm-browser" data-device="' . esc_attr( $specs['type'] ) . '"><div class="device"><div class="screen">' . $anchor_s . do_shortcode( $content ) . $anchor_e . '</div></div></div>' . $width_e;
-}
-
-add_shortcode( 'browser', 'device_mockups_browser_wrapper' );
-
-
-//disables wp texturize on registered shortcodes
+/**
+ * disables wp texturize on registered shortcodes
+ */
 function device_mockups_shortcode_exclude( $shortcodes ) {
 	$shortcodes[] = 'device';
 	$shortcodes[] = 'browser';
@@ -116,9 +90,9 @@ function device_mockups_shortcode_exclude( $shortcodes ) {
 
 add_filter( 'no_texturize_shortcodes', 'device_mockups_shortcode_exclude' );
 
-// remove and re-prioritize wpautop to prevent auto formatting inside shortcodes
-// shortcode_unautop is a core function
-
+/**
+ * remove and re-prioritize wpautop to prevent auto formatting inside shortcodes
+ */
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop', 99 );
 add_filter( 'the_content', 'shortcode_unautop', 100 );

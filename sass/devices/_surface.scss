@@ -8,7 +8,7 @@
     &[data-orientation="landscape"] {
       padding-bottom: 64.7584973%;
       & > .device {
-        background-image: url("img/surface.png");
+        background-image: url("#{$base-url}surface.png");
       }
       & > .device > .screen {
         top: 14.5488029%;
@@ -18,7 +18,7 @@
       }
     }
     & > .device {
-      background-image: url("img/surface.png");
+      background-image: url("#{$base-url}surface.png");
     }
     & > .device > .screen {
       top: 14.5488029%;

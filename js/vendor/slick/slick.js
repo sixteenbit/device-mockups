@@ -1,6 +1,19 @@
-/*! Device Mockups - v1.5.0
- * 
- * Copyright (c) 2015; * Licensed GPLv2+ */
+/*
+     _ _      _       _
+ ___| (_) ___| | __  (_)___
+/ __| | |/ __| |/ /  | / __|
+\__ \ | | (__|   < _ | \__ \
+|___/_|_|\___|_|\_(_)/ |___/
+                   |__/
+
+ Version: 1.5.8
+  Author: Ken Wheeler
+ Website: http://kenwheeler.github.io
+    Docs: http://kenwheeler.github.io/slick
+    Repo: http://github.com/kenwheeler/slick
+  Issues: http://github.com/kenwheeler/slick/issues
+
+ */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 (function(factory) {
     'use strict';
@@ -2627,14 +2640,3 @@
     };
 
 }));
-;(function ($) {
-    $('.dm-device .gallery').slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 4000
-    });
-})(jQuery);

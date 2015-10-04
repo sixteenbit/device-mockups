@@ -6,7 +6,7 @@
   &[data-device="macbook"] {
     padding-bottom: 61.775701%;
     & > .device {
-      background-image: url("img/macbook.png");
+      background-image: url("#{$base-url}macbook.png");
       & > .screen {
         top: 11.0438729%;
         bottom: 14.6747352%;
