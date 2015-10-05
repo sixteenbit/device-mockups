@@ -52,8 +52,10 @@ add_action( 'plugins_loaded', 'device_mockups_load_textdomain' );
  */
 function device_mockups_stylesheet() {
 	global $post;
-	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'device' ) || has_shortcode( $post->post_content, 'browser' ) ) {
+	if ( is_a( $post, 'WP_Post' ) && ( has_shortcode( $post->post_content, 'device' ) || has_shortcode( $post->post_content, 'browser' ) ) ) {
 		wp_enqueue_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . '/css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
+	} else {
+		// do nothing
 	}
 }
 
@@ -66,6 +68,8 @@ function device_mockups_script() {
 	global $post;
 	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'gallery' ) ) {
 		wp_enqueue_script( 'device-mockups-scripts', DEVICE_MOCKUPS_URL . '/js/device-mockups.js', array(), DEVICE_MOCKUPS_VERSION, true );
+	} else {
+		// do nothing
 	}
 }
 

@@ -27,17 +27,17 @@
                                     label: 'Type',
                                     'values': [
                                         {text: '', value: ''},
+                                        {text: 'iMac', value: 'imac'},
+                                        {text: 'Macbook', value: 'macbook'},
                                         {text: 'iPhone 6', value: 'iphone6'},
                                         {text: 'iPhone 6 Plus', value: 'iphone6-plus'},
                                         {text: 'iPhone 5s', value: 'iphone5s'},
                                         {text: 'iPhone 5', value: 'iphone5'},
-                                        {text: 'iPad', value: 'ipad'},
-                                        {text: 'iMac', value: 'imac'},
-                                        {text: 'Macbook Pro', value: 'macbook'},
                                         {text: 'Galaxy S3', value: 's3'},
-                                        {text: 'Nexus 7', value: 'nexus'},
-                                        {text: 'Surface', value: 'surface'},
-                                        {text: 'Lumia 920', value: 'lumia920'}
+                                        {text: 'Lumia 920', value: 'lumia920'},
+                                        {text: 'iPad', value: 'ipad'},
+                                        {text: 'Nexus 7', value: 'nexus7'},
+                                        {text: 'Surface', value: 'surface'}
                                     ]
                                 },
                                 {
@@ -68,12 +68,22 @@
                                     label: 'Width'
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'hide',
+                                    label: 'Hide',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'Left', value: 'left'},
+                                        {text: 'Right', value: 'right'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" width="' + e.data.width + '"]' + e.data.content + '[/device]');
+                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/device]');
                             }
                         });
                     }
@@ -108,12 +118,22 @@
                                     label: 'Width'
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'hide',
+                                    label: 'Hide',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'Left', value: 'left'},
+                                        {text: 'Right', value: 'right'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" width="' + e.data.width + '"]' + e.data.content + '[/browser]');
+                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/browser]');
                             }
                         });
                     }
