@@ -68,17 +68,26 @@ Please help by reporting any bugs/feature request at the link below.
 * Report at: [Github Issue Tracker](https://github.com/mrdink/device-mockups/issues)
 
 = Questions/Comments =
-* http://byjust.in/contact/
+* https://byjust.in/contact/
 
 == Installation ==
 1. Upload `/device-mockups/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
-1. Stacked option
-2. TinyMCE shortcode generator
+1. iMac
+2. Stacking
+3. Browsers
 
 == Changelog ==
+= 1.5.0 =
+* semi-major update
+* re-wrote entire code base
+* styles and scripts only enqueue when shortcodes are used
+* re-organized tinymce button
+* switched to slick.js for gallery slider
+* added internalization
+
 = 1.4.2 =
 * pull request from @irazasyed to fix the custom url to the plugin dir
 * removed README.md
