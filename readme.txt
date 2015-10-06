@@ -4,7 +4,7 @@ Donate link: http://drop.byjust.in/3YqO
 Tags: portfolio, shortcode, device, mockup, iphone, responsive
 Requires at least: 3.0.1
 Tested up to: 4.3.1
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,8 +13,7 @@ Show your work in high resolution, responsive device mockups using only shortcod
 == Description ==
 Show your work in high resolution, responsive device mockups using only shortcodes. Wrap images, videos, or any other content within a few simple shortcodes to display them within any of the pre-packaged devices mockups, which are easily selectable from within the editor.
 
-= Documentation =
-For more information, including code examples and more, check out (http://dm.byjust.in).
+[Device Mockups Documentation](http://dm.byjust.in)
 
 = Available shortcodes =
 * [device][/device]

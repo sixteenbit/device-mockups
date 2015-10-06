@@ -3,7 +3,7 @@
  * Plugin Name: Device Mockups
  * Plugin URI:  https://wordpress.org/plugins/device-mockups/
  * Description: Show your work in high resolution, responsive device mockups using only shortcodes.
- * Version:     1.5.0
+ * Version:     1.5.1
  * Author: Justin Peacock
  * Author URI: https://byjust.in/
  * License:     GPLv2+
@@ -30,7 +30,7 @@
  */
 
 // Useful global constants
-define( 'DEVICE_MOCKUPS_VERSION', '1.5.0' );
+define( 'DEVICE_MOCKUPS_VERSION', '1.5.1' );
 define( 'DEVICE_MOCKUPS_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEVICE_MOCKUPS_PATH', dirname( __FILE__ ) . '/' );
 define( 'DEVICE_MOCKUPS_ADMIN', DEVICE_MOCKUPS_PATH . 'admin/' );
@@ -54,8 +54,6 @@ function device_mockups_stylesheet() {
 	global $post;
 	if ( is_a( $post, 'WP_Post' ) && ( has_shortcode( $post->post_content, 'device' ) || has_shortcode( $post->post_content, 'browser' ) ) ) {
 		wp_enqueue_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . '/css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
-	} else {
-		// do nothing
 	}
 }
 
@@ -68,8 +66,6 @@ function device_mockups_script() {
 	global $post;
 	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'gallery' ) ) {
 		wp_enqueue_script( 'device-mockups-scripts', DEVICE_MOCKUPS_URL . '/js/device-mockups.js', array(), DEVICE_MOCKUPS_VERSION, true );
-	} else {
-		// do nothing
 	}
 }
 
@@ -113,3 +109,4 @@ add_filter( 'no_texturize_shortcodes', 'device_mockups_shortcode_exclude' );
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop', 99 );
 add_filter( 'the_content', 'shortcode_unautop', 100 );
+add_filter( 'widget_text', 'do_shortcode' );

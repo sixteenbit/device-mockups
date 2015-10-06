@@ -1,4 +1,4 @@
-/*! Device Mockups - v1.5.0
+/*! Device Mockups - v1.5.1
  * 
  * Copyright (c) 2015; * Licensed GPLv2+ */
 (function () {
