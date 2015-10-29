@@ -3,7 +3,7 @@
  * Plugin Name: Device Mockups
  * Plugin URI:  https://wordpress.org/plugins/device-mockups/
  * Description: Show your work in high resolution, responsive device mockups using only shortcodes.
- * Version:     1.5.1
+ * Version:     1.5.2
  * Author: Justin Peacock
  * Author URI: https://byjust.in/
  * License:     GPLv2+
@@ -30,11 +30,12 @@
  */
 
 // Useful global constants
-define( 'DEVICE_MOCKUPS_VERSION', '1.5.1' );
+define( 'DEVICE_MOCKUPS_VERSION', '1.5.2' );
 define( 'DEVICE_MOCKUPS_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEVICE_MOCKUPS_PATH', dirname( __FILE__ ) . '/' );
 define( 'DEVICE_MOCKUPS_ADMIN', DEVICE_MOCKUPS_PATH . 'admin/' );
 define( 'DEVICE_MOCKUPS_INC', DEVICE_MOCKUPS_PATH . 'includes/' );
+define( 'DEVICE_MOCKUPS_DOCS', 'http://devicemockupswp.com/' );
 
 /**
  * Load plugin textdomain.
@@ -46,16 +47,13 @@ function device_mockups_load_textdomain() {
 add_action( 'plugins_loaded', 'device_mockups_load_textdomain' );
 
 /**
- * Enqueue stylesheet when device or browser shortcode is used.
+ * Register stylesheet to be used within shortcodes.
  */
-function device_mockups_stylesheet() {
-	global $post;
-	if ( is_a( $post, 'WP_Post' ) && ( has_shortcode( $post->post_content, 'device' ) || has_shortcode( $post->post_content, 'browser' ) ) ) {
-		wp_enqueue_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . '/css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
-	}
+function device_mockups_register_style() {
+	wp_register_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . 'css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
 }
 
-add_action( 'wp_enqueue_scripts', 'device_mockups_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'device_mockups_register_style' );
 
 /**
  * Enqueue script when gallery shortcode is used.
@@ -63,7 +61,7 @@ add_action( 'wp_enqueue_scripts', 'device_mockups_stylesheet' );
 function device_mockups_script() {
 	global $post;
 	if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'gallery' ) ) {
-		wp_enqueue_script( 'device-mockups-scripts', DEVICE_MOCKUPS_URL . '/js/device-mockups.js', array(), DEVICE_MOCKUPS_VERSION, true );
+		wp_enqueue_script( 'device-mockups-scripts', DEVICE_MOCKUPS_URL . 'js/device-mockups.js', array(), DEVICE_MOCKUPS_VERSION, true );
 	}
 }
 
@@ -73,7 +71,7 @@ add_action( 'wp_enqueue_scripts', 'device_mockups_script' );
  * Add documentation link
  */
 function device_mockups_docs_link( $links ) {
-	$settings_link = '<a href="http://dm.byjust.in" target="_blank">Documentation</a>';
+	$settings_link = '<a href="' . esc_url( DEVICE_MOCKUPS_DOCS ) . '" target="_blank">Documentation</a>';
 	array_unshift( $links, $settings_link );
 
 	return $links;
@@ -90,7 +88,7 @@ require_once DEVICE_MOCKUPS_INC . 'device.php';
 require_once DEVICE_MOCKUPS_INC . 'browser.php';
 
 /**
- * disables wp texturize on registered shortcodes
+ * Disables wp texturize on registered shortcodes
  */
 function device_mockups_shortcode_exclude( $shortcodes ) {
 	$shortcodes[] = 'device';
@@ -98,6 +96,8 @@ function device_mockups_shortcode_exclude( $shortcodes ) {
 
 	return $shortcodes;
 }
+
+add_filter( 'no_texturize_shortcodes', 'device_mockups_shortcode_exclude' );
 
 function device_mockups_shortcode_unautop( $pee ) {
 	global $shortcode_tags;
@@ -155,5 +155,4 @@ remove_filter( 'the_content', 'shortcode_unautop' );
 add_filter( 'the_content', 'device_mockups_shortcode_unautop' );
 remove_filter( 'the_excerpt', 'shortcode_unautop' );
 add_filter( 'the_excerpt', 'device_mockups_shortcode_unautop' );
-add_filter( 'no_texturize_shortcodes', 'device_mockups_shortcode_exclude' );
 add_filter( 'widget_text', 'do_shortcode' );

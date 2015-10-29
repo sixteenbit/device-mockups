@@ -15,6 +15,8 @@ function device_mockups_browser_wrapper( $atts, $content = null ) {
 	$anchor_s = ! empty( $specs['link'] ) ? '<a href="' . esc_url( $specs['link'] ) . '">' : '';
 	$anchor_e = ! empty( $specs['link'] ) ? '</a>' : '';
 
+	wp_enqueue_style('device-mockups-styles');
+
 	return $width_s . '<div class="dm-browser" data-device="' . esc_attr( $specs['type'] ) . '"><div class="device"><div class="screen">' . $anchor_s . do_shortcode( $content ) . $anchor_e . '</div></div></div>' . $width_e;
 }
 

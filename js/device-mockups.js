@@ -1,4 +1,4 @@
-/*! Device Mockups - v1.5.1
+/*! Device Mockups - v1.5.2
  * 
  * Copyright (c) 2015; * Licensed GPLv2+ */
 /* global window, document, define, jQuery, setInterval, clearInterval */

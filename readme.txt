@@ -1,10 +1,10 @@
 === Device Mockups ===
 Contributors: mrdink, phikai
 Donate link: http://drop.byjust.in/3YqO
-Tags: portfolio, shortcode, device, mockup, iphone, responsive
+Tags: portfolio, shortcode, device, mockup, iphone, responsive, gallery
 Requires at least: 3.0.1
 Tested up to: 4.3.1
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,29 +21,19 @@ Show your work in high resolution, responsive device mockups using only shortcod
 * [dm-gallery]
 
 = Device Attributes =
-* type
-* color: black/white/gold/silver
-* orientation: portrait/landscape
-* stacked: open/closed
-* position: left/right
+* type: imac, iphone6, iphone6-plus, iphone5s, iphone5, s3, lumia920, ipad, nexus7, or surface
+* color: black, white, gold, or silver
+* orientation: portrait or landscape
+* stacked: open or closed
+* position: left or right
 * link
-* width
-* hide: left/right
+* width: pixels or percentage
+* hide: left or right
 
 = Browser Attributes =
-* type
+* type: chrome, firefox, or safari
 * link
-* width
-
-= Slider Attributes =
-* order
-* orderby
-* id (post)
-* size (thumbnail, medium, large, or full)
-* include (id)
-* exclude (id)
-* css (inline styles to apply to the container)
-* options (custom js options)
+* width: pixels or percentage
 
 = Recommended Image Sizes =
 * iPhone 6 – 1334×750
@@ -74,11 +64,16 @@ Please help by reporting any bugs/feature request at the link below.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
-1. iMac
+1. Devices
 2. Stacking
 3. Browsers
 
 == Changelog ==
+= 1.5.2 =
+* optimized output to work better with other shortcodes i.e. page builders
+* removed conditional statements to check for if shortcode is used to enqueue and moved enqueue within the shortcode function
+* shortcodes will work within widgets now
+
 = 1.5.0 =
 * semi-major update
 * re-wrote entire code base
@@ -111,7 +106,7 @@ Please help by reporting any bugs/feature request at the link below.
 * and much more
 
 = 1.2.1 =
-* added icons to suppot WP 4.0 installer (Created by @timm3h)
+* added icons to support WP 4.0 installer (Created by @timm3h)
 * added more browser prefixes
 
 = 1.1.9 =
