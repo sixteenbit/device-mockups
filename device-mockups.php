@@ -3,16 +3,16 @@
  * Plugin Name: Device Mockups
  * Plugin URI:  https://wordpress.org/plugins/device-mockups/
  * Description: Show your work in high resolution, responsive device mockups using only shortcodes.
- * Version:     1.5.2
+ * Version:     1.6.0
  * Author: Justin Peacock
- * Author URI: https://byjust.in/
+ * Author URI: https://sixteenbit.com/
  * License:     GPLv2+
  * Text Domain: device_mockups
  * Domain Path: /languages
  */
 
 /**
- * Copyright (c) 2015 Sixteenbit LLC (email : wp@sixteenbit.com)
+ * Copyright (c) 2016 Sixteenbit LLC (email : wp@sixteenbit.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
@@ -30,12 +30,12 @@
  */
 
 // Useful global constants
-define( 'DEVICE_MOCKUPS_VERSION', '1.5.2' );
+define( 'DEVICE_MOCKUPS_VERSION', '1.6.0' );
 define( 'DEVICE_MOCKUPS_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEVICE_MOCKUPS_PATH', dirname( __FILE__ ) . '/' );
 define( 'DEVICE_MOCKUPS_ADMIN', DEVICE_MOCKUPS_PATH . 'admin/' );
 define( 'DEVICE_MOCKUPS_INC', DEVICE_MOCKUPS_PATH . 'includes/' );
-define( 'DEVICE_MOCKUPS_DOCS', 'http://devicemockupswp.com/' );
+define( 'DEVICE_MOCKUPS_DOCS', 'https://devicemockupswp.com/' );
 
 /**
  * Load plugin textdomain.
@@ -50,7 +50,8 @@ add_action( 'plugins_loaded', 'device_mockups_load_textdomain' );
  * Register stylesheet to be used within shortcodes.
  */
 function device_mockups_register_style() {
-	wp_register_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . 'css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
+	wp_register_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . 'css/device-mockups.css', array(),
+		DEVICE_MOCKUPS_VERSION, false );
 }
 
 add_action( 'wp_enqueue_scripts', 'device_mockups_register_style' );
@@ -69,6 +70,10 @@ add_action( 'wp_enqueue_scripts', 'device_mockups_script' );
 
 /**
  * Add documentation link
+ *
+ * @param $links
+ *
+ * @return mixed
  */
 function device_mockups_docs_link( $links ) {
 	$settings_link = '<a href="' . esc_url( DEVICE_MOCKUPS_DOCS ) . '" target="_blank">Documentation</a>';
@@ -78,6 +83,7 @@ function device_mockups_docs_link( $links ) {
 }
 
 $plugin = plugin_basename( __FILE__ );
+
 add_filter( "plugin_action_links_$plugin", 'device_mockups_docs_link' );
 
 /**
@@ -89,6 +95,10 @@ require_once DEVICE_MOCKUPS_INC . 'browser.php';
 
 /**
  * Disables wp texturize on registered shortcodes
+ *
+ * @param $shortcodes
+ *
+ * @return array
  */
 function device_mockups_shortcode_exclude( $shortcodes ) {
 	$shortcodes[] = 'device';
@@ -113,31 +123,31 @@ function device_mockups_shortcode_unautop( $pee ) {
 		. '<p>'                              // Opening paragraph
 		. '\\s*+'                            // Optional leading whitespace
 		. '('                                // 1: The shortcode
-		.     '\\[\\/?'                      // Opening bracket for opening or closing shortcode tag
-		.     "($tagregexp)"                 // 2: Shortcode name
-		.     '(?![\\w-])'                   // Not followed by word character or hyphen
+		. '\\[\\/?'                      // Opening bracket for opening or closing shortcode tag
+		. "($tagregexp)"                 // 2: Shortcode name
+		. '(?![\\w-])'                   // Not followed by word character or hyphen
 		// Unroll the loop: Inside the opening shortcode tag
-		.     '[^\\]\\/]*'                   // Not a closing bracket or forward slash
-		.     '(?:'
-		.         '\\/(?!\\])'               // A forward slash not followed by a closing bracket
-		.         '[^\\]\\/]*'               // Not a closing bracket or forward slash
-		.     ')*?'
-		.     '[\\w\\s="\']*'                // Shortcode attributes
-		.     '(?:'
-		.         '\\s*+'                    // Optional leading whitespace, supports [footag /]
-		.         '\\/\\]'                   // Self closing tag and closing bracket
-		.     '|'
-		.         '\\]'                      // Closing bracket
-		.         '(?:'                      // Unroll the loop: Optionally, anything between the opening and closing shortcode tags
-		.             '(?!<\/p>)'            // Not followed by closing paragraph
-		.             '[^\\[]*+'             // Not an opening bracket, matches all content between closing bracket and closing shortcode tag
-		.             '(?:'
-		.                 '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
-		.                 '[^\\[]*+'         // Not an opening bracket
-		.             ')*+'
-		.             '\\[\\/\\2\\]'         // Closing shortcode tag
-		.         ')?'
-		.     ')'
+		. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
+		. '(?:'
+		. '\\/(?!\\])'               // A forward slash not followed by a closing bracket
+		. '[^\\]\\/]*'               // Not a closing bracket or forward slash
+		. ')*?'
+		. '[\\w\\s="\']*'                // Shortcode attributes
+		. '(?:'
+		. '\\s*+'                    // Optional leading whitespace, supports [footag /]
+		. '\\/\\]'                   // Self closing tag and closing bracket
+		. '|'
+		. '\\]'                      // Closing bracket
+		. '(?:'                      // Unroll the loop: Optionally, anything between the opening and closing shortcode tags
+		. '(?!<\/p>)'            // Not followed by closing paragraph
+		. '[^\\[]*+'             // Not an opening bracket, matches all content between closing bracket and closing shortcode tag
+		. '(?:'
+		. '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
+		. '[^\\[]*+'         // Not an opening bracket
+		. ')*+'
+		. '\\[\\/\\2\\]'         // Closing shortcode tag
+		. ')?'
+		. ')'
 		. ')'
 		. '\\s*+'                            // optional trailing whitespace
 		. '<\\/p>'                           // closing paragraph

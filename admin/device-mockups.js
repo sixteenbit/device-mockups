@@ -1,6 +1,6 @@
 /*! Device Mockups - v1.5.2
  * 
- * Copyright (c) 2015; * Licensed GPLv2+ */
+ * Copyright (c) 2016; * Licensed GPLv2+ */
 (function () {
     tinymce.PluginManager.add('device_mockups_tc_button', function (editor, url) {
         editor.addButton('device_mockups_tc_button', {

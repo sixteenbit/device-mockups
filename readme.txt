@@ -3,8 +3,8 @@ Contributors: mrdink, phikai
 Donate link: http://drop.byjust.in/3YqO
 Tags: portfolio, shortcode, device, mockup, iphone, responsive, gallery
 Requires at least: 3.0.1
-Tested up to: 4.3.1
-Stable tag: 1.5.2
+Tested up to: 4.4
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

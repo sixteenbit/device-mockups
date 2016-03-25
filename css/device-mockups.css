@@ -185,18 +185,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="imac"] {
   padding-bottom: 81.230769%;
@@ -236,18 +239,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="ipad"] {
   padding-bottom: 128.406276%;
@@ -309,18 +315,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="iphone5"] {
   padding-bottom: 200.477897%;
@@ -381,18 +390,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="iphone5s"] {
   padding-bottom: 210.477897%;
@@ -459,18 +471,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="iphone6"] {
   padding-bottom: 200.477897%;
@@ -537,18 +552,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="iphone6-plus"] {
   padding-bottom: 200.477897%;
@@ -615,18 +633,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="lumia920"] {
   padding-bottom: 172.796353%;
@@ -681,18 +702,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="macbook"] {
   padding-bottom: 61.775701%;
@@ -732,18 +756,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="nexus7"] {
   padding-bottom: 156.521739%;
@@ -798,18 +825,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="s3"] {
   padding-bottom: 178.787879%;
@@ -870,18 +900,21 @@
   background-repeat: no-repeat;
 }
 .dm-device > .device > .screen {
+  overflow-y: scroll;
   position: absolute;
   top: 11.0438729%;
   bottom: 14.6747352%;
   left: 13.364486%;
   right: 13.364486%;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 .dm-device > .device > .screen .embed-youtube,
 .dm-device > .device > .screen iframe {
   width: 100% !important;
   height: 100% !important;
+}
+.dm-device > .device > .screen::-webkit-scrollbar {
+  display: none;
 }
 .dm-device[data-device="surface"] {
   padding-bottom: 64.7584973%;
@@ -1059,8 +1092,8 @@
 .slick-slider {
   position: relative;
   display: block;
-  box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1173,7 +1206,11 @@
   background: transparent;
   color: transparent;
   top: 50%;
-  margin-top: -10px;
+  margin-top: -10px\9;
+  /*lte IE 8*/
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   padding: 0;
   border: none;
   outline: none;
