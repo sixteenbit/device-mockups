@@ -2,5 +2,5 @@
 node_modules
 bower_components
 .idea
-*.map
+*.css.map
 release

@@ -75,12 +75,21 @@
                                     ]
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'scroll',
+                                    label: 'Scroll',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'True', value: 'true'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/device]');
+                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" hide="' + e.data.hide + '" width="' + e.data.width + '" scroll="' + e.data.scroll + '"]' + e.data.content + '[/device]');
                             }
                         });
                     }
@@ -125,16 +134,25 @@
                                     ]
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'scroll',
+                                    label: 'Scroll',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'True', value: 'true'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/browser]');
+                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" hide="' + e.data.hide + '" width="' + e.data.width + '" scroll="' + e.data.scroll + '"]' + e.data.content + '[/browser]');
                             }
                         });
                     }
-                },
+                }
             ]
         });
     });

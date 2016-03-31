@@ -19,7 +19,7 @@
         background-repeat: no-repeat;
         & > {
             .screen {
-                overflow-y: scroll;
+                overflow: hidden;
                 position: absolute;
                 top: 11.0438729%;
                 bottom: 14.6747352%;
@@ -27,6 +27,7 @@
                 right: 13.364486%;
                 background-color: $screen-color;
                 .embed-youtube,
+                .jetpack-video-wrapper iframe,
                 iframe {
                     width: 100% !important;
                     height: 100% !important;

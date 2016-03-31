@@ -1,15 +1,12 @@
-/**
- * Firefox
- */
 .dm-browser {
-  @include dm-browser;
-  &[data-device="firefox"] {
-    & > .device {
-      background-image: url("#{$base-url}firefox.png");
-      & > .screen {
-        top: 13.3%;
-        border: 1px solid #f6f6f6;
-      }
+    @include dm-browser;
+    &[data-device="firefox"] {
+        & > .device {
+            background-image: url("#{$base-url}firefox.png");
+            & > .screen {
+                top: 13.3%;
+                border: 1px solid #f6f6f6;
+            }
+        }
     }
-  }
 }

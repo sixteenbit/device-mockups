@@ -1,18 +1,15 @@
-/**
- * Macbook Pro
- */
 .dm-device {
-  @include dm-device;
-  &[data-device="macbook"] {
-    padding-bottom: 61.775701%;
-    & > .device {
-      background-image: url("#{$base-url}macbook.png");
-      & > .screen {
-        top: 11.0438729%;
-        bottom: 14.6747352%;
-        left: 13.364486%;
-        right: 13.364486%;
-      }
+    @include dm-device;
+    &[data-device="macbook"] {
+        padding-bottom: 61.775701%;
+        & > .device {
+            background-image: url("#{$base-url}macbook.png");
+            & > .screen {
+                top: 11.0438729%;
+                bottom: 14.6747352%;
+                left: 13.364486%;
+                right: 13.364486%;
+            }
+        }
     }
-  }
 }

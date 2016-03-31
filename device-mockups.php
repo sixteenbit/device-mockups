@@ -4,8 +4,8 @@
  * Plugin URI:  https://wordpress.org/plugins/device-mockups/
  * Description: Show your work in high resolution, responsive device mockups using only shortcodes.
  * Version:     1.6.0
- * Author: Justin Peacock
- * Author URI: https://sixteenbit.com/
+ * Author: Sixteenbit
+ * Author URI: https://sixteenbit.com/portfolio/device-mockups/
  * License:     GPLv2+
  * Text Domain: device_mockups
  * Domain Path: /languages
@@ -50,8 +50,7 @@ add_action( 'plugins_loaded', 'device_mockups_load_textdomain' );
  * Register stylesheet to be used within shortcodes.
  */
 function device_mockups_register_style() {
-	wp_register_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . 'css/device-mockups.css', array(),
-		DEVICE_MOCKUPS_VERSION, false );
+	wp_register_style( 'device-mockups-styles', DEVICE_MOCKUPS_URL . 'css/device-mockups.css', array(), DEVICE_MOCKUPS_VERSION, false );
 }
 
 add_action( 'wp_enqueue_scripts', 'device_mockups_register_style' );
@@ -76,7 +75,7 @@ add_action( 'wp_enqueue_scripts', 'device_mockups_script' );
  * @return mixed
  */
 function device_mockups_docs_link( $links ) {
-	$settings_link = '<a href="' . esc_url( DEVICE_MOCKUPS_DOCS ) . '" target="_blank">Documentation</a>';
+	$settings_link = '<a href="' . esc_url( DEVICE_MOCKUPS_DOCS ) . '" target="_blank">' . esc_html__( 'Documentation' ) . '</a>';
 	array_unshift( $links, $settings_link );
 
 	return $links;
@@ -109,6 +108,13 @@ function device_mockups_shortcode_exclude( $shortcodes ) {
 
 add_filter( 'no_texturize_shortcodes', 'device_mockups_shortcode_exclude' );
 
+/**
+ * Filters shortcode to remove auto p and br tags
+ *
+ * @param $pee
+ *
+ * @return mixed
+ */
 function device_mockups_shortcode_unautop( $pee ) {
 	global $shortcode_tags;
 
@@ -166,3 +172,12 @@ add_filter( 'the_content', 'device_mockups_shortcode_unautop' );
 remove_filter( 'the_excerpt', 'shortcode_unautop' );
 add_filter( 'the_excerpt', 'device_mockups_shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
+
+/**
+ * Add theme support for Responsive Videos
+ */
+function device_mockups_responsive_videos_init() {
+	add_theme_support( 'jetpack-responsive-videos' );
+}
+
+add_action( 'after_setup_theme', 'device_mockups_responsive_videos_init' );

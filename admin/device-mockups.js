@@ -1,6 +1,8 @@
-/*! Device Mockups - v1.5.2
+/** Device Mockups - v1.6.0
  * 
- * Copyright (c) 2016; * Licensed GPLv2+ */
+ * Copyright (c) 2016;
+ * Licensed GPLv2+
+ */
 (function () {
     tinymce.PluginManager.add('device_mockups_tc_button', function (editor, url) {
         editor.addButton('device_mockups_tc_button', {
@@ -78,12 +80,21 @@
                                     ]
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'scroll',
+                                    label: 'Scroll',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'True', value: 'true'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/device]');
+                                editor.insertContent('[device link="' + e.data.link + '" type="' + e.data.type + '" color="' + e.data.color + '" orientation="' + e.data.orientation + '" hide="' + e.data.hide + '" width="' + e.data.width + '" scroll="' + e.data.scroll + '"]' + e.data.content + '[/device]');
                             }
                         });
                     }
@@ -128,16 +139,25 @@
                                     ]
                                 },
                                 {
+                                    type: 'listbox',
+                                    name: 'scroll',
+                                    label: 'Scroll',
+                                    'values': [
+                                        {text: '', value: ''},
+                                        {text: 'True', value: 'true'}
+                                    ]
+                                },
+                                {
                                     type: 'textbox',
                                     name: 'content',
                                     label: 'Content'
                                 }],
                             onsubmit: function (e) {
-                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" hide="' + e.data.hide + '" width="' + e.data.width + '"]' + e.data.content + '[/browser]');
+                                editor.insertContent('[browser link="' + e.data.link + '" type="' + e.data.type + '" hide="' + e.data.hide + '" width="' + e.data.width + '" scroll="' + e.data.scroll + '"]' + e.data.content + '[/browser]');
                             }
                         });
                     }
-                },
+                }
             ]
         });
     });

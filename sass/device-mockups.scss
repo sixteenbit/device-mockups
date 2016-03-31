@@ -2,67 +2,151 @@
 /**
  * Table of Contents
  *
- * Options
- *      Gallery
- *      Stacking
- *      Hiding
- *      Width
- * Devices
- * 		iMac
- *		iPad
- *		iPhone 5
- *		iPhone 5s
- * 		iPhone 6
- *      iPhone 6 Plus
- *      Lumia 920
- *      Macbook Pro
- *      Nexus 7
- *      Galaxy S3
- *      Surface
- * Browsers
- * 		Chrome
- *		Firefox
- *		Safari
- * Slick
+ * 1.0 Devices
+ *      1.1 iMac
+ *		1.2 iPad
+ *		1.3 iPhone 5
+ *		1.4 iPhone 5s
+ * 		1.5 iPhone 6
+ *      1.6 iPhone 6 Plus
+ *      1.7 Lumia 920
+ *      1.8 Macbook Pro
+ *      1.9 Nexus 7
+ *      1.10 Galaxy S3
+ *      1.11 Surface
+ * 2.0 Browsers
+ * 		2.1 Chrome
+ *		2.2 Firefox
+ *		2.3 Safari
+ * 3.0 Options
+ *      3.1 Gallery
+ *      3.2 Stacking
+ *      3.3 Hiding
+ *      3.4 Width
+ *      3.5 Scrolling
+ * 4.0 Vendors
+ *      4.1 Slick Slider
+ *
+ */
+// Vendors
+@import 'bourbon';
+// Configuration and helpers
+@import 'utils/variables';
+@import 'utils/mixins';
+
+/**
+ * 1.0 Devices
  */
 
-// Vendors
-@import
-  'bourbon';
+/**
+ * 1.1 iMac
+ */
+@import 'devices/imac';
 
-// Configuration and helpers
-@import
-  'utils/variables',
-  'utils/mixins';
+/**
+ * 1.2 iPad
+ */
+@import 'devices/ipad';
 
-// Options
-@import
-  'options/gallery',
-  'options/stacking',
-  'options/hiding',
-  'options/width';
+/**
+ * 1.3 iPhone 5
+ */
+@import 'devices/iphone5';
 
-// Devices
-@import
-  'devices/imac',
-  'devices/ipad',
-  'devices/iphone5',
-  'devices/iphone5s',
-  'devices/iphone6',
-  'devices/iphone6-plus',
-  'devices/lumia-920',
-  'devices/macbook',
-  'devices/nexus',
-  'devices/s3',
-  'devices/surface';
+/**
+ * 1.4 iPhone 5s
+ */
+@import 'devices/iphone5s';
 
-// Browsers
-@import
-  'browsers/chrome',
-  'browsers/firefox',
-  'browsers/safari';
+/**
+ * 1.5 iPhone 6
+ */
+@import 'devices/iphone6';
 
-// Vendors
-@import
-  'slick',
-  'slick-theme';
+/**
+ * 1.6 iPhone 6 Plus
+ */
+@import 'devices/iphone6-plus';
+
+/**
+ * 1.7 Lumia 920
+ */
+@import 'devices/lumia-920';
+
+/**
+ * 1.8 Macbook
+ */
+@import 'devices/macbook';
+
+/**
+ * 1.9 Nexus
+ */
+@import 'devices/nexus';
+
+/**
+ * 1.10 Galaxy S3
+ */
+@import 'devices/s3';
+
+/**
+ * 1.11 Surface
+ */
+@import 'devices/surface';
+
+/**
+ * 2.0 Browsers
+ */
+
+/**
+ * 2.1 Chrome
+ */
+@import 'browsers/chrome';
+
+/**
+ * 2.2 Firefox
+ */
+@import 'browsers/firefox';
+
+/**
+ * 2.3 Safari
+ */
+@import 'browsers/safari';
+
+/**
+ * 3.0 Options
+ */
+
+/**
+ * 3.1 Gallery
+ */
+@import 'options/gallery';
+
+/**
+ * 3.2 Stacking
+ */
+@import 'options/stacking';
+
+/**
+ * 3.3 Hiding
+ */
+@import 'options/hiding';
+
+/**
+ * 3.4 Width
+ */
+@import 'options/width';
+
+/**
+ * 3.5 Scroll
+ */
+@import 'options/scroll';
+
+/**
+ * 4.0 Vendors
+ */
+
+/**
+ * 4.1 Slick Slider
+ */
+@import 'slick.scss';
+@import 'slick-theme.scss';

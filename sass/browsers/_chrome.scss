@@ -1,15 +1,12 @@
-/**
- * Google Chrome
- */
 .dm-browser {
-  @include dm-browser;
-  &[data-device="chrome"] {
-    & > .device {
-      background-image: url("#{$base-url}chrome.png");
-      & > .screen {
-        top: 12.4%;
-        border: 1px solid #f3f2f3;
-      }
+    @include dm-browser;
+    &[data-device="chrome"] {
+        & > .device {
+            background-image: url("#{$base-url}chrome.png");
+            & > .screen {
+                top: 12.4%;
+                border: 1px solid #f3f2f3;
+            }
+        }
     }
-  }
 }
